@@ -9,10 +9,10 @@ $citizenID = $_POST['CitizenID'];
 $address = $_POST['Address'];
 $encryppsw = sha1($psw);
 
-$servername = "localhost";
+$servername = "34.87.187.203";
 $dbUsername = "root";
-$dbPassword = "";
-$dbName = "Hotel";
+$dbPassword = "Segmentation3";
+$dbName = "hotel";
 
 //Connect to data base
 $conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
