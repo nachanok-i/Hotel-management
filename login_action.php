@@ -1,4 +1,7 @@
 <?php
+    // Start the session
+    session_start();
+    
     //connect to database
     require_once "config.php";
 
@@ -27,9 +30,10 @@
     else
     {
         echo "Login success!";
-        // $_SESSION["UserID"] = $objResult["UserID"];
+        $_SESSION["email"] = $objResult["email"];
+        header('Location: home.php');
         // $_SESSION["Status"] = $objResult["Status"];
-        // session_write_close();
+        session_write_close();
     }
     mysqli_close($conn);
 ?>
