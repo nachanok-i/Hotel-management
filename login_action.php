@@ -30,9 +30,10 @@
     else
     {
         echo "Login success!";
-        // $_SESSION["UserID"] = $objResult["UserID"];
+        $_SESSION["email"] = $objResult["email"];
+        header('Location: home.php');
         // $_SESSION["Status"] = $objResult["Status"];
-        // session_write_close();
+        session_write_close();
     }
     mysqli_close($conn);
 ?>
