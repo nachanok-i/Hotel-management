@@ -1,27 +1,35 @@
 <?php
+    //connect to database
+    require_once "config.php";
+
     //get value from index.php
     $email = $_POST['email'];
-    $password = $_POST['pass'];
+    $password = $_POST['password'];
 
     //prevent mysql injection
     $email = stripcslashes($email);
     $password = stripcslashes($password);
-    $email = mysql_real_escape_string($email);
-    $password = mysql_real_escape_string($password);
+    $email = mysqli_real_escape_string ($conn,$_REQUEST['email']);
+    $password = mysqli_real_escape_string($conn,$_REQUEST['password']);
     
     //connect to database
     require_once "config.php";
 
-    $result = mysql_query("SELECT * FROM Customer WHERE email = '$email' AND password = '$password'")
-                or die("Failed to query database ".mysql_error());
-    $row = mysql_fetch_array($result);
-    if ($row['email'] == $email && $row['password'] == $password) 
+    $query = "SELECT * FROM `Customer` WHERE email = '$email'
+    AND password = '".sha1($password)."'";
+    $objQuery = mysqli_query($conn,$query) or die(mysqli_error());
+    $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
+
+    if(!$objResult)
     {
-        echo "Login success!!! Welcome".$row['email'];
+        echo "Username and Password Incorrect!";
     }
     else
     {
-        echo "Failed to login!";
+        echo "Login success!";
+        // $_SESSION["UserID"] = $objResult["UserID"];
+        // $_SESSION["Status"] = $objResult["Status"];
+        // session_write_close();
     }
-
+    mysqli_close($conn);
 ?>
