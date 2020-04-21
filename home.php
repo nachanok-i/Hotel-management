@@ -1,3 +1,9 @@
+<?php
+  // Start the session
+  session_start();
+  $email = $_SESSION["email"];
+?>
+
 <!Doctype html>
 <html>
     <head>
@@ -17,7 +23,7 @@
      
     <div>     
         <nav class ="navbar navbar-expand-sm bg-dark navbar-dark">
-          <a class="navbar-brand" style="background-color:transparent;">Tap Hotel</a>
+          <a class="navbar-brand" style="background-color:transparent;" href="index.html">Tap Hotel</a>
           <ul class ="nav navbar-nav">
               <li class ="nav-item"> 
                  <a class="nav-link " href="#">Link1</a>
@@ -39,18 +45,11 @@
               </li>
           </ul>
           <ul class=" nav navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a> 
-                <div class="dropdown-menu p-3">
-                    <form class="form-horizontal" method="post" accept-charset="UTF-8">
-                        <input class="form-control login" type="text" name="username2" placeholder="Username">
-                        <input class="form-control login" type="text" name="password2" placeholder="Password">
-                        <input class="btn btn-primary" type="button" name="submit" value="Login">
-                    </form>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href=#> <i class="fas fa-user-alt"></i> <?php echo $email ?></a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=loginPage.html> <i class="fas fa-user-plus"></i> Sign up</a> 
+                <a class="nav-link" href=index.php> <i class="fas fa-sign-out-alt"></i> Sign out</a> 
              </li>
           </ul>
         </nav>
