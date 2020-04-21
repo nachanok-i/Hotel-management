@@ -1,6 +1,7 @@
 <?php
-// Start the session
-session_start();
+  // Start the session
+  session_start();
+  $email = $_SESSION["email"];
 ?>
 
 <!Doctype html>
@@ -44,16 +45,12 @@ session_start();
               </li>
           </ul>
           <ul class=" nav navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a> 
-                <div class="dropdown-menu dropdown-menu-right p-3">
-                    <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
-                        <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
-                        <input class="form-control login" type="text" name="password" placeholder="Password" id="pass">
-                        <input class="btn btn-primary" type="submit" name="submit" value="Login">
-                    </form>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href=#> <i class="fas fa-user-alt"></i> <?php echo $email ?></a> 
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href=index.php> <i class="fas fa-sign-out-alt"></i> Sign out</a> 
+             </li>
           </ul>
         </nav>
     </div>
