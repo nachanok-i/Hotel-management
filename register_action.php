@@ -16,20 +16,23 @@ $encryppsw = sha1($psw);
         {
         $sql = "INSERT INTO Customer(firstName, lastName, email, password, address, citizenID)
         VALUES('$firstName', '$lastName', '$email', '$encryppsw', '$address', '$citizenID')";
-        echo"Sign Successfully";
+
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
         $conn->close();
+        echo '<script>
+        alert("Register Successfully");
+        window.location.href="index.php";
+        </script>';
         }
     else
         {
-        echo"Please fill all requirement";
+        echo '<script>
+        alert("Fail to Register because there are some invalid in form");
+        window.location.href="register.php";
+        </script>';
         }
-
-
-
-
 ?>
