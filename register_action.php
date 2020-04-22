@@ -1,4 +1,7 @@
-<?php
+    <?php
+
+// Include config file
+require_once "config.php";
 
 $email = $_POST['email'];
 $psw = $_POST['psw'];
@@ -7,33 +10,26 @@ $firstName = $_POST['Firstname'];
 $lastName = $_POST['Lastname'];
 $citizenID = $_POST['CitizenID'];
 $address = $_POST['Address'];
+$checkBox = $_POST["remember"];
 $encryppsw = sha1($psw);
+    if( ($psw == $pswRep) && (isset($checkBox)) )
+        {
+        $sql = "INSERT INTO Customer(firstName, lastName, email, password, address, citizenID)
+        VALUES('$firstName', '$lastName', '$email', '$encryppsw', '$address', '$citizenID')";
+        echo"Sign Successfully";
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        $conn->close();
+        }
+    else
+        {
+        echo"Please fill all requirement";
+        }
 
-$servername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "Hotel";
 
-//Connect to data base
-$conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
-
-if(!$conn) {
-	die("Connection Failed: ". mysqli_connect_error());
-	echo "<br>";
-}
-
-$sql = "INSERT INTO Customer(firstName, lastName, email, password, address, citizenID)
-VALUES('$firstName', '$lastName', '$email', '$encryppsw', '$address', '$citizenID')";
-
-
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
 
 
 ?>
