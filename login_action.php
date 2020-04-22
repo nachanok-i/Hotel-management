@@ -25,13 +25,18 @@
 
     if(!$objResult)
     {
-        echo "Username and Password Incorrect!";
+    echo '<script>
+    alert("Invalid password or email");
+    window.location.href="register.php";
+    </script>';
     }
     else
     {
-        echo "Login success!";
+        echo '<script>
+        alert("Login Successful");
+        window.location.href="home.php";
+        </script>';
         $_SESSION["email"] = $objResult["email"];
-        header('Location: home.php');
         // $_SESSION["Status"] = $objResult["Status"];
         session_write_close();
     }
