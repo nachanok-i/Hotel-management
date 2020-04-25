@@ -21,7 +21,9 @@ session_start();
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
         <script>
+        /* Tap help find that condition pls */
         $(function() {
             var check =[]
             var from = $( "#fromDate" )
@@ -54,7 +56,9 @@ session_start();
             }
             return date;
         }});
+        /* Tap help find that condition pls */
         </script>
+    
     </head>
     <body>
      
@@ -105,49 +109,62 @@ session_start();
                 <p>Please fill the infomation.</p>
                 <hr>
 
-            <!--for choose branch -->
-            <div class="container">
-                <div class="form-group ">
-                    <label for="Branch"><b>Branch</b> </label>
-                        <select name="Branch"  class="form-control" >
-                            <option value ="Branch1">Branch1</option> <!--can insert value :) -->
-                            <option value ="Branch2">Branch2</option>
-                            <option value ="Branch3">Branch3</option>
-                            <option value ="Branch4">Branch4</option>
-                            <option value ="Branch5">Branch5</option>
-                        </select>
-                    <label for="From"><b>From</b></lable>
-                        <p><input type="text" name="From" placeholder="DD-MM-YYYY" id="fromDate" class ="form-control" required></p>
+                <!--for choose branch -->
+                <div class="container">
+                    <div class="form-group ">
+                        <label for="Branch"><b>Branch</b> </label>
+                            <select name="Branch"  class="form-control" >
+                                <option value ="Branch1">Branch1</option> <!--can insert value :) -->
+                                <option value ="Branch2">Branch2</option>
+                                <option value ="Branch3">Branch3</option>
+                                <option value ="Branch4">Branch4</option>
+                                <option value ="Branch5">Branch5</option>
+                            </select>
+                        <label for="From"><b>From</b></lable>
+                            <p><input type="text" name="From" placeholder="DD-MM-YYYY" id="fromDate" class ="form-control" required></p>
 
-                    <label for="From"><b>To</b></lable>  
-                        <p><input type="text" name="To" placeholder="DD-MM-YYYY" id="toDate" class ="form-control" required></p>
+                        <label for="From"><b>To</b></lable>  
+                            <p><input type="text" name="To" placeholder="DD-MM-YYYY" id="toDate" class ="form-control" required></p>
 
-                    <h4><b>Number of Guest</b></h4>
-                        <label for="adult"><b>Adult</b></lable>
-                            <p><input type="number" name="adult" placeholder="Enter number" class ="form-control" required></p>
-                        <label for="child"><b>Child</b></lable>
-                        <p><input type="number" name="child" placeholder="Enter number" class ="form-control" required></p>
+                        <h4><b>Number of Guest</b></h4>
+                            <label for="adult"><b>Adult</b></lable>
+                                <p><input type="number" name="adult" placeholder="Enter number" class ="form-control" required></p>
+                            <label for="child"><b>Child</b></lable>
+                            <p><input type="number" name="child" placeholder="Enter number" class ="form-control" required></p>
                     </div>
                 </div>    
 
-            <div class="container">
-                <h5><b>Payment Section</b></h5>
-                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                <i class="fa fa-cc-discover" style="color:orange;"></i>
-                <div class="form-group">
-                    <label for="cardNumber"><b>Card Number</b></label>
-                        <p><input type=text name="CardNumber" placeholder="Enter your Fullname" class=></p>
+                <div class="container">
+                    <h5><b>Payment Section</b></h5>
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                    <div class="form-group">
+                        <label for="cardNumber"><b>Card Number</b></label>
+                            <p><input type=text name="cardNumber" placeholder="Card Number" class="form-control" required></p>
+                    </div>
                 </div>
+
+                <div class="container">
+                    <h5><b>Comment Section</b></h5>
+                    <label for="rating"><b>Rating</b></label>
+                        <select name="rating"  class="form-control" >
+                                <option value =1>1</option> <!--can insert value :) -->
+                                <option value =2>2</option>
+                                <option value =3>3</option>
+                                <option value =4>4</option>
+                                <option value =5>5</option>
+                        </select>
+                    <label for="additionalNote"><b>Additional Note</b></label>
+                        <textarea rows="4" cols="50" name="additionalNote" form="usrform" class="form-control"> </textarea>
                 </div>
-            </div>
 
                 <div class="clearfix">
                     <button type="button" class="cancelbtn">Cancel</button>
                     <button type="submit" class="signupbtn">Confirm</button>
                 </div>
             </div>
-        </form>
+    </form>
 
 </html> 
