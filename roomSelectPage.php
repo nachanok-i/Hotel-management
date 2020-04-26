@@ -1,9 +1,14 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!Doctype html>
 <html>
-<head>
+    <head>
         <meta charset ="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="roomSelectPage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -77,50 +82,69 @@
                 </a>
             </div>
     </div>
-    
+    <div class="area">
+        <div class ="areaHeader">
+            <h3><b>ROOMS & VILLAS</b></h3>
+            <div class = inside>
+                <p>With warm hues and a slight pop of color, the villas at Crimson Mactan Resort and Spa is bound to make you a striking first impression.<br>
+                Imagine taking a nap on a plush four-poster canopy bed with interiors immersed in local architecture at the best Beach resort in Mactan,<br>
+                Cebu. Each of our spacious villas and luxurious casitas features polished teak floors, locally-sourced Cebuano décor and beautiful domed<br>
+                ceilings made of woven Banig. Feel at home in an expansive living area that leads to mesmerizing views of the pristine Mactan sea from<br>
+                your own private plunge pool. Drained from the day’s activities? Relax and unwind in the sunk-in tub within the most elegant bathroom.<br>
+                </p>
+            </div>
+        </div>
+    </div>
 
-        <form id="Register" action="#" style="border:1px solid #ccc" method = "POST">
-            <div class="container">
-                <h1>Sign Up</h1>
-                <p>Please fill in this form to create an account.</p>
-                <hr>
-          
-                <label for="StaffID"><b>StaffID</b></label>
-                <input type="text" placeholder="Enter StaffID" name="StaffID" required>
-
-                <label for="Firstname"><b>Firstname</b></label>
-                <input type="text" placeholder="Enter Firstname" name="Firstname" required>
-                
-                <label for="Lastname"><b>Lastname</b></label>
-                <input type="text" placeholder="Enter Lastname" name="Lastname" required>
-                
-                <label for="position"><b>Position</b></label>
-                <input type="text" placeholder="Enter position" name="position" required>
-
-                <label for="salary"><b>Salary</b></label>
-                <input type="text" placeholder="Enter salary" name="salary" required>
-
-                <label for="branchID"><b>branchID</b></label>
-                <input type="text" placeholder="Enter branchID" name="branchID" required>
-    
-                <label for="workTimeDescription"><b>workTimeDescription</b></label>
-                <input type="text" placeholder="Enter your work time description" name="workTimeDescription" required>
-                <label>
-
-                <label for="starDate"><b>workTimeDescription</b></label>
-                <input type="text" placeholder="Enter your star date of work" name="starDate" required>
-                <label>
-
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Are you sure to summit
-                </label>
-          
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-          
-                <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
+    <div >
+        <div class="pic1">
+            <img src="./picHotelRoom/beach1.jpg" class="pic1" alt="Room type1">
+            <div class="insideSet1">
+                <h2><b>Room Type1</b></h2>
+            </div>
+            <button href=# class=buttonInsideSet1><b>Book now</b></button>
+            <button href=# class=buttonInsideSet1_2><b>View more</b></button>
+        </div>  
+    </div>
+  <div>
+    <div class ="set2">
+        <div class = "inline-block">
+            <img src="./picHotelRoom/deluxe.jpg"class="set2">
+            <div class="insideSet2">
+                <h2><b>Room Type2</b></h2>
+            </div>
+            <button href=# class=buttonInsideSet2><b>Book now</b></button>
+                <button href=# class=buttonInsideSet2_2><b>View more</b></button>
+        </div>
+        <div class = "inline-block">
+            <img src="./picHotelRoom/private.jpg" class="set2">
+            <div class="insideSet3">
+                <h2><b>Room Type3</b></h2>
+            </div>
+            <button href=# class=buttonInsideSet3><b>Book now</b></button>
+            <button href=# class=buttonInsideSet3_2><b>View more</b></button>
+        </div>
+    </div>
+  </div> 
+  <div style="margin-top:10%;">
+      <footer class ="page-footer">
+        <div class="container">
+            <div class = "row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                    <P>This website is for Tab Hotel<br> Thank you for using our page</P>
+              </div>
+               <div class="col-lg-4 col-md-4 col-sm-12">
+                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <p>1640 Riverside Drive, Hill Valley, California
+                <br>book21424@gmail.com
+                <br>+ 01 234 567 88
+                <br  >+ 01 234 567 89</p>
                 </div>
             </div>
-        </form>
-    </body>
-</html>
+            <div class="footer-copyright text-uppercase font-weight-bold  text-center">king mongkut's university of technology thonburi  </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html> 

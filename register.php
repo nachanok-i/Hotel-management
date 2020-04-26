@@ -15,7 +15,7 @@
     </head>
     <body>
       <div>     
-        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
           <a class="navbar-brand" style="background-color:transparent;" href="index.html">Tap Hotel</a>
           <ul class ="nav navbar-nav">
               <li class ="nav-item"> 
