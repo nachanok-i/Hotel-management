@@ -65,13 +65,13 @@ session_start();
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block mx-auto" width="100%" height=500px  src="./picHotelRoom/black1.jpg" alt="First slide">
+                    <img class="d-block mx-auto" width="100%" height=650px  src="./picHotelRoom/black1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block mx-auto" width="100%" height=500px src="./picHotelRoom/beach2_5.jpg" alt="Second slide">
+                    <img class="d-block mx-auto" width="100%" height=650px src="./picHotelRoom/beach2_5.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block  mx-auto" width="100%" height=500px src="./picHotelRoom/hotel2_5.jpg" alt="Third slide">
+                    <img class="d-block  mx-auto" width="100%" height=650px src="./picHotelRoom/hotel2_5.jpg" alt="Third slide">
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -127,7 +127,7 @@ session_start();
         </div>
     </div>
   </div> 
-  <div style="margin-top:10%;">
+  <div style>
       <footer class ="page-footer">
         <div class="container">
             <div class = "row">
