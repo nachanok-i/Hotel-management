@@ -3,19 +3,19 @@
     <head>
         <meta charset ="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="register.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!--This is my kit font awesome pls remind me-------------------------------------------->
         <script src="https://kit.fontawesome.com/92d742c429.js" crossorigin="anonymous"></script>
         <!--------------------------------------------------------------------------------------->
     </head>
     <body>
       <div>     
-        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark">
           <a class="navbar-brand" style="background-color:transparent;" href="index.html">Tap Hotel</a>
           <ul class ="nav navbar-nav">
               <li class ="nav-item"> 
@@ -55,33 +55,47 @@
         </nav>
     </div>
 
-        <form id="Register" action="register_action.php" style="border:1px solid #ccc" method = "POST">
+        <form id="Register" action="register_action.php"  method = "POST">
             <div class="container">
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
                 <hr>
+
+                <div class="form-group ">
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" class ="form-control" required>
+                </div>
+
+                <div class="form-group ">
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" class ="form-control" name="psw" required>
+                </div>
           
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-          
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-          
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <div class="form-group ">
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" class ="form-control" name="psw-repeat" required>
+                </div>
                 
-                <label for="Firstname"><b>Firstname</b></label>
-                <input type="text" placeholder="Enter Firstname" name="Firstname" required>
+                <div class="form-group ">
+                  <label for="Firstname"><b>Firstname</b></label>
+                  <input type="text" placeholder="Enter Firstname" class ="form-control" name="Firstname" required>
+                </div>
                 
-                <label for="Lastname"><b>Lastname</b></label>
-                <input type="text" placeholder="Enter Lastname" name="Lastname" required>
+                <div class="form-group ">
+                  <label for="Lastname"><b>Lastname</b></label>
+                  <input type="text" placeholder="Enter Lastname" class ="form-control" name="Lastname" required>
+                </div>
     
-                <label for="CitizenID"><b>CitizenID</b></label>
-                <input type="text" placeholder="Enter CitizenID" name="CitizenID" required>
-    
+                <div class="form-group ">
+                  <label for="CitizenID"><b>CitizenID</b></label>
+                  <input type="text" placeholder="Enter CitizenID" class ="form-control" name="CitizenID" required>
+                </div>
+
+              <div class="form-group ">
                 <label for="Address"><b>Address</b></label>
-                <input type="text" placeholder="Enter Address" name="Address" required>
+                <input type="text" placeholder="Enter Address" class ="form-control" name="Address" required>
                 <label>
+              </div>
                 <input type="checkbox" name="remember" style="margin-bottom:15px"> Are you sure to summit
                 </label>
           
