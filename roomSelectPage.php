@@ -1,7 +1,3 @@
-<?php
-// Start the session
-session_start();
-?>
 
 <!Doctype html>
 <html>
@@ -22,112 +18,115 @@ session_start();
     <body>
      
     <div>     
-        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-          <a class="navbar-brand" style="background-color:transparent;" href="index.html">Tap Hotel</a>
-          <ul class ="nav navbar-nav">
-              <li class ="nav-item"> 
-                 <a class="nav-link " href="#">Link1</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link2</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-          </ul>
-          <ul class=" nav navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a> 
-                <div class="dropdown-menu dropdown-menu-right p-3">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a href="#" class="navbar-brand">Tap Hotel</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">Room Reservation</a>
+            <a href="#" class="nav-item nav-link">Food Service</a>
+            <a href="#" class="nav-item nav-link" tabindex="-1">Other Service</a>
+          </div>
+          <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+          <div class="dropdown-menu dropdown-menu-right p-3">
                     <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
                         <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
                         <input class="form-control login" type="text" name="password" placeholder="Password" id="pass">
                         <input class="btn btn-primary" type="submit" name="submit" value="Login">
                     </form>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href=register.php> <i class="fas fa-user-plus"></i> Sign up</a> 
-             </li>
-          </ul>
-        </nav>
-    </div>
-    <div>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block mx-auto" width="100%" height=650px  src="./picHotelRoom/black1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block mx-auto" width="100%" height=650px src="./picHotelRoom/beach2_5.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block  mx-auto" width="100%" height=650px src="./picHotelRoom/hotel2_5.jpg" alt="Third slide">
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-                </a>
-            </div>
-    </div>
-    <div class="area">
-        <div class ="areaHeader">
-            <h3><b>ROOMS & VILLAS</b></h3>
-            <div class = inside>
-                <p>With warm hues and a slight pop of color, the villas at Crimson Mactan Resort and Spa is bound to make you a striking first impression.<br>
-                Imagine taking a nap on a plush four-poster canopy bed with interiors immersed in local architecture at the best Beach resort in Mactan,<br>
-                Cebu. Each of our spacious villas and luxurious casitas features polished teak floors, locally-sourced Cebuano décor and beautiful domed<br>
-                ceilings made of woven Banig. Feel at home in an expansive living area that leads to mesmerizing views of the pristine Mactan sea from<br>
-                your own private plunge pool. Drained from the day’s activities? Relax and unwind in the sunk-in tub within the most elegant bathroom.<br>
-                </p>
-            </div>
+          </div>
+          <a href="register.php" class="nav-item nav-link"> Sign up</a>
+          </div>
         </div>
+      </nav>
     </div>
+    
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./picHotelRoom/black1.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./picHotelRoom/beach2_5.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./picHotelRoom/hotel2_5.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
-    <div >
-        <div class="pic1">
-            <img src="./picHotelRoom/beach1.jpg" class="pic1" alt="Room type1">
-            <div class="insideSet1">
-                <h2><b>Room Type1</b></h2>
-            </div>
-            <button href=# class=buttonInsideSet1><b>Book now</b></button>
-            <button href=# class=buttonInsideSet1_2><b>View more</b></button>
-        </div>  
+  <div class="row about">
+    <div class="container">
+      <div class="w3ls-heading">
+        <h4> ROOM & VILLAS</h4>
+      </div>
+      <p>With warm hues and a slight pop of color, the villas at Crimson Mactan Resort and Spa is bound to make you a striking first impression.<br>Imagine taking a nap on a plush four-poster canopy bed with interiors immersed in local architecture at the best Beach resort in Mactan,<br> Cebu. Each of our spacious villas and luxurious casitas features polished teak floors, locally-sourced Cebuano décor and beautiful domed ceilings made of woven Banig. Feel at home in an expansive living area that leads to mesmerizing views of the pristine Mactan sea from your own private plunge pool. Drained from the day’s activities? Relax and unwind in the sunk-in tub within the most elegant bathroom.</p>
     </div>
-  <div>
-    <div class ="set2">
-        <div class = "inline-block">
-            <img src="./picHotelRoom/deluxe.jpg"class="set2">
-            <div class="insideSet2">
-                <h2><b>Room Type2</b></h2>
-            </div>
-            <button href=# class=buttonInsideSet2><b>Book now</b></button>
-                <button href=# class=buttonInsideSet2_2><b>View more</b></button>
-        </div>
-        <div class = "inline-block">
-            <img src="./picHotelRoom/private.jpg" class="set2">
-            <div class="insideSet3">
-                <h2><b>Room Type3</b></h2>
-            </div>
-            <button href=# class=buttonInsideSet3><b>Book now</b></button>
-            <button href=# class=buttonInsideSet3_2><b>View more</b></button>
-        </div>
+  </div>
+
+  <div class="about_2">
+    <div class=grid>
+      <figure class="effect-apollo">
+        <a class="example-image-link" href="type3.php" data-lightbox="example-set">  
+        <img src="./picHotelRoom/beach1.jpg" class=" img-fluid">
+        <figcaption>
+          <h2>Beach Casita</h2>
+          <p>One of our finest room</p>
+		    </figcaption>	
+        </a>
+    </figure>
     </div>
-  </div> 
-  <div style>
+  </div>
+
+  <div class="about_3">
+    <div class="row">
+      <div class="col">
+        <div class=grid>
+          <figure class="effect-apollo">
+            <a class="example-image-link" href="type1.php">  
+              <img src="./picHotelRoom/deluxe.jpg" class=" float-left img-fluid">
+              <figcaption>
+                <h2>DELUXE GARDEN</h2>
+                <p>Your family will feel the truthly confortable</p>
+		          </figcaption>	
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div class="col"> 
+      <div class=grid>
+          <figure class="effect-apollo">
+            <a class="example-image-link" href="type2.php">  
+            <img src="./picHotelRoom/private.jpg"   class="float-right img-fluid" >
+              <figcaption>
+                <h2>BEACH VILLA</h2>
+                <p>Spectacular will for this room</p>
+		          </figcaption>	
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div >
       <footer class ="page-footer">
         <div class="container">
             <div class = "row">
