@@ -88,11 +88,11 @@
               </div>
               <div class="w-100"></div>
               <div class="w3l-button col">
-					      <a href="#" data-toggle="modal" data-target="#myModal">Book Now</a>
+					      <a href="#" data-toggle="modal" >Book Now</a>
               </div>
               <div class="w3l-button col" >
-						    <a href="#" data-toggle="modal" data-target="#myModal">View More</a>
-              </div>
+						    <a href="roomSelectPage.php" >View More</a>
+              </div>  
 
             </div>
           <div class="w3ls-heading" style="padding-bottom: 2%;">  
