@@ -25,16 +25,16 @@
      
     <div class="banner">     
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a href="#" class="navbar-brand">Tap Hotel</a>
+      <a href="index.php" class="navbar-brand">Tap Hotel</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">Room Reservation</a>
-            <a href="#" class="nav-item nav-link">Food Service</a>
-            <a href="#" class="nav-item nav-link" tabindex="-1">Other Service</a>
+            <a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+            <a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Room Reservation</a>
+            <a href="#" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food Service</a>
+            <a href="#" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Other Service</a>
           </div>
           <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
