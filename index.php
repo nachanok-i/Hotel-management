@@ -50,7 +50,7 @@ session_start();
                         <input class="btn btn-primary" type="submit" name="submit" value="Login">
                     </form>
           </div>
-          <a href="register.php" class="nav-item nav-link"> Sign up</a>
+          <a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
           </div>
         </div>
       </nav>
