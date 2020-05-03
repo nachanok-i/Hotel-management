@@ -56,7 +56,7 @@
       <div class="about">
         <div class="container">
           <div class="w3ls-heading">  
-            <h2>Deluxe Garden</h2>
+            <h2>Deluxe</h2>
           </div>
           <div clas="w3-about-grids">
             <div class="row">

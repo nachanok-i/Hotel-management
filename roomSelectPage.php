@@ -87,7 +87,7 @@
         <a class="example-image-link" href="type3.php" data-lightbox="example-set">  
         <img src="./picHotelRoom/beach1.jpg" class=" img-fluid">
         <figcaption>
-          <h2>Beach Casita</h2>
+          <h2>Suit</h2>
           <p>One of our finest room</p>
 		    </figcaption>	
         </a>
@@ -103,7 +103,7 @@
             <a class="example-image-link" href="type1.php">  
               <img src="./picHotelRoom/deluxe.jpg" class=" float-left img-fluid">
               <figcaption>
-                <h2>DELUXE GARDEN</h2>
+                <h2>DELUXE</h2>
                 <p>Your family will feel the truthly confortable</p>
 		          </figcaption>	
             </a>
@@ -116,7 +116,7 @@
             <a class="example-image-link" href="type2.php">  
             <img src="./picHotelRoom/private.jpg"   class="float-right img-fluid" >
               <figcaption>
-                <h2>BEACH VILLA</h2>
+                <h2>Elite</h2>
                 <p>Spectacular will for this room</p>
 		          </figcaption>	
             </a>
