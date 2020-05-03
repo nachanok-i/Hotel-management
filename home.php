@@ -21,8 +21,8 @@
     </head>
     <body>
      
-    <div>     
-        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div>
+        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
           <a class="navbar-brand" style="background-color:transparent;" href="index.html">Tap Hotel</a>
           <ul class ="nav navbar-nav">
               <li class ="nav-item"> 
@@ -45,6 +45,18 @@
               </li>
           </ul>
           <ul class=" nav navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a> 
+                <div class="dropdown-menu dropdown-menu-right p-3">
+                    <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
+                        <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
+                        <input class="form-control login" type="text" name="password" placeholder="Password" id="pass">
+                        <input class="btn btn-primary" type="submit" name="submit" value="Login">
+                    </form>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=register.html> <i class="fas fa-user-plus"></i> Sign up</a> 
               <li class="nav-item">
                 <a class="nav-link" href=#> <i class="fas fa-user-alt"></i> <?php echo $email ?></a> 
               </li>
@@ -54,5 +66,4 @@
           </ul>
         </nav>
     </div>
-    
 </html> 
