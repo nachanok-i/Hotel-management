@@ -1,7 +1,5 @@
 .about_2 {
     padding : 0.5em 0;
-
-    background-repeat: no-repeat;
 }
 
 .about_3 {
@@ -67,6 +65,7 @@
 .about {
     padding: 3em 0;
 }
+
 .w3-about-grids {
     margin-top: 5em;
     
@@ -353,3 +352,49 @@ figure.effect-apollo:hover h2,h1,h3{
 .gallery-grids {
     margin-top: 4em;
 } 
+
+.carousel {
+    height: 100%;
+  }
+  
+  .carousel-item,
+  .carousel-inner,
+  .carousel-inner img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+    transition: box-shadow .3s ease-out;
+  }
+  
+  .carousel-item {
+    text-align: center;
+  }
+
+.colorPlate{
+    background-color: grey;
+}
+
+.drk:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#000;
+    opacity:0.5;
+}
+
+
+
+.ccd {
+    background: rgba(0,0,0,0.6);
+}
+ .carousel-caption  {
+    top: 15%;
+    font-size: 5em;
+    color:white;
+ }
+
