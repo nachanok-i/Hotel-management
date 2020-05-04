@@ -61,25 +61,22 @@
       <div class="carousel-inner">
         <div class="carousel-item drk active">
           <img class=" img-fluid" src="./picHotelRoom/black1.jpg" alt="First slide">
-          <div class="carousel-caption d-none d-md-block w-50 ml-auto mr-auto">
+          <div class="carousel-caption d-block">
             <p>CALINA HOTEL</p>
-            <h5 style="font-size:20%;">Hope you happy with our service</h5>
             <a target="_blank" href="booking.php" class="btn btn-danger btn-lg btn-rounded">Book NOW</a>
           </div>
         </div>
         <div class="carousel-item drk">
           <img class="img-fluid" src="./picHotelRoom/beach2_5.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block w-50 ml-auto mr-auto">
+          <div class="carousel-caption d-block">
             <p>CALINA HOTEL</p>
-            <h5 style="font-size:20%;">Hope you happy with our service</h5>
             <a target="_blank" href="booking.php" class="btn btn-danger btn-lg btn-rounded">Book NOW</a>
           </div>
         </div>
         <div class="carousel-item drk">
           <img class="img-fluid" href="http://google.com" src="./picHotelRoom/hotel2_5.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block w-50 ml-auto mr-auto">
+          <div class="carousel-caption d-block">
             <p>CALINA HOTEL</p>
-            <h5 style="font-size:20%;">Hope you happy with our service</h5>
             <a target="_blank" href="booking.php" class="btn btn-danger btn-lg btn-rounded">Book NOW</a>
           </div>
         </div>
