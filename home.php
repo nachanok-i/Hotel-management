@@ -1,7 +1,14 @@
 <?php
   // Start the session
   session_start();
-  $email = $_SESSION["email"];
+  if ($_SESSION["email"] == NULL)
+    {
+      echo '<script>
+    window.location.href="index.php";
+    </script>';
+    }
+  else
+    $email = $_SESSION["email"];
 ?>
 
 <!Doctype html>

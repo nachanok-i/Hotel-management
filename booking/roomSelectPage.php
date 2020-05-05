@@ -19,7 +19,7 @@
      
     <div>     
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a href="#" class="navbar-brand">Tap Hotel</a>
+        <a href="home.php" class="navbar-brand"><img src="logo/nyxlogo.png" class="img-responsive logo"></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>

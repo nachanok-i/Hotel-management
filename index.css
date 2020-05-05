@@ -2,8 +2,10 @@ html, body{
     font-size: 100%;
 	font-family: 'Prompt', sans-serif;
 	background:#ffffff;
-	margin: 0;
+    margin: 0;
+    padding: 0;
 }
+
 p,ul li,ol li{
 	margin:0;
 	font-size:14px;
@@ -16,9 +18,16 @@ ul,label{
 	margin:0;
 	padding:0;
 }
+/*navbar*/
+.navbar-brand img{
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 body a:hover{
 	text-decoration:none;
-}   
+}
 
 .w3-banner{
     padding:13em 0;

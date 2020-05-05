@@ -28,19 +28,31 @@ session_start();
     </head>
     <body>
      
-    <div class="banner">     
+    <div class="banner">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a href="#" class="navbar-brand">Tap Hotel</a>
+		<a href="home.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">Room Reservation</a>
-            <a href="#" class="nav-item nav-link">Food Service</a>
-            <a href="#" class="nav-item nav-link" tabindex="-1">Other Service</a>
-          </div>
+		  	<li class="nav-item">
+				<a href="#" class="nav-item nav-link">Find Branch</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-item nav-link">Promotion</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-item nav-link">Service & Facility</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-item nav-link">Views</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-item nav-link">Contact</a>
+			</li>  
+		</div>
+		  <!-- login -->
           <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
           <div class="dropdown-menu dropdown-menu-right p-3">
@@ -54,9 +66,10 @@ session_start();
           </div>
         </div>
       </nav>
+	  <!-- body -->
         <div class="w3-banner">
 				  <div id="typer"></div>
-				</div>	
+				</div>
       </div>
       
       <div class="about">

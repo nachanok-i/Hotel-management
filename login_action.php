@@ -27,7 +27,7 @@
     {
     echo '<script>
     alert("Invalid password or email");
-    window.location.href="register.php";
+    window.location.href="index.php";
     </script>';
     }
     else

@@ -14,45 +14,32 @@
         <!--------------------------------------------------------------------------------------->
     </head>
     <body>
-      <div>     
-        <nav class ="navbar navbar-expand-sm bg-dark navbar-dark">
-          <a class="navbar-brand" style="background-color:transparent;" href="index.html">Tap Hotel</a>
-          <ul class ="nav navbar-nav">
-              <li class ="nav-item"> 
-                 <a class="nav-link " href="#">Link1</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link2</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-              <li class ="nav-item">
-                <a class="nav-link" href="#">Link3</a>
-              </li>
-          </ul>
-          <ul class=" nav navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a> 
-                <div class="dropdown-menu dropdown-menu-right p-3">
+    <div>     
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a href="home.php" class="navbar-brand"><img src="logo/nyxlogo.png" class="img-responsive logo"></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">Room Reservation</a>
+            <a href="#" class="nav-item nav-link">Food Service</a>
+            <a href="#" class="nav-item nav-link" tabindex="-1">Other Service</a>
+          </div>
+          <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+          <div class="dropdown-menu dropdown-menu-right p-3">
                     <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
                         <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
                         <input class="form-control login" type="text" name="password" placeholder="Password" id="pass">
                         <input class="btn btn-primary" type="submit" name="submit" value="Login">
                     </form>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href=register.php> <i class="fas fa-user-plus"></i> Sign up</a> 
-             </li>
-          </ul>
-        </nav>
+          </div>
+          <a href="register.php" class="nav-item nav-link"> Sign up</a>
+          </div>
+        </div>
+      </nav>
     </div>
 
         <form id="Register" action="register_action.php"  method = "POST">
