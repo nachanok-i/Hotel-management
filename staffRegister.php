@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="booking_hotel.css">
+  <link rel="stylesheet" type="text/css" href="staffRegister.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -113,70 +113,70 @@
         <hr>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="firstName">Firstname</label>
+            <label for="firstName"><b>Firstname</b></label>
             <input type="text" class="form-control  form-control-lg" name="firstName" id="firstName" placeholder="Your Firstname" required>
             <div class="invalid-feedback">please fill your name</div>
           </div>
           <div class="form-group col-md-6">
-            <label for="lastName">Lastname</label>
+            <label for="lastName"><b>Lastname</b></label>
             <input type="tex" class="form-control  form-control-lg" name="lastName" id="lastName" placeholder="Your Lastname" required>
           </div>
         </div>
         <div class="form-group">
-          <label for="email">Email address</label>
+          <label for="email"><b>Email address</b></label>
           <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="name@example.com" required>
         </div>
         <div class="form-group">
-          <label for="requiredSalary">Required Salary</label>
+          <label for="requiredSalary"><b>Required Salary</b></label>
           <input type="number" class="form-control form-control-lg" name="requiredSalary" id="requiredSalary" placeholder="Required Salary" required>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity" required>
+            <label for="inputCity"><b>City</b></label>
+            <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity" placeholder="Enter City" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="street">Street</label>
-            <input type="text" class="form-control form-control-lg" name="street" id="street" required>
+            <label for="street"><b>Street</b></label>
+            <input type="text" class="form-control form-control-lg" name="street" id="street" placeholder="Enter Street" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="state">State</label>
-            <input type="text" class="form-control form-control-lg" name="state" id="state" required>
+            <label for="state"><b>State</b></label>
+            <input type="text" class="form-control form-control-lg" name="state" id="state" placeholder="Enter State" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
-            <label for="zipCode">Zip Code</label>
-            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode" required>
+            <label for="zipCode"><b>Zip Code</b></label>
+            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode"  placeholder="Enter Zipcode" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="country">Country</label>
-            <input type="text" class="form-control form-control-lg" name="country" id="country" required>
+            <label for="country"><b>Country</b></label>
+            <input type="text" class="form-control form-control-lg" name="country" id="country" placeholder="Enter Country" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="nationality">Nationality</label>
-            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" required>
+            <label for="nationality"><b>Nationality</b></label>
+            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" placeholder="Enter Nationality" required>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number</label>
+          <label for="phone"><b>Phone Number</b></label>
           <input type="number" class="form-control form-control-lg" name="phone" id="phone" placeholder="Your Phone Number" required>
         </div>
 
         <div class="form-group">
-          <label for="position">Position</label>
+          <label for="position"><b>Position</b></label>
           <input type="text" class="form-control form-control-lg" name="position" id="positon" placeholder="Enter Position" required>
         </div>
 
         <div class="form-group">
-          <label for="starDate">Start Date</label>
+          <label for="starDate"><b>Start Date</b></label>
           <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date" readonly="readonly"  required>
         </div>
 
         <div class="form-group">
           <label for="Branch">
-            Branch
+          <b>Branch</b>
           </label>
           <select name="Branch" class="form-control form-control-lg" require>
             <option value="">Select Branch</option>
@@ -194,15 +194,15 @@
         <h4>Gender</h4>
         <div class="custom-control custom-radio">
           <input type="radio" id="customRadio1" name="gender" class="custom-control-input" required>
-          <label class="custom-control-label" for="customRadio1">Male</label>
+          <label class="custom-control-label" for="customRadio1"><b>Male</b></label>
         </div>
         <div class="custom-control custom-radio">
           <input type="radio" id="customRadio2" name="gender" class="custom-control-input" required>
-          <label class="custom-control-label" for="customRadio2">Female</label>
+          <label class="custom-control-label" for="customRadio2"><b>Female</b></label>
         </div>
         <div class="custom-control custom-radio">
           <input type="radio" id="customRadio3" name="gender" class="custom-control-input" required>
-          <label class="custom-control-label" for="customRadio3">Other</label>
+          <label class="custom-control-label" for="customRadio3"><b>Other</b></label>
         </div>
 
         <h4>Your Picture</h4>

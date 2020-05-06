@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="booking_hotel.css">
+  <link rel="stylesheet" type="text/css" href="staffRegister.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -76,6 +76,7 @@
 
 </head>
 
+
 <body>
   <div>
     <div>
@@ -113,12 +114,12 @@
         <hr>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="firstName">Firstname</label>
+            <label for="firstName"><b>Firstname</b></label>
             <input type="text" class="form-control  form-control-lg" name="firstName" id="firstName" placeholder="Your Firstname" required>
             <div class="invalid-feedback">please fill your name</div>
           </div>
           <div class="form-group col-md-6">
-            <label for="lastName">Lastname</label>
+            <label for="lastName"><b>Lastname</b></label>
             <input type="text" class="form-control  form-control-lg" name="lastName" id="lastName" placeholder="Your Lastname" required>
           </div>
         </div>
@@ -137,29 +138,29 @@
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
-            <label for="inputCity">City</label>
+            <label for="inputCity"><b>City</b></label>
             <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="street">Street</label>
+            <label for="street"><b>Street</b></label>
             <input type="text" class="form-control form-control-lg" name="street" id="street" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="state">State</label>
+            <label for="state"><b>State</b></label>
             <input type="text" class="form-control form-control-lg" name="state" id="state" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
-            <label for="zipCode">Zip Code</label>
+            <label for="zipCode"><b>Zip Code</b></label>
             <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="country">Country</label>
+            <label for="country"><b>Country</b></label>
             <input type="text" class="form-control form-control-lg" name="country" id="country" required>
           </div>
           <div class="form-group col-sm-3 my-1">
-            <label for="nationality">Nationality</label>
+            <label for="nationality"><b>Nationality</b></label>
             <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" required>
           </div>
         </div>
