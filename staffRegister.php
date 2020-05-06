@@ -77,7 +77,7 @@
 </head>
 
 <body>
-  <div class="image-box" style="--image-url: url(./picHotelRoom/background.jpg)">
+  <div >
     <div>
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a href="index.php" class="navbar-brand">Tap Hotel</a>
@@ -106,7 +106,7 @@
       </nav>
     </div>
 
-    <form id="staffRegister" action="#" style="border:1px solid #ccc" method="POST">
+    <form id="staffRegister" action="#"  method="POST">
       <div class="container pt-3 bg grey">
         <h1>Staff Register</h1>
         <p>Please fill the infomation.</p>
