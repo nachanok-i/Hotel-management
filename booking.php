@@ -1,12 +1,3 @@
-<?php
-require_once "config.php";
-$query = "SELECT * FROM Branch ORDER BY branchID";
-$query_2 = "SELECT * FROM Furniture ";
-$result_2 = $conn->query($query_2);
-$result = $conn->query($query);
-?>
-
-
 <!Doctype html>
 <html>
 
