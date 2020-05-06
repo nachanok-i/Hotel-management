@@ -114,64 +114,64 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="firstName">Firstname</label>
-            <input type="text" class="form-control  form-control-lg" name="firstName" id="firstName" placeholder="Your Firstname">
+            <input type="text" class="form-control  form-control-lg" name="firstName" id="firstName" placeholder="Your Firstname" required>
             <div class="invalid-feedback">please fill your name</div>
           </div>
           <div class="form-group col-md-6">
             <label for="lastName">Lastname</label>
-            <input type="tex" class="form-control  form-control-lg" name="lastName" id="lastName" placeholder="Your Lastname">
+            <input type="tex" class="form-control  form-control-lg" name="lastName" id="lastName" placeholder="Your Lastname" required>
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="name@example.com">
+          <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="name@example.com" required>
         </div>
         <div class="form-group">
           <label for="requiredSalary">Required Salary</label>
-          <input type="number" class="form-control form-control-lg" name="requiredSalary" id="requiredSalary" placeholder="Required Salary">
+          <input type="number" class="form-control form-control-lg" name="requiredSalary" id="requiredSalary" placeholder="Required Salary" required>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity">
+            <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="street">Street</label>
-            <input type="text" class="form-control form-control-lg" name="street" id="street">
+            <input type="text" class="form-control form-control-lg" name="street" id="street" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="state">State</label>
-            <input type="text" class="form-control form-control-lg" name="state" id="state">
+            <input type="text" class="form-control form-control-lg" name="state" id="state" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
             <label for="zipCode">Zip Code</label>
-            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode">
+            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="country">Country</label>
-            <input type="text" class="form-control form-control-lg" name="country" id="country">
+            <input type="text" class="form-control form-control-lg" name="country" id="country" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="nationality">Nationality</label>
-            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality">
+            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" required>
           </div>
         </div>
 
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="number" class="form-control form-control-lg" name="phone" id="phone" placeholder="Your Phone Number">
+          <input type="number" class="form-control form-control-lg" name="phone" id="phone" placeholder="Your Phone Number" required>
         </div>
 
         <div class="form-group">
           <label for="position">Position</label>
-          <input type="text" class="form-control form-control-lg" name="position" id="positon" placeholder="Enter Position">
+          <input type="text" class="form-control form-control-lg" name="position" id="positon" placeholder="Enter Position" required>
         </div>
 
         <div class="form-group">
           <label for="starDate">Start Date</label>
-          <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date">
+          <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date" readonly="readonly"  required>
         </div>
 
         <div class="form-group">
@@ -193,21 +193,21 @@
         </div>
         <h4>Gender</h4>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio1" name="gender" class="custom-control-input">
+          <input type="radio" id="customRadio1" name="gender" class="custom-control-input" required>
           <label class="custom-control-label" for="customRadio1">Male</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio2" name="gender" class="custom-control-input">
+          <input type="radio" id="customRadio2" name="gender" class="custom-control-input" required>
           <label class="custom-control-label" for="customRadio2">Female</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio3" name="gender" class="custom-control-input">
+          <input type="radio" id="customRadio3" name="gender" class="custom-control-input" required>
           <label class="custom-control-label" for="customRadio3">Other</label>
         </div>
 
         <h4>Your Picture</h4>
         <div class="form-group">
-          <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture" accept="image/*">
+          <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture" accept="image/*" required>
         </div>
 
         <div class="clearfix">
