@@ -1,6 +1,5 @@
 <!Doctype html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +17,14 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+
+  <?php
+    require_once "config.php";
+    $query = "SELECT * FROM Branch ORDER BY branchID";
+    $query_2 = "SELECT * FROM Furniture ";
+    $result_2 = $conn->query($query_2);
+    $result = $conn->query($query);
+    ?>
 
   <script>
     $(document).ready(function() {
