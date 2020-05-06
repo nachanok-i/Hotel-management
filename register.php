@@ -139,31 +139,32 @@
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
             <label for="inputCity"><b>City</b></label>
-            <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity" required>
+            <input type="text" class="form-control form-control-lg" name="inputCity" id="inputCity" placeholder="Enter City" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="street"><b>Street</b></label>
-            <input type="text" class="form-control form-control-lg" name="street" id="street" required>
+            <input type="text" class="form-control form-control-lg" name="street" id="street" placeholder="Enter Street" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="state"><b>State</b></label>
-            <input type="text" class="form-control form-control-lg" name="state" id="state" required>
+            <input type="text" class="form-control form-control-lg" name="state" id="state" placeholder="Enter State" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
             <label for="zipCode"><b>Zip Code</b></label>
-            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode" required>
+            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode"  placeholder="Enter Zipcode" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="country"><b>Country</b></label>
-            <input type="text" class="form-control form-control-lg" name="country" id="country" required>
+            <input type="text" class="form-control form-control-lg" name="country" id="country" placeholder="Enter Country" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="nationality"><b>Nationality</b></label>
-            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" required>
+            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" placeholder="Enter Nationality" required>
           </div>
         </div>
+
         <h4>Your Picture</h4>
         <div class="form-group">
           <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture" accept="image/*" required>

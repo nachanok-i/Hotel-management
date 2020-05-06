@@ -161,7 +161,7 @@
 
         <div class="form-group">
           <label for="phone"><b>Phone Number</b></label>
-          <input type="number" class="form-control form-control-lg" name="phone" id="phone" placeholder="Your Phone Number" required>
+          <input type="tel" class="form-control form-control-lg" name="phone" id="phone" placeholder="Your Phone Number" required>
         </div>
 
         <div class="form-group">
