@@ -59,12 +59,6 @@
 
 
   <script>
-    $(document).ready(function() {
-      $('#datetimepicker1').datetimepicker();
-    });
-  </script>
-
-  <script>
     /* Date picker */
     $(document).ready(function() {
 
@@ -176,8 +170,8 @@
         </div>
 
         <div class="form-group">
-          <label for="starDate">Working Time</label>
-          <input type="text" class="form-control form-control-lg" name="startDate" id="datetimepicker1" placeholder="Enter Working Time">
+          <label for="starDate">Start Date</label>
+          <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date">
         </div>
 
         <div class="form-group">
@@ -213,7 +207,7 @@
 
         <h4>Your Picture</h4>
         <div class="form-group">
-          <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture">
+          <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture" accept="image/*">
         </div>
 
         <div class="clearfix">

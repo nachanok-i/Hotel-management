@@ -187,13 +187,13 @@
                     <div class="form-row">
                         <div class="col-md-3">
                             <label for="From">
-                                <h4><b>Depart</b></h4>
+                                <h4><b>Arrive</b></h4>
                                 </lable>
                                 <input type="text" name="From" readonly="readonly" placeholder="DD-MM-YYYY" id="dt1" class="form-control form-control-lg" required>
                         </div>
                         <div class="col-md-3">
                             <label for="From">
-                                <h4><b>Arrive</b></h4>
+                                <h4><b>Depart</b></h4>
                                 </lable>
 
                                 <input type="text" name="To" readonly="readonly" placeholder="DD-MM-YYYY" id="dt2" class="form-control form-control-lg" required>
