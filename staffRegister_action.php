@@ -19,7 +19,6 @@ if (isset($_POST['submit'])) {
                 $fileActualExt;
             $fileDestination = './staffPicture/' . $fileNameNew;
             move_uploaded_file($fileTmpName, $fileDestination);
-            echo "upload scuccess";
         } else {
             echo '<script>
             alert("There something error in your file");
@@ -49,18 +48,26 @@ if (isset($_POST['submit'])) {
     $branch = $_POST['Branch'];
     $gender = $_POST['gender'];
     $picture =  $fileName;
-    $sql = "INSERT INTO EmployeeApplication(id,firstName, lastName, email, requiredSalary, startDate, street,city,state,zipCode,country,nationality,phone,imgURL,gender,position,branchID)  
-            VALUES('APP0000004','$firstName', '$lastName', '$email', '$requireSalary','$startDate', '$street', '$city','$state','$zipCode','$country','$nationality','$phone','$picture','$gender','$position','$branch')";
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $sql = "INSERT INTO EmployeeApplication(id,firstName, lastName, email, requiredSalary, startDate, street,city,state,zipCode,country,nationality,phone,imgURL,gender,position,branchID)  
+            VALUES('APP0000005','$firstName', '$lastName', '$email', '$requireSalary','$startDate', '$street', '$city','$state','$zipCode','$country','$nationality','$phone','$picture','$gender','$position','$branch')";
 
-    if ($conn->query($sql) === TRUE) {
-        $conn->close();
-        echo '<script>
+        if ($conn->query($sql) === TRUE) {
+            $conn->close();
+            echo '<script>
         alert("Register Successfully");
         window.location.href="index.php";
         </script>';
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+            $conn->close();
+        }
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
         $conn->close();
+        echo'<script>
+        alert("format of email is invalid");
+        window.location.href="staffRegister.php";
+        </script>';
     }
 } else {
     $conn->close();
