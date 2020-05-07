@@ -1,0 +1,265 @@
+@charset "UTF-8";
+th{text-align: center;}
+
+td{text-align: center;}
+
+body {
+	padding-top: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 20%;
+	background-color:#E5E7E9;
+	width : 450 px;
+	margin : auto;}
+
+label{
+	color: black;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+input{
+	border-radius: 5px;
+}
+
+h1,h2{
+	text-align: center;
+	float:inherit ;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	padding-top: 2.5%;}
+
+h3{
+	text-align: left;
+}
+
+footer{
+	float: center;
+	background-color: lightgray;
+}
+
+#icon{
+	width: 25px;
+	height: 25px;
+}
+
+#fillInfo{
+	background-color: lightgray;
+	color: white;
+	max-resolution: res;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	text-align: left;
+	padding-top: 3%;
+	padding-left: 5%;
+	padding-bottom: 3%;
+}
+
+/*--------------------------------------------------Order section---------------------------------------------------*/
+#orderT,#summaryT{
+	background-color: lightgrey; 
+}
+table{
+	width: 100%;
+	border : thin;
+	overflow-x:auto;
+}
+
+th{
+	background-color: #FF934E;
+	color : white;
+	padding: 8px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+}
+
+td{
+	padding: 4px;
+}
+
+/*--------------------------------------------------Table Row---------------------------------------------------*/
+tr{
+	border: solid;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+tr:hover{
+	background-color: darkgray ;
+	text-decoration-style: solid;
+	color :white ;
+}
+
+#buttonAdd{
+	background-color: #52BE80;
+	color: white;
+	text-transform: uppercase;
+	width : 100px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	transition-duration: 0.3s;
+	float: right;
+	cursor: pointer;
+	box-shadow: 0 5px #999;
+	border-radius: 8px;}
+
+#buttonAdd:hover{
+	background-color: #239B56;
+}
+
+#buttonR{
+	background-color: #FF6161;
+	color: white;
+	text-transform: uppercase;
+	width : 100px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	transition-duration: 0.3s;
+	float: right;
+	cursor: pointer;
+	box-shadow: 0 5px #999;
+	border-radius: 8px;
+}
+
+#buttonR:hover{
+	background-color: crimson;
+}
+
+#buttonP{
+	background-color: #52BE80;
+	color: white;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	box-shadow: 0 5px #999;
+	border-radius: 8px;
+}
+
+#buttonP:hover{
+	background-color: #239B56;
+}
+
+#buttonM{
+	background-color: #FF6161;
+	color: white;
+	transition-duration: 0.3s;
+	cursor: pointer;
+	box-shadow: 0 5px #999;
+	border-radius: 8px;
+}
+
+#buttonM:hover{
+	background-color: crimson;
+}
+
+.responsive{
+	width: 100%;
+	max-width: 200px;
+	height: 100%;
+	max-height: 200px;
+}
+
+.foodPic{
+	float: left;
+	background-color: lightgray;
+	padding-left:2% ;
+	padding-right:2% ;
+}
+
+/*=========================================SLIDESHOW==========================================*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#sumTable{
+	float: right;
+	width: 35%;
+	color : white;
+	border: thin;
+	border-color: lightgray;
+	background-color: gray;
+}
