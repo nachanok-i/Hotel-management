@@ -38,11 +38,11 @@ session_start();
 				<div class="navbar-nav">
 				<a href="home.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
 				<a href="branchSelect.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
-				<a href="#" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Dining</a>
+				<a href="#" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
 				<a href="#" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
 				</div>
 				<div class="navbar-nav ml-auto">
-				<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+				<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i> Login</a>
 					<div class="dropdown-menu dropdown-menu-right p-3">
 						<form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
 							<input class="form-control login" type="text" name="email" placeholder="Email" id="email">

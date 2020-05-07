@@ -14,14 +14,13 @@
     $password = stripcslashes($password);
     $email = mysqli_real_escape_string ($conn,$_REQUEST['email']);
     $password = mysqli_real_escape_string($conn,$_REQUEST['password']);
-    
-    //connect to database
-    require_once "config.php";
+    $password = sha1($password);
 
-    $query = "SELECT * FROM `Customer` WHERE email = '$email'
-    AND password = '".sha1($password)."'";
+    $query = "SELECT * FROM `Customer` WHERE email LIKE '%$email%'
+    AND password LIKE '%$password%'";
     $objQuery = mysqli_query($conn,$query) or die(mysqli_error());
-    $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
+    $objResult = mysqli_fetch_array($objQuery ,MYSQLI_ASSOC);
+
 
     if(!$objResult)
     {

@@ -18,7 +18,7 @@
         $output .= '<div class="form-group">';
         $output .= '    <div class="mb-3">';
         $output .= '        <label for="price">';
-        $output .= '            <h4><b>Price</b></h4>';
+        $output .= '            <b>Price</b>';
         $output .= '        </label>';
         $output .= '        <p><input type="text" name="price" id="price" readonly="readonly" placeholder="'.$row["price"].'" class="form-control form-control-lg "></p>';
         $output .= '    </div>';
@@ -30,7 +30,7 @@
         //     $output .=     '</div>';  
         //     $output .=     '</div>'; 
         // }
-        
+        $_SESSION['price'] = $row['price'];
         echo $output;
     }
 ?>
