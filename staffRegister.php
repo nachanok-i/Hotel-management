@@ -1,5 +1,6 @@
 <!Doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,12 +20,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
 
   <?php
-    require_once "config.php";
-    $query = "SELECT * FROM Branch ORDER BY branchID";
-    $query_2 = "SELECT * FROM Furniture ";
-    $result_2 = $conn->query($query_2);
-    $result = $conn->query($query);
-    ?>
+  require_once "config.php";
+  $query = "SELECT * FROM Branch ORDER BY branchID";
+  $query_2 = "SELECT * FROM Furniture ";
+  $result_2 = $conn->query($query_2);
+  $result = $conn->query($query);
+  ?>
 
   <script>
     $(document).ready(function() {
@@ -76,7 +77,7 @@
 </head>
 
 <body>
-  <div >
+  <div>
     <div>
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a href="index.php" class="navbar-brand">Tap Hotel</a>
@@ -105,7 +106,7 @@
       </nav>
     </div>
 
-    <form id="staffRegister" action="#"  method="POST">
+    <form id="staffRegister" action="staffRegister_action.php" method="POST" enctype="multipart/form-data">
       <div class="container pt-3 bg grey">
         <h1>Staff Register</h1>
         <p>Please fill the infomation.</p>
@@ -146,7 +147,7 @@
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
             <label for="zipCode"><b>Zip Code</b></label>
-            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode"  placeholder="Enter Zipcode" required>
+            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode" placeholder="Enter Zipcode" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="country"><b>Country</b></label>
@@ -170,12 +171,12 @@
 
         <div class="form-group">
           <label for="starDate"><b>Start Date</b></label>
-          <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date" readonly="readonly"  required>
+          <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date" readonly="readonly" required>
         </div>
 
         <div class="form-group">
           <label for="Branch">
-          <b>Branch</b>
+            <b>Branch</b>
           </label>
           <select name="Branch" class="form-control form-control-lg" require>
             <option value="">Select Branch</option>
@@ -187,31 +188,38 @@
             } else {
               echo '<option value="">Branch is not available</option>';
             }
+            $conn->close();
             ?>
           </select>
         </div>
         <h4>Gender</h4>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio1" name="gender" class="custom-control-input" required>
+          <input type="radio" id="customRadio1" value="M" name="gender" class="custom-control-input" required>
           <label class="custom-control-label" for="customRadio1"><b>Male</b></label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio2" name="gender" class="custom-control-input" required>
+          <input type="radio" id="customRadio2" value="F" name="gender" class="custom-control-input" required>
           <label class="custom-control-label" for="customRadio2"><b>Female</b></label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio3" name="gender" class="custom-control-input" required>
+          <input type="radio" id="customRadio3" value="other" name="gender" class="custom-control-input" required>
           <label class="custom-control-label" for="customRadio3"><b>Other</b></label>
         </div>
 
         <h4>Your Picture</h4>
-        <div class="form-group">
-          <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture" accept="image/*" required>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" name="yourPicture" accept="image/*" required>
+            <label class="custom-file-label" for="yourPicture">Choose Picture</label>
+          </div>
         </div>
 
         <div class="clearfix">
           <button type="submit" value="ignore" formaction="index.php" class="cancelbtn" formnovalidate>Cancel</button>
-          <button href="index.php" type="submit" class="signupbtn">Confirm</button>
+          <button href="index.php" type="submit" name="submit" class="signupbtn">Confirm</button>
         </div>
 
       </div>

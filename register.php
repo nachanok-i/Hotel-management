@@ -18,13 +18,6 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
-  <?php
-    require_once "config.php";
-    $query = "SELECT * FROM Branch ORDER BY branchID";
-    $query_2 = "SELECT * FROM Furniture ";
-    $result_2 = $conn->query($query_2);
-    $result = $conn->query($query);
-    ?>
   <script>
     $(document).ready(function() {
       $("#choose").mousedown(function(e) {
@@ -105,7 +98,7 @@
       </nav>
     </div>
 
-    <form id="Register" action="register_action.php" method="POST">
+    <form id="Register" action="register_action.php" method="POST" enctype="multipart/form-data">
       <div class="container pt-3 bg grey">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
@@ -122,6 +115,10 @@
           </div>
         </div>
         <div class="form-group ">
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" class="form-control  form-control-lg" name="email" required>
+        </div>
+        <div class="form-group ">
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" class="form-control  form-control-lg" name="psw" required>
         </div>
@@ -132,7 +129,7 @@
         </div>
         <div class="form-group ">
           <label for="CitizenID"><b>CitizenID</b></label>
-          <input type="number" placeholder="Enter CitizenID" class="form-control" name="CitizenID" required>
+          <input type="number" placeholder="Enter CitizenID" class="form-control form-control-lg" name="CitizenID" required>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
@@ -151,26 +148,30 @@
         <div class="form-row">
           <div class="form-group col-sm-3 my-1">
             <label for="zipCode"><b>Zip Code</b></label>
-            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode"  placeholder="Enter Zipcode" required>
+            <input type="number" class="form-control form-control-lg" name="zipCode" id="zipCode" placeholder="Enter Zipcode" required>
           </div>
           <div class="form-group col-sm-3 my-1">
             <label for="country"><b>Country</b></label>
             <input type="text" class="form-control form-control-lg" name="country" id="country" placeholder="Enter Country" required>
           </div>
-          <div class="form-group col-sm-3 my-1">
-            <label for="nationality"><b>Nationality</b></label>
-            <input type="text" class="form-control form-control-lg" name="nationality" id="nationality" placeholder="Enter Nationality" required>
-          </div>
+
         </div>
 
         <h4>Your Picture</h4>
-        <div class="form-group">
-          <input type="file" class="form-control-file form-control-lg" name="yourPicture" id="yourPicture" accept="image/*" required>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" name="yourPicture" accept="image/*" required>
+            <label class="custom-file-label" for="yourPicture">Choose Picture</label>
+          </div>
         </div>
+
 
         <div class="clearfix">
           <button type="submit" value="ignore" formaction="index.php" class="cancelbtn" formnovalidate>Cancel</button>
-          <button href="index.php" type="submit" class="signupbtn">Confirm</button>
+          <button href="index.php" type="submit" name="submit" class="signupbtn">Confirm</button>
         </div>
 
       </div>
