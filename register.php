@@ -98,7 +98,7 @@
       </nav>
     </div>
 
-    <form id="Register" action="register_action.php" method="POST" enctype="multipart/form-data">
+    <form id="Register" action="register_action.php" charset="UTF-8" method="POST" enctype="multipart/form-data">
       <div class="container pt-3 bg grey">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
@@ -116,7 +116,7 @@
         </div>
         <div class="form-group ">
           <label for="email"><b>Email</b></label>
-          <input type="email" placeholder="Enter Email" class="form-control  form-control-lg" name="email" required>
+          <input type="text" placeholder="Enter Email" class="form-control  form-control-lg"  name="email" required>
         </div>
         <div class="form-group ">
           <label for="psw"><b>Password</b></label>

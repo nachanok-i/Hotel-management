@@ -106,7 +106,7 @@
       </nav>
     </div>
 
-    <form id="staffRegister" action="staffRegister_action.php" method="POST" enctype="multipart/form-data">
+    <form id="staffRegister" action="staffRegister_action.php" charset="UTF-8" method="POST" enctype="multipart/form-data">
       <div class="container pt-3 bg grey">
         <h1>Staff Register</h1>
         <p>Please fill the infomation.</p>

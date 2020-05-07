@@ -17,9 +17,16 @@
         $email = $_POST['email'];
         $encryppsw = sha1($psw);
         $sql_citizenID = mysqli_query($conn, "SELECT citizenID FROM Customer WHERE citizenID='$citizenID'");
-        $sql_email = mysqli_query($conn, "SELECT email FROM Customer WHERE email='$email'");
+        $sql_email = mysqli_query($conn, "SELECT email FROM Customer WHERE email like '%$email%'");
         $result = mysqli_num_rows($sql_citizenID);
         $result_2 = mysqli_num_rows($sql_email);
+
+        if ($result_2 > 0) {
+            echo '<script>
+                alert("Email already used");
+                window.location.href="register.php";
+                </script>';
+        }
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo '<script>
@@ -27,7 +34,7 @@
                     window.location.href="register.php";
                     </script>';
         } else {
-            if (($psw == $pswRep) && ($result == 0)) {
+            if (($psw == $pswRep) && ($result_2 == 0)) {
                 $file = $_FILES['yourPicture'];
                 $fileName = $_FILES['yourPicture']['name'];
                 $fileTmpName = $_FILES['yourPicture']['tmp_name'];
@@ -72,15 +79,19 @@
                     echo 'error:' . $sql . "<br>" . $conn->error;
                     $conn->close();
                 }
-            }
-            else if (($psw != $pswRep) && ($result == 0)) {
+            } else if (($psw != $pswRep) && ($result_2 == 0)) {
                 $conn->close();
                 echo '<script>
         alert("Password from your both input are not the same");
         window.location.href="register.php";
             </script>';
-            } 
-            else {
+            } else if (($psw == $pswRep) && ($result_2 != 0)) {
+                $conn->close();
+                echo '<script>
+        alert("Email already used");
+        window.location.href="register.php";
+            </script>';
+            } else {
                 $conn->close();
                 echo '<script>
         alert("CitizenID already use");
@@ -88,7 +99,6 @@
             </script>';
             }
         }
-        
     } else {
         echo '<script>
     alert("There is something wrong with register form");
