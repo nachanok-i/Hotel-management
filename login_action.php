@@ -18,27 +18,24 @@
     //connect to database
     require_once "config.php";
 
-    $query = "SELECT * FROM `Customer` WHERE email = '$email'
+    $query = "SELECT * FROM `Customer` WHERE email like '%$email%'
     AND password = '".sha1($password)."'";
-    $objQuery = mysqli_query($conn,$query) or die(mysqli_error());
+    $objQuery = mysqli_query($conn,$query) or die(mysqli_error($conn));
     $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
 
     if(!$objResult)
     {
-    echo '<script>
-    alert("Invalid password or email");
-    window.location.href="register.php";
-    </script>';
+        echo '<script>
+        alert("Register Successfully");
+        window.location.href="index.php";
+        </script>';
     }
     else
     {
-        echo '<script>
-        alert("Login Successful");
-        window.location.href="home.php";
-        </script>';
+        echo "Login success!";
         $_SESSION["email"] = $objResult["email"];
+        header('Location: home.php');
         // $_SESSION["Status"] = $objResult["Status"];
         session_write_close();
     }
     mysqli_close($conn);
-?>
