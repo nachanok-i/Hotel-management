@@ -95,7 +95,7 @@ $email = $_SESSION["email"];
                     </div>
                     <div class="w-100"></div>
                     <div class="w3l-button col">
-                        <a href="roomSelectPage.php">Book Now</a>
+                        <a href="roomSelectPage_login.php">Book Now</a>
                     </div>
 
                 </div>
