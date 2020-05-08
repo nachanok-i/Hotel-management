@@ -87,7 +87,6 @@ if (isset($_SESSION['email']) != NULL) {
 					<div class="col-md-6 w3-about-left">
 						<h5>Hope you all happy with our service</h5>
 						<p>We will create for you an atmosphere of tranquility, subdued elegance and new expression for cosmopolitan life at its finest in the vibrant and green Filinvest City.</p>
-						<img src="./picHotelRoom/5.jpg " class="img2">
 					</div>
 
 				</div>
@@ -119,18 +118,55 @@ if (isset($_SESSION['email']) != NULL) {
 				</div>
 			</div>
 		</div>
-	<?php else : ?>
-		<div class="wrapper">
-			<div class="container-fluid">
+		<?php else : ?>
+		<div class="about">
+			<div class="container">
 				<div class="w3ls-heading">
-					<h2>Profile</h2>
+					<h2><b>Profile<b></h2>
 				</div>
 				<?php
 				$path = './customerPicture/';
 				if ($result->num_rows > 0) {
 					while ($row = mysqli_fetch_array($result)) {
 						$imgName = $row['profileImage'];
-						echo '<img src="' . $path . $imgName . '" alt="icon">';
+						echo '<img src="' . $path . $imgName . '" class="img-fluid img-thumbnail mx-auto d-block" alt="customer picture" >';
+						echo '<div clas="row">';
+							echo '<div class="col w3-about-left">';
+								echo '<h5> Firstname </h5>';
+								echo '<p style="font-size:2em;">'.$row['firstName'].'</p>';
+							echo '</div>';
+							echo '<div class="col w3-about-left">';
+								echo '<h5> Lastname </h5>';
+								echo '<p style="font-size:2em;">'.$row['lastName'].'</p>';
+							echo '</div>';
+							echo '<div class="w-100"></div>';
+							echo '<div class="col w3-about-left">';
+								echo '<h5> CitizenID </h5>';
+								echo '<p style="font-size:2em;">'.$row['citizenID'].'</p>';
+							echo '</div>';
+							echo '<div class="col w3-about-left">';
+								echo '<h5> Street </h5>';
+								echo '<p style="font-size:2em;">'.$row['street'].'</p>';
+							echo '</div>';
+							echo '<div class="w-100"></div>';	
+							echo '<div class="col w3-about-left">';
+								echo '<h5> City </h5>';
+								echo '<p style="font-size:2em;">'.$row['city'].'</p>';
+							echo '</div>';	
+							echo '<div class="col w3-about-left">';
+								echo '<h5> State </h5>';
+								echo '<p style="font-size:2em;">'.$row['state'].'</p>';
+							echo '</div>';
+							echo '<div class="w-100 "></div>';								
+							echo '<div class="col w3-about-left">';
+								echo '<h5> Zipcode </h5>';
+								echo '<p style="font-size:2em;">'.$row['zipCode'].'</p>';
+							echo '</div>';
+							echo '<div class="col w3-about-left">';
+								echo '<h5> Country </h5>';
+								echo '<p style="font-size:2em;">'.$row['country'].'</p>';
+							echo '</div>';
+						echo '</div>';
 					}
 				} else {
 					echo 'could not find customer picture';
@@ -250,7 +286,6 @@ if (isset($_SESSION['email']) != NULL) {
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<footer class="page-footer">
 		<div class="container">
@@ -271,6 +306,7 @@ if (isset($_SESSION['email']) != NULL) {
 		</div>
 	</footer>
 	</div>
+
 	<script src="js/easy-responsive-tabs.js"></script>
 	<script>
 		$(document).ready(function() {
