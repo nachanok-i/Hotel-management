@@ -21,81 +21,84 @@
         $result = mysqli_num_rows($sql_citizenID);
         $result_2 = mysqli_num_rows($sql_email);
 
-        if ($result_2 > 0) {
-            echo '<script>
-                alert("Email already used");
-                window.location.href="register.php";
-                </script>';
-        }
-
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo '<script>
-                    alert("invalid email format");
-                    window.location.href="register.php";
-                    </script>';
+        alert("invalid email format");
+        window.location.href="register.php";
+        </script>';
         } else {
-            if (($psw == $pswRep) && ($result_2 == 0)) {
-                $file = $_FILES['yourPicture'];
-                $fileName = $_FILES['yourPicture']['name'];
-                $fileTmpName = $_FILES['yourPicture']['tmp_name'];
-                $fileSize = $_FILES['yourPicture']['size'];
-                $fileError = $_FILES['yourPicture']['error'];
-                $fileType = $_FILES['yourPicture']['type'];
-
-                $fileExt = explode('.', $fileName);
-                $fileActualExt = strtolower(end($fileExt));
-                $alllowed = array('jpg', 'jpeg', 'png', 'pdf');
-                if (in_array($fileActualExt, $alllowed)) {
-                    if ($fileError === 0) {
-                        $fileNameNew = $fileName;
-                        $fileDestination = './customerPicture/' . $fileNameNew;
-                        move_uploaded_file($fileTmpName, $fileDestination);
-                    } else {
+            if (($result > 0) && ($result_2 > 0)) {
+                echo '<script>
+                alert("CitizenID and Email already used");
+                window.location.href="register.php";
+                </script>';
+            } else {
+                if ($result > 0) {
+                    echo '<script>
+            alert("CitizenID already used");
+            window.location.href="register.php";
+            </script>';
+                } else {
+                    if ($result_2 > 0) {
                         $conn->close();
                         echo '<script>
+                    alert("email already used");
+                    window.location.href="register.php";
+                    </script>';
+                    } else {
+                        if (($psw == $pswRep) && ($result_2 == 0) && ($result == 0)) {
+                            $file = $_FILES['yourPicture'];
+                            $fileName = $_FILES['yourPicture']['name'];
+                            $fileTmpName = $_FILES['yourPicture']['tmp_name'];
+                            $fileSize = $_FILES['yourPicture']['size'];
+                            $fileError = $_FILES['yourPicture']['error'];
+                            $fileType = $_FILES['yourPicture']['type'];
+
+                            $fileExt = explode('.', $fileName);
+                            $fileActualExt = strtolower(end($fileExt));
+                            $alllowed = array('jpg', 'jpeg', 'png', 'pdf');
+                            if (in_array($fileActualExt, $alllowed)) {
+                                if ($fileError === 0) {
+                                    $fileNameNew = $fileName;
+                                    $fileDestination = './customerPicture/' . $fileNameNew;
+                                    move_uploaded_file($fileTmpName, $fileDestination);
+                                } else {
+                                    $conn->close();
+                                    echo '<script>
                     alert("There something error in your file");
                     window.location.href="register.php";
                     </script>';
-                    }
-                } else {
-                    $conn->close();
-                    echo '<script>
+                                }
+                            } else {
+                                $conn->close();
+                                echo '<script>
                 alert("Your file type is not macth the requirement");
                 window.location.href="register.php";
                 </script>';
-                }
+                            }
 
-                $sql = "INSERT INTO Customer(firstName, lastName, email,password, citizenID, profileImage, street,city,state,zipCode,country)
+                            $sql = "INSERT INTO Customer(firstName, lastName, email,password, citizenID, profileImage, street,city,state,zipCode,country)
                 VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileName','$street','$city','$state','$zipCode','$country' )";
 
-                if ($conn->query($sql) === TRUE) {
-                    $conn->close();
-                    echo '<script>
+                            if ($conn->query($sql) === TRUE) {
+                                $conn->close();
+                                echo '<script>
                     alert("Register Successfully");
                     window.location.href="index.php";
                     </script>';
-                } else {
-                    echo 'error:' . $sql . "<br>" . $conn->error;
-                    $conn->close();
+                            } else {
+                                echo 'error:' . $sql . "<br>" . $conn->error;
+                                $conn->close();
+                            }
+                        } else {
+                            $conn->close();
+                            echo '<script>
+    alert("There was something wrong with you form");
+    window.location.href="register.php";
+        </script>';
+                        }
+                    }
                 }
-            } else if (($psw != $pswRep) && ($result_2 == 0)) {
-                $conn->close();
-                echo '<script>
-        alert("Password from your both input are not the same");
-        window.location.href="register.php";
-            </script>';
-            } else if (($psw == $pswRep) && ($result_2 != 0)) {
-                $conn->close();
-                echo '<script>
-        alert("Email already used");
-        window.location.href="register.php";
-            </script>';
-            } else {
-                $conn->close();
-                echo '<script>
-        alert("CitizenID already use");
-        window.location.href="register.php";
-            </script>';
             }
         }
     } else {
