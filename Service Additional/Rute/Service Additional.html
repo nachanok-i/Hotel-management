@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Service additional</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="serviceCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<h1>Service Detail</h1>
+	<div id = "fillInfo">
+		<form action="/action_page.php">
+  			<label class ="left" for="cname">Customer Name :</label>
+ 			<input type="text" id="fname" name="cname"><br><br>
+ 			<label class ="left" for="roomID">Room ID : </label>
+ 			<input type="text" id="lname" name="roomID"><br><br>
+			<label class ="left" for="bID">Branch ID : </label>
+ 			<input type="text" id="lname" name="bID"><br><br>
+			<label class ="left" for="date">Date : </label>
+ 			<input type="text" id="lname" name="roomID"><br><br>
+		</form>
+	</div>
+
+<!--------------------------------------------------Slideshow--------------------------------------------------->
+
+<div class="slideshow-container">
+
+	<div class="mySlides fade">
+ 		<div class="numbertext">1 / 3</div>
+ 		<img src="../Asset/spa.jpg" style="width:100%">
+  		<div class="text"><strong>Spa</strong></div>
+	</div>
+
+<div class="mySlides fade">
+  	<div class="numbertext">2 / 3</div>
+  		<img src="../Asset/massage.jpg" style="width:100%">
+  	<div class="text"><strong>Massage</strong></div>
+</div>
+
+<div class="mySlides fade">
+  	<div class="numbertext">3 / 3</div>
+  		<img src="../Asset/fitness.jpg" style="width:100%">
+  	<div class="text"><strong>Fitness</strong></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!--------------------------------------------------Order section--------------------------------------------------->
+	</br>
+	</br>
+
+	<h2>Service</h2>
+	<div id = "orderT">
+		<table>
+			<tr>
+				<th>Service List</th>
+				<th>Rate</th>
+			</tr>
+			<tr>
+				<td class ="left">Spa <button id = "buttonAdd">Add</button></td>
+				<td>1,200</td>
+			</tr>
+			<tr>
+				<td class ="left">Fitness Center<button id = "buttonAdd">Add</button></td>
+				<td>2,000</td>
+			</tr>
+			<tr>
+				<td class ="left">Massage Set 1<button id = "buttonAdd">Add</button></td>
+				<td>1,000</td>
+			</tr>
+			<tr>
+				<td class ="left">Massage Set 2<button id = "buttonAdd">Add</button></td>
+				<td>700</td>
+			</tr>
+			<tr>
+				<td class ="left">Laundry<button id = "buttonAdd">Add</button></td>
+				<td>400</td>
+			</tr>
+			<tr>
+				<td class ="left">Water Park<button id = "buttonAddD" >Add</button></td>
+				<td>6,000</td>
+			</tr>
+			<tr>
+				<td class ="left">Car Rental <button id = "buttonAddD">Add</button></td>
+				<td>1000/hr</td>
+			</tr>
+			<tr>
+				<td class ="left">Lounge Service<button id = "buttonAddD">Add</button></td>
+				<td>500</td>
+			</tr>
+			<tr>
+				<td class ="left">Camping<button id = "buttonAddD">Add</button></td>
+				<td>5,000</td>
+			</tr>
+			<tr>
+				<td class ="left">Wake-up call<button id = "buttonAddD">Add</button></td>
+				<td>250</td>
+			</tr>
+			<tr>
+				<td class ="left">Bar Service<button id = "buttonAddD">Add</button></td>
+				<td>4,000</td>
+			</tr>
+			<tr>
+				<td class ="left">Pet service<button id = "buttonAddD">Add</button></td>
+				<td>200/day</td>
+			</tr>
+
+	  </table>
+	</div>
+	</br>
+	</br>
+	</br>
+	
+	<h2>Summary</h2>
+	<div id = "summaryT">
+		<table>
+			<table>
+			<tr>
+				<th>Menu</th>
+				<th>Rate</th>
+				<th>Quantity</th>
+				<th>Amount</th>
+			</tr>
+			<tr>
+				<td class ="left">Chicken <button id = "buttonR">Remove</button></td>
+				<td>45</td>
+				<td> <button id = "buttonM"> - </button> 2 <button id = "buttonP"> + </button> </td>
+				<td> 90 </td>
+			</tr>
+			<tr>
+				<td class ="left">Steak <button id = "buttonR">Remove</button></td>
+				<td>45</td>
+				<td> <button id = "buttonM"> - </button> 4 <button id = "buttonP"> + </button> </td>
+				<td> 200 </td>
+			</tr>
+			<tr>
+				<td class ="left">Beef Rost <button id = "buttonR">Remove</button></td>
+				<td>45</td>
+				<td> <button id = "buttonM"> - </button> 1 <button id = "buttonP"> + </button> </td>
+				<td> 150 </td>
+			</tr>
+		</table>
+	</div>
+		</br>
+	<div>
+		<table id = "sumTable">
+			<tr>
+				<td>Subtotal</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td>TAX(7%)</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td>Other</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td style = "background-color: #29C2FF">Total</td>
+				<td style = "background-color: #29C2FF">45</td>
+			</tr>
+		</table>
+		<input type="submit"></input>
+	</div>
+
+</body>
+</html>
