@@ -49,8 +49,8 @@ if (isset($_POST['submit'])) {
     $gender = $_POST['gender'];
     $picture =  $fileName;
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $sql = "INSERT INTO EmployeeApplication(id,firstName, lastName, email, requiredSalary, startDate, street,city,state,zipCode,country,nationality,phone,imgURL,gender,position,branchID)  
-            VALUES('APP0000005','$firstName', '$lastName', '$email', '$requireSalary','$startDate', '$street', '$city','$state','$zipCode','$country','$nationality','$phone','$picture','$gender','$position','$branch')";
+        $sql = "INSERT INTO EmployeeApplication(firstName, lastName, email, requiredSalary, startDate, street,city,state,zipCode,country,nationality,phone,imgURL,gender,position,branchID)  
+            VALUES('$firstName', '$lastName', '$email', '$requireSalary','$startDate', '$street', '$city','$state','$zipCode','$country','$nationality','$phone','$picture','$gender','$position','$branch')";
 
         if ($conn->query($sql) === TRUE) {
             $conn->close();
