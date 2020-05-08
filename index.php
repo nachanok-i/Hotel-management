@@ -1,7 +1,11 @@
 <?php
 require_once "config.php";
 ?>
-<?php session_start(); ?>
+<?php session_start();
+if (isset($_SESSION['email']) != NULL) {
+	$userEmail = $_SESSION['email'];
+}
+?>
 <!Doctype html>
 <html>
 
@@ -25,6 +29,13 @@ require_once "config.php";
 	<!-- //font-awesome-icons -->
 	<link href="//fonts.googleapis.com/css?family=Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<?php
+	require_once "config.php";
+	if (isset($_SESSION['email']) != NULL) {
+		$query = "SELECT * FROM Customer WHERE email like '%$userEmail%'";
+		$result =  mysqli_query($conn, $query);
+	}
+	?>
 </head>
 
 <body>
@@ -66,48 +77,68 @@ require_once "config.php";
 			<div id="typer"></div>
 		</div>
 	</div>
-
-	<div class="about">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h2>Welcome</h2>
-			</div>
-			<div clas="w3-about-grids">
-				<div class="col-md-6 w3-about-left">
-					<h5>Hope you all happy with our service</h5>
-					<p>We will create for you an atmosphere of tranquility, subdued elegance and new expression for cosmopolitan life at its finest in the vibrant and green Filinvest City.</p>
-					<img src="./picHotelRoom/5.jpg " class="img2">
+	<?php if (isset($_SESSION['email']) == NULL) : ?>
+		<div class="about">
+			<div class="container">
+				<div class="w3ls-heading">
+					<h2>Welcome</h2>
 				</div>
+				<div clas="w3-about-grids">
+					<div class="col-md-6 w3-about-left">
+						<h5>Hope you all happy with our service</h5>
+						<p>We will create for you an atmosphere of tranquility, subdued elegance and new expression for cosmopolitan life at its finest in the vibrant and green Filinvest City.</p>
+						<img src="./picHotelRoom/5.jpg " class="img2">
+					</div>
 
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="popular-section-wthree">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h3>Our Service</h3>
-			</div>
-			<div class="popular-agileinfo">
-				<div class="col-md-3 popular-grid item1">
-					<i class="fa fa-cutlery" aria-hidden="true"></i>
-					<h4>Food</h4>
-					<p>We have varity food for customer to explore</p>
+		<div class="popular-section-wthree">
+			<div class="container">
+				<div class="w3ls-heading">
+					<h3>Our Service</h3>
 				</div>
-				<div class="col-md-3 popular-grid item2">
-					<i class="fa fa-moon-o" aria-hidden="true"></i>
-					<h4>Resting</h4>
-					<p>We have varity rooms for customer to choose for booking</p>
+				<div class="popular-agileinfo">
+					<div class="col-md-3 popular-grid item1">
+						<i class="fa fa-cutlery" aria-hidden="true"></i>
+						<h4>Food</h4>
+						<p>We have varity food for customer to explore</p>
+					</div>
+					<div class="col-md-3 popular-grid item2">
+						<i class="fa fa-moon-o" aria-hidden="true"></i>
+						<h4>Resting</h4>
+						<p>We have varity rooms for customer to choose for booking</p>
+					</div>
+					<div class="col-md-3 popular-grid popular-grid-bottom item3">
+						<i class="fa fa-car" aria-hidden="true"></i>
+						<h4>Service</h4>
+						<p>We have varity services for customer to choose for using</p>
+					</div>
+					<div class="clearfix"> </div>
 				</div>
-				<div class="col-md-3 popular-grid popular-grid-bottom item3">
-					<i class="fa fa-car" aria-hidden="true"></i>
-					<h4>Service</h4>
-					<p>We have varity services for customer to choose for using</p>
-				</div>
-				<div class="clearfix"> </div>
 			</div>
 		</div>
-	</div>
+	<?php else : ?>
+		<div class="wrapper">
+			<div class="container-fluid">
+				<div class="w3ls-heading">
+					<h2>Profile</h2>
+				</div>
+				<?php
+				$path = './customerPicture/';
+				if ($result->num_rows > 0) {
+					while ($row = mysqli_fetch_array($result)) {
+						$imgName = $row['profileImage'];
+						echo '<img src="' . $path . $imgName . '" alt="icon">';
+					}
+				} else {
+					echo 'could not find customer picture';
+				}
+				?>
+			</div>
+		</div>
+	<?php endif ?>
 	<div class="team">
 		<div class="container">
 			<div class="w3ls-heading">
@@ -219,7 +250,6 @@ require_once "config.php";
 				</div>
 			</div>
 		</div>
-
 
 	</div>
 	<footer class="page-footer">

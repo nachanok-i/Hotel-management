@@ -1,3 +1,14 @@
+<?php
+// Start the session
+session_start();
+require_once "config.php";
+$query = "SELECT * FROM Branch ORDER BY branchID";
+$query_2 = "SELECT * FROM Furniture ";
+$result_2 = $conn->query($query_2);
+$result = $conn->query($query);
+?>
+
+
 <!Doctype html>
 <html>
 
@@ -16,6 +27,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <?php
     require_once "config.php";
     $query = "SELECT * FROM Branch ORDER BY branchID";
@@ -89,11 +101,24 @@
         });
         /* Tap help find that condition pls */
     </script>
-
+    <script>
+        $(document) .ready(function(){
+            $("#room_type").change(function(){
+                $.ajax({
+                    url: 'get_price.php',
+                    type: 'post',
+                    data: {room_type: $(this).val()},
+                    success: function(output){
+                        $("#output").html(output);
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div>
+    <div class="image-box" style="--image-url: url(./picHotelRoom/background.jpg)">
         <div>
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <a href="index.php" class="navbar-brand">Tap Hotel</a>
@@ -129,13 +154,13 @@
                 <hr>
                 <!--for choose branch -->
                 <div class="container">
-                    <label for="Branch">
-                        <h4><b>Branch</b></h4>
-                    </label>
                     <div class="form-group">
-                        <select name="Branch" class="form-control form-control-lg" require>
+                        <!-- <label for="Branch">
+                            <h4><b>Branch</b></h4>
+                        </label>
+                        <select name="Branch" id="branch" class="form-control form-control-lg" require>
                             <option value="">Select Branch</option>
-                            <?php
+                            
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo '<option value="' . $row['branchID'] . '">' . $row['title'] . '</option>';
@@ -144,11 +169,12 @@
                                 echo '<option value="">Branch is not available</option>';
                             }
                             ?>
-                        </select>
+                        </select> -->
+                        
                         <label for="Room_Type">
                             <h4><b>Room Type</b></h4>
                         </label>
-                        <select name="Room_Type" class="form-control form-control-lg" required>
+                        <select name="Room_Type" id="room_type" class="form-control form-control-lg" required>
                             <option value="">Select Room Type</option>
                             <?php
                             if ($result_2->num_rows > 0) {
@@ -160,16 +186,19 @@
                             }
                             ?>
                         </select>
+                        </p>
+                        
                     </div>
-
-                    <div class="form-group">
+                            
+                    <span id="output"></span>
+                    <!-- <div class="form-group">
                         <div class="mb-3">
                             <label for="price">
                                 <h4><b>Price</b></h4>
                             </label>
-                            <p><input type="text" name="price" readonly="readonly" placeholder="Enter price" class="form-control form-control-lg " required></p>
+                            <p><input type="text" name="price" id="price" readonly="readonly" placeholder="Enter price" class="form-control form-control-lg " required></p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <h4><b>Guest Name</b></h4>
                     <div class="form-row">
@@ -187,13 +216,13 @@
                     <div class="form-row">
                         <div class="col-md-3">
                             <label for="From">
-                                <h4><b>Arrive</b></h4>
+                                <h4><b>Depart</b></h4>
                                 </lable>
                                 <input type="text" name="From" readonly="readonly" placeholder="DD-MM-YYYY" id="dt1" class="form-control form-control-lg" required>
                         </div>
                         <div class="col-md-3">
                             <label for="From">
-                                <h4><b>Depart</b></h4>
+                                <h4><b>Arrive</b></h4>
                                 </lable>
 
                                 <input type="text" name="To" readonly="readonly" placeholder="DD-MM-YYYY" id="dt2" class="form-control form-control-lg" required>

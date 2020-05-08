@@ -1,5 +1,5 @@
     <?php
-
+    session_start();
     // Include config file
     require_once "config.php";
 
@@ -47,8 +47,7 @@
                 $alllowed = array('jpg', 'jpeg', 'png', 'pdf');
                 if (in_array($fileActualExt, $alllowed)) {
                     if ($fileError === 0) {
-                        $fileNameNew = $fileName . "." .
-                            $fileActualExt;
+                        $fileNameNew = $fileName;
                         $fileDestination = './customerPicture/' . $fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
                     } else {

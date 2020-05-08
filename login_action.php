@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($conn,$query);
         if (mysqli_num_rows($result) == 1){
             $_SESSION['email'] =$email;
+            
             echo '<script>
             alert("Login Successful");
             window.location.href="index.php";

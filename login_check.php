@@ -10,7 +10,7 @@
     }
     else
     {
-        $_SESSION['branch'] = $_POST['Branch'];
+        $_SESSION['Branch'] = $_POST['Branch'];
         echo '<script>
         window.location.href="booking.php";
         </script>';
