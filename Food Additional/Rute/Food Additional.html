@@ -13,15 +13,14 @@
 	<h1>Food Detail</h1>
 	<div id = "fillInfo">
 		<form action="/action_page.php">
-  			<label for="cname">Customer Name :</label>
+  			<label class = "left" for="cname">Customer Name :</label>
  			<input type="text" id="fname" name="cname"><br><br>
- 			<label for="roomID">Room ID : </label>
+ 			<label class = "left" for="roomID">Room ID : </label>
  			<input type="text" id="lname" name="roomID"><br><br>
-			<label for="bID">Branch ID : </label>
+			<label class = "left" for="bID">Branch ID : </label>
  			<input type="text" id="lname" name="bID"><br><br>
-			<label for="date">Date : </label>
+			<label class = "left" for="date">Date : </label>
  			<input type="text" id="lname" name="roomID"><br><br>
- 			<input type="submit">
 		</form>
 	</div>
 
@@ -89,70 +88,73 @@ function showSlides(n) {
 </script>
 
 <!--------------------------------------------------Order section--------------------------------------------------->
-	
+	</br>
+	</br>
+
+	<h2>Menu</h2>
 	<div id = "orderT">
-		<h2>Menu</h2>
 		<table>
 			<tr>
 				<th>Menu</th>
 				<th>Rate</th>
 			</tr>
 			<tr>
-				<td>Chicken <button id = "buttonAdd">Add</button></td>
-				<td>45</td>
-			</tr>
-			<tr>
-				<td>Steak <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Steak <button id = "buttonAdd">Add</button></td>
 				<td>90</td>
 			</tr>
 			<tr>
-				<td>Roasted Beef<button id = "buttonAdd">Add</button></td>
-				<td>85</td>
-			</tr>
-			<tr>
-				<td>Macaroni and Cheese <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Macaroni and Cheese <button id = "buttonAdd">Add</button></td>
 				<td>50</td>
 			</tr>
 			<tr>
-				<td>Fries <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Fries <button id = "buttonAdd">Add</button></td>
 				<td>40</td>
 			</tr>
 			<tr>
-				<td>Spicy Chicken's Wings<button id = "buttonAdd">Add</button></td>
-				<td>55</td>
-			</tr>
-			<tr>
-				<td>Mushroom soup <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Mushroom soup <button id = "buttonAdd">Add</button></td>
 				<td>50</td>
 			</tr>
 			<tr>
-				<td>Shark fin soup <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Shark fin soup <button id = "buttonAdd">Add</button></td>
 				<td>60</td>
 			</tr>
 			<tr>
-				<td>Tomato soup<button id = "buttonAdd">Add</button></td>
-				<td>45</td>
-			</tr>
-			<tr>
-				<td>Sushi Set 1<button id = "buttonAdd">Add</button></td>
+				<td class = "left">Sushi Set 1<button id = "buttonAdd">Add</button></td>
 				<td>250</td>
 			</tr>
 			<tr>
-				<td>Sushi Set 2 <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Sushi Set 2 <button id = "buttonAddD">Add</button></td>
 				<td>290</td>
 			</tr>
 			<tr>
-				<td>Bad ass dishes <button id = "buttonAdd">Add</button></td>
+				<td class = "left">Tuna Salad<button id = "buttonAddD">Add</button></td>
 				<td>999</td>
+			</tr>
+			<tr>
+				<td class = "left">Chicken <button id = "buttonAddD">Add</button></td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td class = "left">Roasted Beef<button id = "buttonAddD">Add</button></td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td class = "left">Spicy Chicken's Wings<button id = "buttonAddD">Add</button></td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td class = "left">Tomato soup<button id = "buttonAddD">Add</button></td>
+				<td>45</td>
 			</tr>
 
 	  </table>
 	</div>
 	
-	
-
-	<div id = "summaryT">
+	</br>
+	</br>
+	</br>
 	<h2>Summary</h2>
+	<div id = "summaryT">
 		<table>
 			<table>
 			<tr>
@@ -202,27 +204,6 @@ function showSlides(n) {
 			</tr>
 		</table>
 	</div>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-
-
-	<footer>
-		<div id = "contact">
-			<h3>Contact us</h3>
-			<ul>
-				<p>Mail</p>
-				<p>Phone</p>
-			</ul>
-		</div>
-		<div id = "contact">
-			<img id = "icon" src="../Asset/fb.png">
-			<img id = "icon" src="../Asset/ig.png">
-		</div>
-	</footer>
+	<input type="submit"></input>
 </body>
 </html>
