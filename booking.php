@@ -8,6 +8,7 @@ $result_2 = $conn->query($query_2);
 $result = $conn->query($query);
 ?>
 
+
 <!Doctype html>
 <html>
 
@@ -26,6 +27,14 @@ $result = $conn->query($query);
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <?php
+    require_once "config.php";
+    $query = "SELECT * FROM Branch ORDER BY branchID";
+    $query_2 = "SELECT * FROM Furniture ";
+    $result_2 = $conn->query($query_2);
+    $result = $conn->query($query);
+    ?>
 
     <script>
         $(document).ready(function() {
@@ -59,7 +68,7 @@ $result = $conn->query($query);
         $(document).ready(function() {
 
             $("#dt1").datepicker({
-                dateFormat: "yy-MM-dd",
+                dateFormat: "dd-MM-yy",
                 monthNames: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
                 changeMonth: true,
                 changeYear: true,
@@ -74,7 +83,7 @@ $result = $conn->query($query);
                 }
             });
             $('#dt2').datepicker({
-                dateFormat: "yy-MM-dd",
+                dateFormat: "dd-MM-yy",
                 monthNames: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
                 changeMonth: true,
                 changeYear: true,
@@ -109,7 +118,7 @@ $result = $conn->query($query);
 </head>
 
 <body>
-    <div>
+    <div class="image-box" style="--image-url: url(./picHotelRoom/background.jpg)">
         <div>
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <a href="index.php" class="navbar-brand">Tap Hotel</a>
@@ -138,7 +147,7 @@ $result = $conn->query($query);
             </nav>
         </div>
 
-        <form id="Booking" action="booking_action.php" method="POST">
+        <form id="Booking" action="#" method="POST">
             <div class="container pt-3 bg grey">
                 <h1>Booking</h1>
                 <p>Please fill the infomation.</p>
@@ -146,11 +155,10 @@ $result = $conn->query($query);
                 <!--for choose branch -->
                 <div class="container">
                     <div class="form-group">
-                    <!-- <label for="Branch">
-                        <h4><b>Branch</b></h4>
-                    </label>
-                    
-                        <select name="Branch" class="form-control form-control-lg" require>
+                        <!-- <label for="Branch">
+                            <h4><b>Branch</b></h4>
+                        </label>
+                        <select name="Branch" id="branch" class="form-control form-control-lg" require>
                             <option value="">Select Branch</option>
                             
                             if ($result->num_rows > 0) {
@@ -162,6 +170,7 @@ $result = $conn->query($query);
                             }
                             ?>
                         </select> -->
+                        
                         <label for="Room_Type">
                             <h4><b>Room Type</b></h4>
                         </label>
@@ -177,14 +186,17 @@ $result = $conn->query($query);
                             }
                             ?>
                         </select>
+                        </p>
+                        
                     </div>
-
-                   <!--  <div class="form-group">
+                            
+                    <span id="output"></span>
+                    <!-- <div class="form-group">
                         <div class="mb-3">
                             <label for="price">
                                 <h4><b>Price</b></h4>
                             </label>
-                            <p><input type="text" name="price" readonly="readonly" placeholder="Enter price" class="form-control form-control-lg " required></p>
+                            <p><input type="text" name="price" id="price" readonly="readonly" placeholder="Enter price" class="form-control form-control-lg " required></p>
                         </div>
                     </div> -->
 
@@ -204,13 +216,13 @@ $result = $conn->query($query);
                     <div class="form-row">
                         <div class="col-md-3">
                             <label for="From">
-                                <h4><b>Arrive</b></h4>
+                                <h4><b>Depart</b></h4>
                                 </lable>
                                 <input type="text" name="From" readonly="readonly" placeholder="DD-MM-YYYY" id="dt1" class="form-control form-control-lg" required>
                         </div>
                         <div class="col-md-3">
                             <label for="From">
-                                <h4><b>Depart</b></h4>
+                                <h4><b>Arrive</b></h4>
                                 </lable>
 
                                 <input type="text" name="To" readonly="readonly" placeholder="DD-MM-YYYY" id="dt2" class="form-control form-control-lg" required>
@@ -222,7 +234,7 @@ $result = $conn->query($query);
                     <div class="form-row">
                         <div class="col-6 col-sm-3">
                             <label for="adult"><b>Adult</b></lable>
-                                <p><input type="number" name="adult" placeholder="Enter number" value="1" class="form-control form-control-lg" required></p>
+                                <p><input type="number" name="adult" placeholder="Enter number" value="0" class="form-control form-control-lg" required></p>
                         </div>
                         <div class="col-6 col-sm-3">
                             <label for="child"><b>Child</b></lable>
@@ -244,7 +256,7 @@ $result = $conn->query($query);
 
                     <div class="form-group">
                         <label for="seeAnotherField">Do You Want To See Another Field?</label>
-                        <select class="form-control form-control-lg" name="payment_method" id="seeAnotherField">
+                        <select class="form-control form-control-lg" id="seeAnotherField">
                             <option value="cash">Cash</option>
                             <option value="creditCard">Credit Card</option>
                         </select>
@@ -255,28 +267,20 @@ $result = $conn->query($query);
                         <input type=text name="cardNumber" id="otherField" placeholder="Card Number" class="form-control form-control-lg" required>
                     </div>
 
-                    <lable for="promotion"><b>Promotion</b></lable>
-                    <input type="text" name="promotion" placeholder="Enter promo code" class="form-control form-control-lg">
-                </div>
-                <div class="container" id="totalPrice">
-                    <h4><b>Total</b></h4>
-                    <span id="output"></span>
-                    <!-- <lable for="total"><b>Total</b></lable>
-                    <span name="total"> echo $_GET['price'];?></span> -->
                 </div>
 
                 <div class="container">
                     <h4><b>Comment Section</b></h4>
-                    <!-- <label for="rating"><b>Rating</b></label>
+                    <label for="rating"><b>Rating</b></label>
                     <select name="rating" class="form-control form-control-lg">
                         <option value=1>1</option>
                         <option value=2>2</option>
                         <option value=3>3</option>
                         <option value=4>4</option>
                         <option value=5>5</option>
-                    </select> -->
-                    <label for="additional"><b>Additional Note</b></label>
-                    <input type="text" name="additional" placeholder="Type your comment" class="form-control form-control-lg"> </textarea>
+                    </select>
+                    <label for="additionalNote"><b>Additional Note</b></label>
+                    <textarea rows="4" cols="50" name="additionalNote" form="usrform" class="form-control form-control-lg"> </textarea>
                 </div>
 
                 <div class="clearfix">

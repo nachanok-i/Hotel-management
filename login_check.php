@@ -5,14 +5,14 @@
     {
         echo '<script>
         alert("You must login first!");
-        window.location.href="branchSelect.php";
+        window.location.href="roomSelectPage.php";
         </script>';
     }
     else
     {
-        $_SESSION['branch'] = $_POST['Branch'];
+        $_SESSION['Branch'] = $_POST['Branch'];
         echo '<script>
-        window.location.href="roomSelectPage.php";
+        window.location.href="booking.php";
         </script>';
     }
 ?>
