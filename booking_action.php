@@ -62,7 +62,8 @@
     $sql = "INSERT INTO Booking_Detail(guestFirstName,guestLastName,checkIn,checkOut,adult,child,branchID,price,paymentMethod,cardnumber,additionalNote,roomID,citizenID)
     VALUES('".$_POST['firstName']."', '".$_POST['lastName']."', '".$_POST['From']."', '".$_POST['To']."', '".$_POST['adult']."', '".$_POST['child']."', 
     '".$_SESSION['branch']."', '".$_SESSION['price']."', '".$_POST['payment_method']."', '".$_POST['cardNumber']."', '".$_POST['additional']."', '$roomID', '$citizenID')";
-    if ($conn->query($sql) === TRUE) {
+    $sql2 = "UPDATE Room SET status = 1 WHERE roomID = '$roomID' AND branchID = '".$_SESSION['branch']."'";
+    if ($conn->query($sql) == TRUE && $conn->query($sql2) == TRUE) {
         $conn->close();
         echo '<script>
         alert("Booking success");
