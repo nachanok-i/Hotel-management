@@ -1,5 +1,5 @@
     <?php
-    session_start();
+
     // Include config file
     require_once "config.php";
 
@@ -33,7 +33,8 @@
                     alert("invalid email format");
                     window.location.href="register.php";
                     </script>';
-        } else {
+        } 
+        else {
             if (($psw == $pswRep) && ($result_2 == 0)) {
                 $file = $_FILES['yourPicture'];
                 $fileName = $_FILES['yourPicture']['name'];

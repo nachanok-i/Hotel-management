@@ -1,8 +1,3 @@
-<?php
-require_once "config.php";
-?>
-<?php session_start(); ?>
-
 <!Doctype html>
 <html>
 
@@ -76,38 +71,31 @@ require_once "config.php";
 <body>
   <div>
     <div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-			<a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
-			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="navbar-nav">
-					<a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
-					<a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Room Reservation</a>
-					<a href="#" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food Service</a>
-					<a href="#" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Other Service</a>
-				</div>
-				<div class="navbar-nav ml-auto">
-					<?php if (isset($_SESSION['email']) != NULL) : ?>
-						<a class="nav-item nav-link"> <i class="fas fa-user-alt"> </i> <?php echo $_SESSION['email']; ?> </a>
-						<form class="form-inline" action="logout.php" method="POST">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logout">Logout</button>
-						</form>
-					<?php else : ?>
-						<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
-						<div class="dropdown-menu dropdown-menu-right p-3">
-							<form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
-								<input class="form-control login" type="text" name="email" placeholder="Email" id="email">
-								<input class="form-control login" type="password" name="password" placeholder="Password" id="pass">
-								<input class="btn btn-primary" type="submit" name="submit" value="Login">
-							</form>
-						</div>
-						<a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
-					<?php endif ?>
-				</div>
-			</div>
-		</nav>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a href="index.php" class="navbar-brand">Tap Hotel</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+            <a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Room Reservation</a>
+            <a href="#" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food Service</a>
+            <a href="#" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Other Service</a>
+          </div>
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+            <div class="dropdown-menu dropdown-menu-right p-3">
+              <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
+                <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
+                <input class="form-control login" type="text" name="password" placeholder="Password" id="pass">
+                <input class="btn btn-primary" type="submit" name="submit" value="Login">
+              </form>
+            </div>
+            <a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
+          </div>
+        </div>
+      </nav>
     </div>
 
     <form id="Register" action="register_action.php" charset="UTF-8" method="POST" enctype="multipart/form-data">

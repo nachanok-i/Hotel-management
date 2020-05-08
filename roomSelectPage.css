@@ -7,6 +7,45 @@
   background-repeat: no-repeat;
 }
 
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+/* navbar */
+.navbar-brand img{
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
 
 .about_2 .buttonInsideSet1_2 {
   position: absolute;
@@ -134,6 +173,25 @@ footer {
   color: #ffffff;
 }
 
+.w3l-button a {
+  color: #000000;
+  font-size: 0.9em;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  background: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  border: solid 1px #000000;
+}
+.w3l-button a:hover {
+  background: #f44336;
+  border: solid 1px #f44336;
+  color: #ffffff;
+}
+.w3l-button a:focus {
+  outline: none;
+}
 
 /* big brain time */
 /*-- gallery --*/
@@ -342,31 +400,26 @@ h3 {
   color: white;
 }
 
-@media (min-width: 350px) {
+@media (min-width: 400px) {
     .carousel-caption {
-        top: 10%;
-        font-size: 1em;
+        top: 5%;
+        font-size: 2em;
         color: white;
       }
 }
-
-
 @media (min-width: 768px) {
-  .carousel-caption {
-    top: 10%;
-    font-size: 4em;
-    color: white;
-  }
+    .carousel-caption {
+        top: 10%;
+        font-size: 4em;
+        color: white;
+      }
 }
-
 @media (min-width: 992px) {
-  .carousel-caption {
-    top: 25%;
-    font-size: 5em;
-    color: white;
-  }
-}
-
+    .carousel-caption {
+        top: 25%;
+        font-size: 5em;
+        color: white;
+      }
 @media (min-width: 1200px) {
     .carousel-caption {
         top: 25%;
