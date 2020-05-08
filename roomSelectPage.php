@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+require_once "config.php";
+$query = "SELECT * FROM Branch ORDER BY branchID";
+$result = $conn->query($query);
+
+?>
+
 <!Doctype html>
 <html>
 
@@ -94,15 +103,37 @@
 
   <div class="colorPlate">
     <div class="about">
-      <div class="row ">
+      <div>
         <div class="container">
           <div class="w3ls-heading">
             <h4> ROOM & VILLAS</h4>
           </div>
           <p>With warm hues and a slight pop of color, the villas at Crimson Mactan Resort and Spa is bound to make you a striking first impression.<br>Imagine taking a nap on a plush four-poster canopy bed with interiors immersed in local architecture at the best Beach resort in Mactan,<br> Cebu. Each of our spacious villas and luxurious casitas features polished teak floors, locally-sourced Cebuano décor and beautiful domed ceilings made of woven Banig. Feel at home in an expansive living area that leads to mesmerizing views of the pristine Mactan sea from your own private plunge pool. Drained from the day’s activities? Relax and unwind in the sunk-in tub within the most elegant bathroom.</p>
         </div>
+        <div class="container">
+          <form name="selectbranch" method="POST" action="login_check.php">
+            <div class="form-group">
+              <select class="form-control form-control-lg" name="Branch" id="branch" required>
+                <option value="">Select Branch</option>
+                <?php
+                if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+                    echo '<option value="' . $row['branchID'] . '">' . $row['title'] . '</option>';
+                  }
+                } else {
+                  echo '<option value="">Branch is not available</option>';
+                }
+                ?>
+              </select>
+          </form>
+        </div>
+
       </div>
     </div>
+    <form name="selectbranch" method="POST" action="login_check.php">
+      <button type="submit" class="btn btn-secondary btn-lg" style="margin-left: 47%;" name="submit" value="Explore">Select</button>
+    </form>
+  </div>
   </div>
 
   <div class="about_2">
