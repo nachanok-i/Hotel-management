@@ -1,29 +1,47 @@
-html {
-  scroll-behavior: smooth;
-}
+.image-box {
+    /* Here's the trick */
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+  
+    /* Basic background styles */
+    background: var(--image-url) center center;
+    background-size: cover;
+  
+    /* Here's the same styles we applied to our content-div earlier */
+    min-height: 100vh;
 
-
-body {
-  background: url(picHotelRoom/pic4.jpg) repeat 0 0; 
-  /* Basic background styles */
-  background-size: cover;
+    
+    /* Add a transition, just for fun */
+    transition: box-shadow .3s ease-out;
+  }
+.image-box:hover {
+      box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.2);
+  }
+  
+  /* For demo only */
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .container {
+    background-color: #f2f2f2;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 10px 20px 15px 20px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 3px;
   }
 
-
-/* colors code */
-.text-bl {
-  color: #343a40;
-}
-
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+.text_1{
+  color:black;
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: #4caf50;
+  background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -34,7 +52,7 @@ button {
 }
 
 button:hover {
-  opacity: 1;
+  opacity:1;
 }
 
 /* Extra styles for the cancel button */
@@ -44,10 +62,14 @@ button:hover {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn,
-.signupbtn {
+.cancelbtn, .signupbtn {
   float: left;
   width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
 }
 
 /* Clear floats */
@@ -59,47 +81,7 @@ button:hover {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn,
-  .signupbtn {
+  .cancelbtn, .signupbtn {
     width: 100%;
   }
-}
-
-.login {
-  margin-bottom: 5px;
-}
-.dropdown-menu {
-  width: 300px !important;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.container {
-  background-color: #f2f2f2;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 10px 20px 15px 20px;
-  border: 1px solid rgb(211, 211, 211);
-  border-radius: 3px;
-}
-
-body {
-  min-height:100%;
-  background:url(./picHotelRoom/pic4.jpg);
-  background-size:cover;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
-}
-html {
-  min-height:100%;
-  background:url(./picHotelRoom/pic4.jpg);
-  background-size:cover;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
 }
