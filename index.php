@@ -348,5 +348,6 @@ if (isset($_SESSION['email']) != NULL) {
 			});
 		}).resize();
 	</script>
+</body>
 
 </html>
