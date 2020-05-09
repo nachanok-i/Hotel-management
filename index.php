@@ -118,118 +118,118 @@ if (isset($_SESSION['email']) != NULL) {
 				</div>
 			</div>
 		</div>
-	<div class="team">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h3>Our Team Member</h3>
-			</div>
-			<div class="inner_w3l_agile_grids">
-				<div id="horizontalTab">
-					<ul class="resp-tabs-list">
-						<li>
-							<img src="./picHotelRoom/tap2.png" alt="Tap" class="img-responsive" />
-						</li>
-						<li>
-							<img src="./picHotelRoom/lion1.2.jpg" alt="Lion" class="img-responsive" />
-						</li>
-						<li>
-							<img src="./picHotelRoom/lion2.2.jpg" alt="Lion" class="img-responsive" />
-						</li>
-						<li>
-							<img src="./picHotelRoom/toon.jpg" alt="Toon" class="img-responsive" />
-						</li>
-						<li>
-							<img src="./picHotelRoom/book.jpg" alt="Book" class="img-responsive" />
-						</li>
-					</ul>
-					<div class="resp-tabs-container">
-						<div class="tab1">
-							<div class="col-md-6 team-img-w3-agile">
-							</div>
-							<div class="col-md-6 team-Info-agileits">
-								<h4>Nachanok Issarapruk</h4>
-								<span>First of Our Member</span>
-								<p> His student ID:61070503410 </p>
-								<div class="w3_agileits_social_media team_agile_w3l">
-									<ul class="social-icons3">
-										<li class="agileinfo_share">Follow In</li>
-										<li><a href="https://www.facebook.com/nachanok.issarapruk.tap.ipod" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									</ul>
+		<div class="team">
+			<div class="container">
+				<div class="w3ls-heading">
+					<h3>Our Team Member</h3>
+				</div>
+				<div class="inner_w3l_agile_grids">
+					<div id="horizontalTab">
+						<ul class="resp-tabs-list">
+							<li>
+								<img src="./picHotelRoom/tap2.png" alt="Tap" class="img-responsive" />
+							</li>
+							<li>
+								<img src="./picHotelRoom/lion1.2.jpg" alt="Lion" class="img-responsive" />
+							</li>
+							<li>
+								<img src="./picHotelRoom/lion2.2.jpg" alt="Lion" class="img-responsive" />
+							</li>
+							<li>
+								<img src="./picHotelRoom/toon.jpg" alt="Toon" class="img-responsive" />
+							</li>
+							<li>
+								<img src="./picHotelRoom/book.jpg" alt="Book" class="img-responsive" />
+							</li>
+						</ul>
+						<div class="resp-tabs-container">
+							<div class="tab1">
+								<div class="col-md-6 team-img-w3-agile">
 								</div>
+								<div class="col-md-6 team-Info-agileits">
+									<h4>Nachanok Issarapruk</h4>
+									<span>First of Our Member</span>
+									<p> His student ID:61070503410 </p>
+									<div class="w3_agileits_social_media team_agile_w3l">
+										<ul class="social-icons3">
+											<li class="agileinfo_share">Follow In</li>
+											<li><a href="https://www.facebook.com/nachanok.issarapruk.tap.ipod" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
 							</div>
-							<div class="clearfix"> </div>
-						</div>
 
-						<div class="tab2">
-							<div class="col-md-6 team-img-w3-agile">
-							</div>
-							<div class="col-md-6 team-Info-agileits">
-								<h4>Sutinan Tadalimavad</h4>
-								<span>Second of Our Member</span>
-								<p>His student ID:61070503443</p>
-								<div class="w3_agileits_social_media team_agile_w3l">
-									<ul class="social-icons3">
-										<li class="agileinfo_share">Follow In</li>
-										<li><a href="https://www.facebook.com/sutinan.tadalimavad" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									</ul>
+							<div class="tab2">
+								<div class="col-md-6 team-img-w3-agile">
 								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="tab3">
-							<div class="col-md-6 team-img-w3-agile">
-							</div>
-							<div class="col-md-6 team-Info-agileits">
-								<h4>Sahachok Prachaporn</h4>
-								<span>Third of Our Member</span>
-								<p>His student ID:61070503436</p>
-								<div class="w3_agileits_social_media team_agile_w3l">
-									<ul class="social-icons3">
-										<li class="agileinfo_share">Follow In</li>
-										<li><a href="https://www.facebook.com/sahachokp" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									</ul>
+								<div class="col-md-6 team-Info-agileits">
+									<h4>Sutinan Tadalimavad</h4>
+									<span>Second of Our Member</span>
+									<p>His student ID:61070503443</p>
+									<div class="w3_agileits_social_media team_agile_w3l">
+										<ul class="social-icons3">
+											<li class="agileinfo_share">Follow In</li>
+											<li><a href="https://www.facebook.com/sutinan.tadalimavad" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
 								</div>
+								<div class="clearfix"> </div>
 							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="tab4">
-							<div class="col-md-6 team-img-w3-agile">
-							</div>
-							<div class="col-md-6 team-Info-agileits">
-								<h4>Siradanai Sutin</h4>
-								<span>Fourth of Our Member</span>
-								<p>His student ID:61070503437</p>
-								<div class="w3_agileits_social_media team_agile_w3l">
-									<ul class="social-icons3">
-										<li class="agileinfo_share">Follow In</li>
-										<li><a href="https://www.facebook.com/toonTheta" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									</ul>
+							<div class="tab3">
+								<div class="col-md-6 team-img-w3-agile">
 								</div>
+								<div class="col-md-6 team-Info-agileits">
+									<h4>Sahachok Prachaporn</h4>
+									<span>Third of Our Member</span>
+									<p>His student ID:61070503436</p>
+									<div class="w3_agileits_social_media team_agile_w3l">
+										<ul class="social-icons3">
+											<li class="agileinfo_share">Follow In</li>
+											<li><a href="https://www.facebook.com/sahachokp" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
 							</div>
-							<div class="clearfix"> </div>
-						</div>
+							<div class="tab4">
+								<div class="col-md-6 team-img-w3-agile">
+								</div>
+								<div class="col-md-6 team-Info-agileits">
+									<h4>Siradanai Sutin</h4>
+									<span>Fourth of Our Member</span>
+									<p>His student ID:61070503437</p>
+									<div class="w3_agileits_social_media team_agile_w3l">
+										<ul class="social-icons3">
+											<li class="agileinfo_share">Follow In</li>
+											<li><a href="https://www.facebook.com/toonTheta" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
 
-						<div class="tab5">
-							<div class="col-md-6 team-img-w3-agile">
-							</div>
-							<div class="col-md-6 team-Info-agileits">
-								<h4>Chadapong Thanaprasit</h4>
-								<span>Fifth of Our Member</span>
-								<p>His student ID:61070503403</p>
-								<div class="w3_agileits_social_media team_agile_w3l">
-									<ul class="social-icons3">
-										<li class="agileinfo_share">Follow In</li>
-										<li><a href="https://www.facebook.com/bookbight" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									</ul>
+							<div class="tab5">
+								<div class="col-md-6 team-img-w3-agile">
 								</div>
+								<div class="col-md-6 team-Info-agileits">
+									<h4>Chadapong Thanaprasit</h4>
+									<span>Fifth of Our Member</span>
+									<p>His student ID:61070503403</p>
+									<div class="w3_agileits_social_media team_agile_w3l">
+										<ul class="social-icons3">
+											<li class="agileinfo_share">Follow In</li>
+											<li><a href="https://www.facebook.com/bookbight" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
 							</div>
-							<div class="clearfix"> </div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	<?php else : ?>
 		<div class="about">
 			<div class="container">
@@ -243,41 +243,41 @@ if (isset($_SESSION['email']) != NULL) {
 						$imgName = $row['profileImage'];
 						echo '<img src="' . $path . $imgName . '" class="img-fluid img-thumbnail mx-auto d-block" alt="customer picture" >';
 						echo '<div clas="row">';
-							echo '<div class="col w3-about-left">';
-								echo '<h5> Firstname </h5>';
-								echo '<p style="font-size:2em;">'.$row['firstName'].'</p>';
-							echo '</div>';
-							echo '<div class="col w3-about-left">';
-								echo '<h5> Lastname </h5>';
-								echo '<p style="font-size:2em;">'.$row['lastName'].'</p>';
-							echo '</div>';
-							echo '<div class="w-100"></div>';
-							echo '<div class="col w3-about-left">';
-								echo '<h5> CitizenID </h5>';
-								echo '<p style="font-size:2em;">'.$row['citizenID'].'</p>';
-							echo '</div>';
-							echo '<div class="col w3-about-left">';
-								echo '<h5> Street </h5>';
-								echo '<p style="font-size:2em;">'.$row['street'].'</p>';
-							echo '</div>';
-							echo '<div class="w-100"></div>';	
-							echo '<div class="col w3-about-left">';
-								echo '<h5> City </h5>';
-								echo '<p style="font-size:2em;">'.$row['city'].'</p>';
-							echo '</div>';	
-							echo '<div class="col w3-about-left">';
-								echo '<h5> State </h5>';
-								echo '<p style="font-size:2em;">'.$row['state'].'</p>';
-							echo '</div>';
-							echo '<div class="w-100 "></div>';								
-							echo '<div class="col w3-about-left">';
-								echo '<h5> Zipcode </h5>';
-								echo '<p style="font-size:2em;">'.$row['zipCode'].'</p>';
-							echo '</div>';
-							echo '<div class="col w3-about-left">';
-								echo '<h5> Country </h5>';
-								echo '<p style="font-size:2em;">'.$row['country'].'</p>';
-							echo '</div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> Firstname </h5>';
+						echo '<p style="font-size:2em;">' . $row['firstName'] . '</p>';
+						echo '</div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> Lastname </h5>';
+						echo '<p style="font-size:2em;">' . $row['lastName'] . '</p>';
+						echo '</div>';
+						echo '<div class="w-100"></div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> CitizenID </h5>';
+						echo '<p style="font-size:2em;">' . $row['citizenID'] . '</p>';
+						echo '</div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> Street </h5>';
+						echo '<p style="font-size:2em;">' . $row['street'] . '</p>';
+						echo '</div>';
+						echo '<div class="w-100"></div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> City </h5>';
+						echo '<p style="font-size:2em;">' . $row['city'] . '</p>';
+						echo '</div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> State </h5>';
+						echo '<p style="font-size:2em;">' . $row['state'] . '</p>';
+						echo '</div>';
+						echo '<div class="w-100 "></div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> Zipcode </h5>';
+						echo '<p style="font-size:2em;">' . $row['zipCode'] . '</p>';
+						echo '</div>';
+						echo '<div class="col w3-about-left">';
+						echo '<h5> Country </h5>';
+						echo '<p style="font-size:2em;">' . $row['country'] . '</p>';
+						echo '</div>';
 						echo '</div>';
 					}
 				} else {
