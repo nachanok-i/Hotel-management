@@ -261,6 +261,12 @@ function loadFood()
             }
             ?>
         </table>
+        <div >
+            <form method="POST" action=#>
+                <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
+            </form>
+        </div>
+
     </div>
 
 </body>
