@@ -55,7 +55,7 @@ if (isset($_GET["action"])) {
 <?php
 function loadFood()
 {
-    $conn = mysqli_connect("34.87.187.203", "root", "Segmentation3", "hotel");
+    require_once "config.php";
     $output = "";
     $sql = "SELECT * FROM Menu";
     $result = mysqli_query($conn, $sql);
@@ -173,9 +173,9 @@ function loadFood()
         <table id="myTable" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Food</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
+                    <th>Service</th>
+                    <th>Price</th>
+                    <th></th>
                 </tr>
             </thead>
             <?php if (mysqli_num_rows($result) > 0) : ?>
@@ -207,6 +207,7 @@ function loadFood()
     </div>
     <p><br /></p>
     <div class="container">
+    <form method="POST" action="service_action.php" name="order">    
         <table class="table table-bordered table-striped">
             <thread>
                 <th>Service Name</th>
@@ -220,7 +221,7 @@ function loadFood()
             ?>
                     <tr>
                         <td><?php echo $values["item_name"]; ?></td>
-                        <td>$ <?php echo $values["item_price"]; ?></td>
+                        <td><?php echo $values["item_price"]; ?> ฿</td>
                         <td><a href="service.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="btn btn-danger">Remove</span></a></td>
                     </tr>
                 <?php
@@ -229,17 +230,32 @@ function loadFood()
                 ?>
                 <tr>
                     <td colspan="2" align="right">Total</td>
-                    <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                    <td align="right"><?php echo number_format($total, 2); ?> ฿</td>
                 </tr>
             <?php
             }
             ?>
         </table>
-        <div >
-            <form method="POST" action=#>
-                <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
-            </form>
+        <div class="container">
+            
+            <select class="form-control form-control-lg" name="Branch" id="branch" required>
+                <option value="">Select Branch</option>
+                <?php
+                $Bquery = "SELECT * FROM Branch ORDER BY branchID";
+                $Bresult = $conn->query($Bquery);
+                if ($Bresult->num_rows > 0) {
+                    while ($Brow = $Bresult->fetch_assoc()) {
+                    echo '<option value="' . $Brow['branchID'] . '">' . $Brow['title'] . '</option>';
+                    }
+                } else {
+                    echo '<option value="">Branch is not available</option>';
+                }
+                ?>
+            </select>
+            <p><input type="text" name="roomID" placeholder="Enter your room number" class="form-control form-control-lg mb-2" required></p>
         </div>
+                <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
+        </form>
 
     </div>
 
