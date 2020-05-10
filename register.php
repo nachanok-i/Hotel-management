@@ -83,10 +83,10 @@ require_once "config.php";
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<div class="navbar-nav">
-					<a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
-					<a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Room Reservation</a>
-					<a href="#" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food Service</a>
-					<a href="#" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Other Service</a>
+          <a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+					<a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
+					<a href="food.php" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
+					<a href="service&facility.php" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
 				</div>
 				<div class="navbar-nav ml-auto">
 					<?php if (isset($_SESSION['email']) != NULL) : ?>

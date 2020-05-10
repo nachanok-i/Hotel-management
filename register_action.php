@@ -62,6 +62,19 @@
                                     $fileNameNew = $fileName;
                                     $fileDestination = './customerPicture/' . $fileNameNew;
                                     move_uploaded_file($fileTmpName, $fileDestination);
+                                    $sql = "INSERT INTO Customer(firstName, lastName, email,password, citizenID, profileImage, street,city,state,zipCode,country)
+                                    VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileName','$street','$city','$state','$zipCode','$country' )";
+
+                                    if ($conn->query($sql) === TRUE) {
+                                        $conn->close();
+                                        echo '<script>
+                                        alert("Register Successfully");
+                                        window.location.href="index.php";
+                                        </script>';
+                                    } else {
+                                        echo 'error:' . $sql . "<br>" . $conn->error;
+                                        $conn->close();
+                                    }
                                 } else {
                                     $conn->close();
                                     echo '<script>
@@ -75,20 +88,6 @@
                 alert("Your file type is not macth the requirement");
                 window.location.href="register.php";
                 </script>';
-                            }
-
-                            $sql = "INSERT INTO Customer(firstName, lastName, email,password, citizenID, profileImage, street,city,state,zipCode,country)
-                VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileName','$street','$city','$state','$zipCode','$country' )";
-
-                            if ($conn->query($sql) === TRUE) {
-                                $conn->close();
-                                echo '<script>
-                    alert("Register Successfully");
-                    window.location.href="index.php";
-                    </script>';
-                            } else {
-                                echo 'error:' . $sql . "<br>" . $conn->error;
-                                $conn->close();
                             }
                         } else {
                             $conn->close();

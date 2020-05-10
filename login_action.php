@@ -18,7 +18,15 @@ if (isset($_POST['submit'])) {
         window.location.href="index.php";
         </script>';
     }
-    if ( ( !empty($email) ) && (!empty($password)) )
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo '<script>
+    alert("invalid email format");
+    window.location.href="register.php";
+    </script>';
+    }
+
+    if ( ( !empty($email) ) && (!empty($password)) && (filter_var($email, FILTER_VALIDATE_EMAIL))  )
         {
         $query = "SELECT * FROM `Customer` WHERE email like '%$email%'
             AND password = '".sha1($password)."'";
