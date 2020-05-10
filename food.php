@@ -1,7 +1,6 @@
 <?php
 require_once "config.php";
-?>
-<?php session_start();
+session_start();
 if (isset($_SESSION['email']) != NULL) {
     $userEmail = $_SESSION['email'];
 }
@@ -22,7 +21,7 @@ if (isset($_POST["add_to_cart"])) {
             $_SESSION["shopping_cart"][$count] = $item_array;
         } else {
             echo '<script>alert("Item Already Added")</script>';
-            echo '<script>window.location="foodName.php"</script>';
+            echo '<script>window.location="food.php"</script>';
         }
     } else {
         $item_array = array(
@@ -55,7 +54,7 @@ if (isset($_GET["action"])) {
 <?php
 function loadFood()
 {
-    $conn = mysqli_connect("34.87.187.203", "root", "Segmentation3", "hotel");
+    require_once "config.php";
     $output = "";
     $sql = "SELECT * FROM Menu";
     $result = mysqli_query($conn, $sql);
@@ -202,7 +201,7 @@ function loadFood()
                             <td>
                                 <div class="form-group">
                                     <?php echo '<input type=text id="food" class="form-control" readonly value="' . $row['foodName'] . '">' ?>
-                                    <?php echo '<input type=hidden id="food" name="foodName" class="form-control" readonly value="' . $row['foodID'] . '">' ?>
+                                    <?php echo '<input type=hidden id="food" name="foodName" class="form-control" readonly value="' . $row['foodName'] . '">' ?>
                                 </div>
                             </td>
                             <td>
@@ -229,6 +228,7 @@ function loadFood()
     </div>
     <p><br /></p>
     <div class="container">
+    <form method="POST" action="food_action.php" name="order">
         <table class="table table-bordered table-striped">
             <thread>
                 <th>Food Name</th>
@@ -245,8 +245,8 @@ function loadFood()
                     <tr>
                         <td><?php echo $values["item_name"]; ?></td>
                         <td><?php echo $values["item_quantity"]; ?></td>
-                        <td>$ <?php echo $values["item_price"]; ?></td>
-                        <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
+                        <td><?php echo $values["item_price"]; ?> ฿</td>
+                        <td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?> ฿</td>
                         <td><a href="food.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="btn btn-danger">Remove</span></a></td>
                     </tr>
                 <?php
@@ -255,18 +255,34 @@ function loadFood()
                 ?>
                 <tr>
                     <td colspan="3" align="right">Total</td>
-                    <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                    <td align="right"><?php echo number_format($total, 2); ?> ฿</td>
                     <td></td>
                 </tr>
             <?php
             }
             ?>
         </table>
-        <div >
-            <form method="POST" action=#>
-                <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
-            </form>
+        <div class="container">
+            
+            <select class="form-control form-control-lg" name="Branch" id="branch" required>
+                <option value="">Select Branch</option>
+                <?php
+                $Bquery = "SELECT * FROM Branch ORDER BY branchID";
+                $Bresult = $conn->query($Bquery);
+                if ($Bresult->num_rows > 0) {
+                    while ($Brow = $Bresult->fetch_assoc()) {
+                    echo '<option value="' . $Brow['branchID'] . '">' . $Brow['title'] . '</option>';
+                    }
+                } else {
+                    echo '<option value="">Branch is not available</option>';
+                }
+                ?>
+            </select>
+            <p><input type="text" name="roomID" placeholder="Enter your room number" class="form-control form-control-lg mb-2" required></p>
         </div>
+        
+            <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
+    </form>
 
     </div>
 
