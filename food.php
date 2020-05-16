@@ -3,10 +3,9 @@ require_once "config.php";
 ?>
 <?php session_start();
 if (isset($_SESSION['email']) != NULL) {
-	$userEmail = $_SESSION['email'];
-}
-else {
-	echo '<script>
+    $userEmail = $_SESSION['email'];
+} else {
+    echo '<script>
     alert("Please Login first");
     window.location.href="index.php";
     </script>';
@@ -202,8 +201,6 @@ function loadFood()
             <?php if (mysqli_num_rows($result) > 0) : ?>
                 <?php while ($row = mysqli_fetch_array($result)) : ?>
                     <form method="post" action="food.php?action=add&id=<?php echo $row["foodID"]; ?>">
-
-
                         <tr>
                             <td>
                                 <div class="form-group">
@@ -235,61 +232,71 @@ function loadFood()
     </div>
     <p><br /></p>
     <div class="container">
-    <form method="POST" action="food_action.php" name="order">
-        <table class="table table-bordered table-striped">
-            <thread>
-                <th>Food Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Total</th>
-                <th>Action</th>
-            </thread>
-            <?php
-            if (!empty($_SESSION["shopping_cart"])) {
-                $total = 0;
-                foreach ($_SESSION["shopping_cart"] as $keys => $values) {
-            ?>
+        <form method="POST" action="food_action.php" name="order">
+            <table class="table table-bordered table-striped">
+                <thread>
+                    <th>Food Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </thread>
+                <?php
+                if (!empty($_SESSION["shopping_cart"])) {
+                    $total = 0;
+                    foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                ?>
+                        <tr>
+                            <td><?php echo $values["item_name"]; ?></td>
+                            <td><?php echo $values["item_quantity"]; ?></td>
+                            <td><?php echo $values["item_price"]; ?> ฿</td>
+                            <td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?> ฿</td>
+                            <td><a href="food.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="btn btn-danger">Remove</span></a></td>
+                        </tr>
+                    <?php
+                        $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                    }
+                    ?>
                     <tr>
-                        <td><?php echo $values["item_name"]; ?></td>
-                        <td><?php echo $values["item_quantity"]; ?></td>
-                        <td><?php echo $values["item_price"]; ?> ฿</td>
-                        <td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?> ฿</td>
-                        <td><a href="food.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="btn btn-danger">Remove</span></a></td>
+                        <td colspan="3" align="right">Total</td>
+                        <td align="right"><?php echo number_format($total, 2); ?> ฿</td>
+                        <td></td>
                     </tr>
                 <?php
-                    $total = $total + ($values["item_quantity"] * $values["item_price"]);
                 }
                 ?>
-                <tr>
-                    <td colspan="3" align="right">Total</td>
-                    <td align="right"><?php echo number_format($total, 2); ?> ฿</td>
-                    <td></td>
-                </tr>
-            <?php
-            }
-            ?>
-        </table>
-        <div class="container">
-            
-            <select class="form-control form-control-lg" name="Branch" id="branch" required>
-                <option value="">Select Branch</option>
-                <?php
-                $Bquery = "SELECT * FROM Branch ORDER BY branchID";
-                $Bresult = $conn->query($Bquery);
-                if ($Bresult->num_rows > 0) {
-                    while ($Brow = $Bresult->fetch_assoc()) {
-                    echo '<option value="' . $Brow['branchID'] . '">' . $Brow['title'] . '</option>';
-                    }
-                } else {
-                    echo '<option value="">Branch is not available</option>';
-                }
-                ?>
-            </select>
-            <p><input type="text" name="roomID" placeholder="Enter your room number" class="form-control form-control-lg mb-2" required></p>
-        </div>
-        
+            </table>
+            <div class="container">
+                <div class="form-group row">
+                    <label for="Branch" class="col-sm-2 col-form-label col-form-label-lg"><b>Branch</b></label>
+                    <div class="col-sm-10">
+                        <select class="form-control form-control-lg" name="Branch" id="branch" required>
+                            <option value="">Select Branch</option>
+                            <?php
+                            $Bquery = "SELECT * FROM Branch ORDER BY branchID";
+                            $Bresult = $conn->query($Bquery);
+                            if ($Bresult->num_rows > 0) {
+                                while ($Brow = $Bresult->fetch_assoc()) {
+                                    echo '<option value="' . $Brow['branchID'] . '">' . $Brow['title'] . '</option>';
+                                }
+                            } else {
+                                echo '<option value="">Branch is not available</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Branch" class="col-sm-2 col-form-label col-form-label-lg"><b>Room Number</b></label>
+                    <div class="col-sm-10">
+                        <p><input type="text" name="roomID" placeholder="Enter your room number" class="form-control form-control-lg mb-2" required></p>
+                    </div>
+                </div>
+
+            </div>
+
             <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
-    </form>
+        </form>
 
     </div>
 
