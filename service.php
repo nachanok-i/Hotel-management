@@ -3,10 +3,15 @@ require_once "config.php";
 ?>
 <?php session_start();
 if (isset($_SESSION['email']) != NULL) {
-    $userEmail = $_SESSION['email'];
+	$userEmail = $_SESSION['email'];
+}
+else {
+	echo '<script>
+    alert("Please Login first");
+    window.location.href="index.php";
+    </script>';
 }
 ?>
-
 <?php
 if (isset($_POST["add_to_cart"])) {
     if (isset($_SESSION["service_cart"])) {

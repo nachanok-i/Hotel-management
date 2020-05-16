@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/*navbar*/
+.navbar-brand img{
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
 body {
   background: url(picHotelRoom/pic4.jpg) repeat 0 0; 

@@ -6,7 +6,7 @@ html, body{
 }
 p,ul li,ol li{
 	margin:0;
-	font-size:14px;
+	font-size:20px;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Prompt', sans-serif;
@@ -33,40 +33,9 @@ body a:hover{
     letter-spacing: 8px;
 }
 
-
-
-/* footer */
-
-footer {
-	background-color: grey;
-	clear: both;
-	margin-top:auto;	
-	margin:auto;	
-}
-
-.page-footer {
-	background-color:#343a40;
-	color: #ccc;
-	padding: 60px 0 30px;
-}
-
-.footer-copyright {
-	color: #666;
-	padding: 40px 0;
-}
-
-/* for responsive picture */
-.responsive {
-    width: 100%;
-    height: 500px;
-}
-
-/*end footer*/
-
 .banner{
-	background:url(./picHotelRoom/pic3.jpg) no-repeat 0px 0px;
-    background-size:cover;
-    
+	background:url(./picHotelRoom/1.jpg) no-repeat 0px 0px;
+	background-size:cover;
 }
 
 .w3-banner{
@@ -76,30 +45,8 @@ footer {
     height:700px;
 }
 
-.price-top {
-    background: #ff5722;
-    padding: 10px;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-}
-
-.price-mobamus:hover .price-top {
-    background: transparent;
-    padding: 0;
-    margin: 10px;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-}
-
 .about {
-    padding: 10% 10%;
+    padding: 5em 0;
 }
 
 .w3ls-heading h2 {
@@ -112,31 +59,6 @@ footer {
     font-weight: 600;
     letter-spacing: 3px;
 }
-
-.w3ls-heading h1 {
-    color: #212121;
-    font-size: 7em;
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 3px;
-    margin-top: 3%;
-    margin-left: -9%;
-}
-.w3ls-heading p {
-    color: #212121;
-    font-size: 2em;
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 3px;
-    margin-left:1%;
-}
-
 .about {
     padding: 5em 0;
 }
@@ -157,26 +79,6 @@ footer {
 
 }
 
- 
-.w3-about-right h5 {
-    color: #ff5722;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 3px;
-    font-size: 2em;
-    margin: 2em 0 0 5em;
-}
-.w3-about-right p {
-    color: black;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 1em 0 0 5em;
-}
-.w3-about-right p span {
-    display: block;
-    margin: 1em 0 0 0;
-}
 
 .w3-about-left h5 {
     color: #ff5722;
@@ -184,19 +86,21 @@ footer {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 3px;
-    font-size: 2em;
-    margin: 2em 0 0 0;
+    margin: 1em 0 0 0;
 }
 
 .w3-about-left p {
-    color: black;
-    font-size: 2em;
+    color: #999999;
+    font-size: .9em;
     line-height: 1.8em;
     margin: 1em 0 0 0;
 }
+
+
+
 .w3-about-left p span {
     display: block;
-    margin: 1em 0 0 0;
+    margin: em 0 0 0;
 }
 .w3l-button {
     margin: 2em 0 1em 0;
@@ -206,7 +110,6 @@ footer {
     font-size: .9em;
     text-decoration: none;
     padding: .5em 2em;
-    margin-left: 2%;
     background: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -218,34 +121,7 @@ footer {
     border: solid 1px #F44336;
     color: #FFFFFF;
 }
-
-.w3l-button_2 {
-    margin: 2em 0 1em 0;
-}
-.w3l-button_2 a {
-    color: #000000;
-    font-size: .9em;
-    text-decoration: none;
-    padding: .5em 2em;
-    margin-left: 2%;
-    background: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    border: solid 1px #000000;
-}
-
-
-.w3l-button_2 a:hover {
-    background: #F44336;
-    border: solid 1px #F44336;
-    color: #FFFFFF;
-}
-.w3l-button_2 a:focus{
-	outline:none;
-}
-
-.w3l-button_2 a:focus{
+.w3l-button a:focus{
 	outline:none;
 }
 .about-a img{
@@ -846,3 +722,73 @@ li.agileinfo_share {
     }
     }
 
+/* footer */
+footer {
+	background-color: grey;
+	clear: both;
+	margin-top:auto;	
+	margin:auto;	
+}
+
+.page-footer {
+	background-color:#343a40;
+	color: #ccc;
+	padding: 60px 0 30px;
+}
+
+.footer-copyright {
+	color: #666;
+	padding: 40px 0;
+}
+
+/* for responsive picture */
+.responsive {
+    width: 100%;
+    height: 500px;
+}
+
+/*navbar*/
+.navbar-brand img{
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.profile p span {
+    display: block;
+    margin: em 0 0 0;
+}
+
+.profile h5 {
+    color: #ff5722;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 1em 0 0 0;
+}
+
+.profile p {
+    color: black;
+    font-size: .9em;
+    line-height: 1.8em;
+    margin: 1em 0 0 0;
+}
+
+.profile p span {
+    display: block;
+    margin: em 0 0 0;
+}
+
+.profile {
+    margin-bottom: 2em;
+}
+.profile h5 {
+    font-size: 1em;
+    margin: 0em 0 0 0;
+}
+
+.profile {
+    padding: 0;
+}

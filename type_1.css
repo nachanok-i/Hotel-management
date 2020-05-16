@@ -4,6 +4,10 @@ html, body{
 	background:#ffffff;
 	margin: 0;
 }
+
+/*navbar*/
+
+
 p,ul li,ol li{
 	margin:0;
 	font-size:14px;
@@ -867,4 +871,10 @@ footer {
 .responsive {
     width: 100%;
     height: 500px;
+}
+
+.navbar-brand img{
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
 }

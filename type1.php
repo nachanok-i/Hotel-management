@@ -1,7 +1,17 @@
 <?php
 require_once "config.php";
 ?>
-<?php session_start(); ?>
+<?php session_start();
+if (isset($_SESSION['email']) != NULL) {
+	$userEmail = $_SESSION['email'];
+}
+else {
+	echo '<script>
+    alert("Please Login first");
+    window.location.href="index.php";
+    </script>';
+}
+?>
 
 
 <!Doctype html>

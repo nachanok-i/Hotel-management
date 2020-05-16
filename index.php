@@ -13,7 +13,7 @@ if (isset($_SESSION['email']) != NULL) {
 	<title>Calina Hotel</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="styleindex.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -22,8 +22,6 @@ if (isset($_SESSION['email']) != NULL) {
 	<!--This is my kit font awesome pls remind me-------------------------------------------->
 	<script src="https://kit.fontawesome.com/92d742c429.js" crossorigin="anonymous"></script>
 	<!--------------------------------------------------------------------------------------->
-	<!-- font-awesome-icons -->
-	<link href="font-awesome.css" rel="stylesheet">
 	<!-- tabs -->
 	<link href="easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
 	<!-- //tabs -->
@@ -78,6 +76,7 @@ if (isset($_SESSION['email']) != NULL) {
 			<div id="typer"></div>
 		</div>
 	</div>
+
 	<?php if (isset($_SESSION['email']) == NULL) : ?>
 		<div class="about">
 			<div class="container">
@@ -234,8 +233,9 @@ if (isset($_SESSION['email']) != NULL) {
 	<?php else : ?>
 		<div class="about">
 			<div class="container">
-				<div class="w3ls-heading">
-					<h2><b>Profile<b></h2>
+				<div class="w3ls-heading" style="margin-bottom: 10px;">
+					<h2><b>Profile</b></h2>
+					<hr>
 				</div>
 				<?php
 				$path = './customerPicture/';
@@ -243,51 +243,60 @@ if (isset($_SESSION['email']) != NULL) {
 					while ($row = mysqli_fetch_array($result)) {
 						$imgName = $row['profileImage'];
 						echo '<img src="' . $path . $imgName . '" class="img-fluid img-thumbnail mx-auto d-block" alt="customer picture" >';
-						echo '<div clas="row">';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> Firstname </h5>';
-						echo '<p style="font-size:2em;">' . $row['firstName'] . '</p>';
-						echo '</div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> Lastname </h5>';
-						echo '<p style="font-size:2em;">' . $row['lastName'] . '</p>';
-						echo '</div>';
-						echo '<div class="w-100"></div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> CitizenID </h5>';
-						echo '<p style="font-size:2em;">' . $row['citizenID'] . '</p>';
-						echo '</div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> Street </h5>';
-						echo '<p style="font-size:2em;">' . $row['street'] . '</p>';
-						echo '</div>';
-						echo '<div class="w-100"></div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> City </h5>';
-						echo '<p style="font-size:2em;">' . $row['city'] . '</p>';
-						echo '</div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> State </h5>';
-						echo '<p style="font-size:2em;">' . $row['state'] . '</p>';
-						echo '</div>';
-						echo '<div class="w-100 "></div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> Zipcode </h5>';
-						echo '<p style="font-size:2em;">' . $row['zipCode'] . '</p>';
-						echo '</div>';
-						echo '<div class="col w3-about-left">';
-						echo '<h5> Country </h5>';
-						echo '<p style="font-size:2em;">' . $row['country'] . '</p>';
-						echo '</div>';
+						echo '<div class="row">';
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> Firstname </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['firstName'] . '</b></p>';
+						echo 	'</div>';
+						echo 	'<div class="col profile" style=" text-align: center;" >';
+						echo 		'<h5 style="font-size:2em;"> Lastname </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['lastName'] . '</b></p>';
+						echo 	'</div>';
+
+						echo 	'<div class="w-100"></div>';
+
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> CitizenID </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['citizenID'] . '</b></p>';
+						echo 	'</div>';
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> Street </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['street'] . '</b></p>';
+						echo 	'</div>';
+
+						echo 	'<div class="w-100"></div>';
+
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> City </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['city'] . '</b></p>';
+						echo 	'</div>';
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> State </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['state'] . '</b></p>';
+						echo 	'</div>';
+
+						echo 	'<div class="w-100 "></div>';
+
+
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> Country </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['country'] . '</b></p>';
+						echo 	'</div>';
+
+						echo 	'<div class="col profile" style=" text-align: center;">';
+						echo 		'<h5 style="font-size:2em;"> Zipcode </h5>';
+						echo 		'<p style="font-size:2em;"><b>' . $row['zipCode'] . '</b></p>';
+						echo 	'</div>';
+
 						echo '</div>';
 					}
 				} else {
-					echo 'could not find customer picture';
+					echo 'Fali to load information';
 				}
 				?>
 			</div>
 		</div>
-	<?php endif ?>
+	<?php endif; ?>
 	<footer class="page-footer">
 		<div class="container">
 			<div class="row">
@@ -305,49 +314,48 @@ if (isset($_SESSION['email']) != NULL) {
 			<div class="footer-copyright text-uppercase font-weight-bold  text-center">king mongkut's university of technology thonburi </div>
 		</div>
 	</footer>
-	</div>
-
-	<script src="js/easy-responsive-tabs.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('#horizontalTab').easyResponsiveTabs({
-				type: 'default', //Types: default, vertical, accordion           
-				width: 'auto', //auto or any width like 600px
-				fit: true, // 100% fit in a container
-				closed: 'accordion', // Start closed if in accordion view
-				activate: function(event) { // Callback function if tab is switched
-					var $tab = $(this);
-					var $info = $('#tabInfo');
-					var $name = $('span', $info);
-					$name.text($tab.text());
-					$info.show();
-				}
-			});
-			$('#verticalTab').easyResponsiveTabs({
-				type: 'vertical',
-				width: 'auto',
-				fit: true
-			});
-		});
-	</script>
-	<!--//tabs-->
-	<!-- //here ends scrolling icon -->
-	<script src='js/jquery.typer.js'></script>
-	<script>
-		var win = $(window),
-			foo = $('#typer');
-
-		foo.typer(['Luxury Hotels', 'Hotels & Resorts', 'Luxury Resorts']);
-
-		// unneeded...
-		win.resize(function() {
-			var fontSize = Math.max(Math.min(win.width() / (1 * 10), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY));
-
-			foo.css({
-				fontSize: fontSize * .8 + 'px'
-			});
-		}).resize();
-	</script>
 </body>
+
+<script src="js/easy-responsive-tabs.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#horizontalTab').easyResponsiveTabs({
+			type: 'default', //Types: default, vertical, accordion           
+			width: 'auto', //auto or any width like 600px
+			fit: true, // 100% fit in a container
+			closed: 'accordion', // Start closed if in accordion view
+			activate: function(event) { // Callback function if tab is switched
+				var $tab = $(this);
+				var $info = $('#tabInfo');
+				var $name = $('span', $info);
+				$name.text($tab.text());
+				$info.show();
+			}
+		});
+		$('#verticalTab').easyResponsiveTabs({
+			type: 'vertical',
+			width: 'auto',
+			fit: true
+		});
+	});
+</script>
+<!--//tabs-->
+<!-- //here ends scrolling icon -->
+<script src='js/jquery.typer.js'></script>
+<script>
+	var win = $(window),
+		foo = $('#typer');
+
+	foo.typer(['Luxury Hotels', 'Hotels & Resorts', 'Luxury Resorts']);
+
+	// unneeded...
+	win.resize(function() {
+		var fontSize = Math.max(Math.min(win.width() / (1 * 10), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY));
+
+		foo.css({
+			fontSize: fontSize * .8 + 'px'
+		});
+	}).resize();
+</script>
 
 </html>

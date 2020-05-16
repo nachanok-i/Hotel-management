@@ -1,3 +1,17 @@
+<?php
+require_once "config.php";
+?>
+<?php session_start();
+if (isset($_SESSION['email']) != NULL) {
+	$userEmail = $_SESSION['email'];
+}
+else {
+	echo '<script>
+    alert("Please Login first");
+    window.location.href="index.php";
+    </script>';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,6 +37,7 @@
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#facility">Facilities</a></li>
                     </ul>

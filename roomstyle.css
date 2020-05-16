@@ -377,3 +377,9 @@ h3 {
 .ccd {
   background: rgba(0, 0, 0, 0.6);
 }
+
+.navbar-brand img{
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+}

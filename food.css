@@ -19,3 +19,8 @@ body {
     border: 1px solid rgb(211, 211, 211);
     border-radius: 3px;
   }
+  .navbar-brand img{
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}

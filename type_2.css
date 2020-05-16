@@ -846,3 +846,8 @@ li.agileinfo_share {
     }
     }
 
+    .navbar-brand img{
+        height: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }

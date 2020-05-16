@@ -1,7 +1,16 @@
 <?php
 require_once "config.php";
 ?>
-<?php session_start(); ?>
+<?php session_start();
+if (isset($_SESSION['email']) != NULL) {
+  $userEmail = $_SESSION['email'];
+} else {
+  echo '<script>
+    alert("Please Login first");
+    window.location.href="index.php";
+    </script>';
+}
+?>
 
 <!Doctype html>
 <html>
@@ -9,7 +18,7 @@ require_once "config.php";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="type_3.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -31,38 +40,38 @@ require_once "config.php";
 <body>
 
   <div class="banner">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-			<a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
-			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="navbar-nav">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
           <a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
-					<a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
-					<a href="food.php" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
-					<a href="service.php" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
-				</div>
-				<div class="navbar-nav ml-auto">
-					<?php if (isset($_SESSION['email']) != NULL) : ?>
-						<a class="nav-item nav-link"> <i class="fas fa-user-alt"> </i> <?php echo $_SESSION['email']; ?> </a>
-						<form class="form-inline" action="logout.php" method="POST">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logout">Logout</button>
-						</form>
-					<?php else : ?>
-						<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
-						<div class="dropdown-menu dropdown-menu-right p-3">
-							<form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
-								<input class="form-control login" type="text" name="email" placeholder="Email" id="email">
-								<input class="form-control login" type="password" name="password" placeholder="Password" id="pass">
-								<input class="btn btn-primary" type="submit" name="submit" value="Login">
-							</form>
-						</div>
-						<a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
-					<?php endif ?>
-				</div>
-			</div>
-		</nav>
+          <a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
+          <a href="food.php" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
+          <a href="service.php" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <?php if (isset($_SESSION['email']) != NULL) : ?>
+            <a class="nav-item nav-link"> <i class="fas fa-user-alt"> </i> <?php echo $_SESSION['email']; ?> </a>
+            <form class="form-inline" action="logout.php" method="POST">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logout">Logout</button>
+            </form>
+          <?php else : ?>
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+            <div class="dropdown-menu dropdown-menu-right p-3">
+              <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
+                <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
+                <input class="form-control login" type="password" name="password" placeholder="Password" id="pass">
+                <input class="btn btn-primary" type="submit" name="submit" value="Login">
+              </form>
+            </div>
+            <a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
+          <?php endif ?>
+        </div>
+      </div>
+    </nav>
     <div class="w3-banner">
     </div>
   </div>
