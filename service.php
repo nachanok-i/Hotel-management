@@ -2,6 +2,8 @@
 require_once "config.php";
 ?>
 <?php session_start();
+
+
 if (isset($_SESSION['email']) != NULL) {
     $userEmail = $_SESSION['email'];
 } else {
@@ -53,25 +55,6 @@ if (isset($_GET["action"])) {
 
 
 
-
-
-
-<?php
-function loadFood()
-{
-    require_once "config.php";
-    $output = "";
-    $sql = "SELECT * FROM Menu";
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        $output .= '<option value="' . $row["foodID"] . '">' . $row["foodName"] . '</option>';
-    }
-    return $output;
-}
-?>
-
-
-
 <!Doctype html>
 <html>
 
@@ -94,23 +77,7 @@ function loadFood()
     $query = "SELECT * FROM AdditionalService";
     $result = mysqli_query($conn, $query);
     ?>
-    <script>
-        $(document).ready(function() {
-            $('#myTable').on('click', 'input[type="button"]', function() {
-                $(this).closest('tr').remove();
-            })
-            $('p input[type="button"]').click(function() {
-                $('#myTable').
-                append(keepCode)
-            });
 
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-
-        });
-    </script>
     <script>
         var food_ID;
         $(document).ready(function() {
@@ -203,7 +170,6 @@ function loadFood()
                                 </div>
                             </td>
                         </tr>
-
                     </form>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -226,7 +192,7 @@ function loadFood()
                         <tr>
                             <td><?php echo $values["item_name"]; ?></td>
                             <td><?php echo $values["item_price"]; ?> ฿</td>
-                            <td><a href="service.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="btn btn-danger">Remove</span></a></td>
+                            <td><a href="service.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="btn btn-danger">Remove</span></a></td>
                         </tr>
                     <?php
                         $total = $total +  $values["item_price"];

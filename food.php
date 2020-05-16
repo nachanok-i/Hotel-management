@@ -57,20 +57,6 @@ if (isset($_GET["action"])) {
 
 
 
-<?php
-function loadFood()
-{
-    require_once "config.php";
-    $output = "";
-    $sql = "SELECT * FROM Menu";
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        $output .= '<option value="' . $row["foodID"] . '">' . $row["foodName"] . '</option>';
-    }
-    return $output;
-}
-?>
-
 
 
 <!Doctype html>
@@ -95,37 +81,7 @@ function loadFood()
     $query = "SELECT * FROM Menu";
     $result = mysqli_query($conn, $query);
     ?>
-    <script>
-        var keepMenuPhp = '';
-        var keepCode = '<tr><td><input type="button" class="bn btn-danger" value="Delete"/></td>' +
-            '<td><select class="form-control" name="food[]" id="exampleFormControlSelect1">' +
-            '<option value="">Food Menu</option>' +
-            '<?php loadFood() ?>' +
-            '</select></td>' +
-            '<td><input type="number" name="qty[]" value="1" min="0" class="form-control" placeholder="Enter Quantity"></td>' +
-            '<td><input type="number" name="price[]" value="0" min="0" class="form-control" placeholder="Enter Price"></td></tr>';
 
-        $(document).ready(function() {
-
-        })
-
-
-        $(document).ready(function() {
-            $('#myTable').on('click', 'input[type="button"]', function() {
-                $(this).closest('tr').remove();
-            })
-            $('p input[type="button"]').click(function() {
-                $('#myTable').
-                append(keepCode)
-            });
-
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-
-        });
-    </script>
     <script>
         var food_ID;
         $(document).ready(function() {
@@ -294,7 +250,6 @@ function loadFood()
                 </div>
 
             </div>
-
             <input type="submit" name="sumbit" style="margin-top:5px; " align="center" class="btn btn-lg btn-primary mx-auto d-block" value="submit" />
         </form>
 
