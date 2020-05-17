@@ -16,7 +16,7 @@ $position = $_POST['position'];
 $startDate = $_POST['startDate'];
 $branch = $_POST['Branch'];
 $gender = $_POST['gender'];
-if (isset($_POST['submit'])&& (!ctype_space($firstName)) && (!ctype_space($lastName)) && (!ctype_space($email)) && (!ctype_space($city)) && (!ctype_space($street)) && (!ctype_space($state)) && (!ctype_space($country)) && (!ctype_space($city)) (!ctype_space($nationality)) && (!ctype_space($position))  ) {
+if (isset($_POST['submit']) ) {
 
     $file = $_FILES['yourPicture'];
     $fileName = $_FILES['yourPicture']['name'];
