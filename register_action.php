@@ -3,7 +3,7 @@
     // Include config file
     require_once "config.php";
     $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
+    $lastName = $_POST['lastName']; 
     $psw = $_POST['psw'];
     $pswRep = $_POST['psw-repeat'];
     $citizenID = $_POST['CitizenID'];

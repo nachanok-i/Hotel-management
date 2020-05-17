@@ -3,7 +3,7 @@
     session_start();
     // Include config file
     require_once "config.php";
-
+    if (isset($_POST['submit'])!=NULL) {
     // echo "in\n";
     // echo "<br>";
     // echo $_POST['Room_Type'];
@@ -29,6 +29,7 @@
     // echo $_POST['additional'];
     // echo "<br>";
     $email = $_SESSION['email'];
+    $totalPrice = $_POST['calPrice'];
     // echo $_SESSION['branch'];
     // echo "<br>";
     // echo "'".$_POST['promotion']."'";
@@ -48,21 +49,21 @@
     }
     //get citizenID
     $query = "SELECT citizenID FROM Customer WHERE email LIKE '%$email%'";
-    $objQuery = mysqli_query($conn,$query) or die(mysqli_error());
+    $objQuery = mysqli_query($conn,$query);
     $objResult = mysqli_fetch_array($objQuery ,MYSQLI_ASSOC);
     $citizenID = $objResult["citizenID"];
     echo "'".$citizenID."'";
     //get roomID
     $query = "SELECT roomID FROM Room WHERE branchID = '".$_SESSION['branch']."' 
     AND roomType = '".$_POST['Room_Type']."' AND status = '0'";
-    $objQuery = mysqli_query($conn,$query) or die(mysqli_error());
+    $objQuery = mysqli_query($conn,$query); 
     $objResult = mysqli_fetch_array($objQuery ,MYSQLI_ASSOC);
     $roomID = $objResult["roomID"];
     //get promotion
 
     $sql = "INSERT INTO Booking_Detail(guestFirstName,guestLastName,checkIn,checkOut,adult,child,branchID,price,paymentMethod,cardnumber,additionalNote,roomID,citizenID)
     VALUES('".$_POST['firstName']."', '".$_POST['lastName']."', '".$_POST['From']."', '".$_POST['To']."', '".$_POST['adult']."', '".$_POST['child']."', 
-    '".$_SESSION['branch']."', '".$_SESSION['price']."', '".$_POST['payment_method']."', '".$_POST['cardNumber']."', '".$_POST['additional']."', '$roomID', '$citizenID')";
+    '".$_SESSION['branch']."', '".$totalPrice."', '".$_POST['payment_method']."', '".$_POST['cardNumber']."', '".$_POST['additional']."', '$roomID', '$citizenID')";
     if ($conn->query($sql) === TRUE) {
         $conn->close();
         echo '<script>
@@ -73,5 +74,10 @@
         echo 'error:' . $sql . "<br>" . $conn->error;
         $conn->close();
     }
-
+}else {
+    echo '<script>
+    alert("Please submit form first");
+    window.location.href="booking.php";
+    </script>';
+}
 ?>

@@ -1,7 +1,22 @@
 
 <?php
 require_once "config.php";
-if (isset($_POST['submit'])) {
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
+$email = $_POST['email'];
+$requireSalary = $_POST['requiredSalary'];
+$city = $_POST['inputCity'];
+$street = $_POST['street'];
+$state = $_POST['state'];
+$zipCode = $_POST['zipCode'];
+$country = $_POST['country'];
+$nationality = $_POST['nationality'];
+$phone = $_POST['phone'];
+$position = $_POST['position'];
+$startDate = $_POST['startDate'];
+$branch = $_POST['Branch'];
+$gender = $_POST['gender'];
+if (isset($_POST['submit'])&& (!ctype_space($firstName)) && (!ctype_space($lastName)) && (!ctype_space($email)) && (!ctype_space($city)) && (!ctype_space($street)) && (!ctype_space($state)) && (!ctype_space($country)) && (!ctype_space($city)) (!ctype_space($nationality)) && (!ctype_space($position))  ) {
 
     $file = $_FILES['yourPicture'];
     $fileName = $_FILES['yourPicture']['name'];
@@ -31,21 +46,7 @@ if (isset($_POST['submit'])) {
         </script>';
     }
 
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $requireSalary = $_POST['requiredSalary'];
-    $city = $_POST['inputCity'];
-    $street = $_POST['street'];
-    $state = $_POST['state'];
-    $zipCode = $_POST['zipCode'];
-    $country = $_POST['country'];
-    $nationality = $_POST['nationality'];
-    $phone = $_POST['phone'];
-    $position = $_POST['position'];
-    $startDate = $_POST['startDate'];
-    $branch = $_POST['Branch'];
-    $gender = $_POST['gender'];
+
     $picture =  $fileName;
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $sql = "INSERT INTO EmployeeApplication(id,firstName, lastName, email, requiredSalary, startDate, street,city,state,zipCode,country,nationality,phone,imgURL,gender,position,branchID)  

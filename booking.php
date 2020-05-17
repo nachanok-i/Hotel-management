@@ -84,6 +84,9 @@ if (isset($_SESSION['email']) != NULL) {
                         },
                         success: function(output) {
                             basePrice = output;
+                            keepPrice = basePrice * diffDays;
+                            document.getElementById("myInput").value = keepPrice;
+                            document.getElementById("pricePerNight").value = output;
                         }
                     });
                 });
@@ -95,6 +98,13 @@ if (isset($_SESSION['email']) != NULL) {
                 changeMonth: true,
                 changeYear: true,
                 buttonText: "Choose",
+                onSelect: function() {
+                    var a = $("#dt1").datepicker('getDate').getTime();
+                    var b = $("#dt2").datepicker('getDate').getTime();
+                    var c = 24 * 60 * 60 * 1000;
+                    diffDays = Math.round(Math.abs((a - b) / (c)));
+                    $("#totaldays").val(diffDays);
+                }
 
             });
             $('#dt2').datepicker({
@@ -111,7 +121,8 @@ if (isset($_SESSION['email']) != NULL) {
                     diffDays = Math.round(Math.abs((a - b) / (c)));
                     $("#totaldays").val(diffDays);
                     keepPrice = basePrice * diffDays;
-                    document.getElementById("myInput").value =keepPrice;
+                    document.getElementById("myInput").value = keepPrice;
+
                     //check to prevent a user from entering a date below date of dt1
                 }
             });
@@ -220,19 +231,19 @@ if (isset($_SESSION['email']) != NULL) {
                         <label for="From">
                             <h4><b>Arrive</b></h4>
                             </lable>
-                            <input type="text" name="From" placeholder="DD-MM-YYYY" id="dt1" class="form-control form-control-lg" required>
+                            <input type="text" name="From" placeholder="YYYY-MM-DD" id="dt1" class="form-control form-control-lg" required>
                     </div>
                     <div class="col-md-3">
                         <label for="From">
                             <h4><b>Depart</b></h4>
                             </lable>
 
-                            <input type="text" name="To" placeholder="DD-MM-YYYY" id="dt2" class="form-control form-control-lg" required>
+                            <input type="text" name="To" placeholder="YYYY-MM-DD" id="dt2" class="form-control form-control-lg" required>
                     </div>
 
                     <div class="col-md-3">
                         <label for="From">
-                            <h4><b>Total Date</b></h4>
+                            <h4><b>Total Days</b></h4>
                             </lable>
                             <input type="text" name="totalDate" placeholder="total date" id="totaldays" class="form-control form-control-lg" readonly>
                     </div>
@@ -260,7 +271,14 @@ if (isset($_SESSION['email']) != NULL) {
                 <i class="fa fa-cc-amex" style="color:blue; font-size:50px"></i>
                 <i class="fa fa-cc-mastercard" style="color:red; font-size:50px"></i>
                 <i class="fa fa-cc-discover" style="color:orange; font-size:50px"></i>
-
+                <div class="form-group">
+                   <label for="perNight"><b>Room Price Per Night</b></label>
+                    <input type="number" class="form-control form-control-lg" name='perNight' id="pricePerNight" placeholder="Price per night" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="calPrice"><b>Total Price</b></label>
+                    <input type="number" class="form-control form-control-lg" name='calPrice' id="myInput" placeholder="Total Price" readonly>
+                </div>
                 <div class="form-group">
                     <label for="seeAnotherField"><b>Select your payment method?</b></label>
                     <select class="form-control form-control-lg" name="payment_method" id="seeAnotherField">
@@ -275,15 +293,7 @@ if (isset($_SESSION['email']) != NULL) {
                 </div>
 
             </div>
-            <div class="container">
-                <div class="form-group">
-                    <h4><b>Total Price</b></h4>
-                    <script>
 
-                    </script>
-                    <input type="number" class="form-control form-control-lg" name='calPrice' id="myInput" placeholder="Total Price" readonly>
-                </div>
-            </div>
 
             <div class="container">
                 <h4><b>Comment Section</b></h4>
@@ -301,7 +311,7 @@ if (isset($_SESSION['email']) != NULL) {
 
             <div class="clearfix">
                 <button type="submit" value="ignore" formaction="index.php" class="cancelbtn" formnovalidate>Cancel</button>
-                <button href="index.php" type="submit" class="signupbtn">Confirm</button>
+                <button type="submit" name="submit" class="signupbtn">Confirm</button>
             </div>
     </form>
 
