@@ -66,8 +66,28 @@ if (isset($_SESSION['email']) != NULL) {
     </script>
 
     <script>
+        var diffDays = 1;
+        var basePrice;
+        var keepPrice;
         /* Date picker */
         $(document).ready(function() {
+
+
+            $(document).ready(function() {
+                $("#room_type").change(function() {
+                    $.ajax({
+                        async: false,
+                        url: 'get_price.php',
+                        type: 'post',
+                        data: {
+                            room_type: $(this).val()
+                        },
+                        success: function(output) {
+                            basePrice = output;
+                        }
+                    });
+                });
+            });
 
             $("#dt1").datepicker({
                 dateFormat: "yy-MM-dd",
@@ -88,27 +108,12 @@ if (isset($_SESSION['email']) != NULL) {
                     var a = $("#dt1").datepicker('getDate').getTime();
                     var b = $("#dt2").datepicker('getDate').getTime();
                     var c = 24 * 60 * 60 * 1000;
-                    var diffDays = Math.round(Math.abs((a - b) / (c)));
+                    diffDays = Math.round(Math.abs((a - b) / (c)));
                     $("#totaldays").val(diffDays);
+                    keepPrice = basePrice * diffDays;
+                    document.getElementById("myInput").value =keepPrice;
                     //check to prevent a user from entering a date below date of dt1
                 }
-            });
-
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("#room_type").change(function() {
-                $.ajax({
-                    url: 'get_price.php',
-                    type: 'post',
-                    data: {
-                        room_type: $(this).val()
-                    },
-                    success: function(output) {
-                        $("#output").html(output);
-                    }
-                });
             });
         });
     </script>
@@ -210,7 +215,6 @@ if (isset($_SESSION['email']) != NULL) {
                     </div>
                 </div>
 
-
                 <div class="form-row">
                     <div class="col-md-3">
                         <label for="From">
@@ -228,10 +232,9 @@ if (isset($_SESSION['email']) != NULL) {
 
                     <div class="col-md-3">
                         <label for="From">
-                            <h4><b>Depart</b></h4>
+                            <h4><b>Total Date</b></h4>
                             </lable>
-
-                            <input type="text" name="totalDate" placeholder="total date" id="totaldays" class="form-control form-control-lg" required>
+                            <input type="text" name="totalDate" placeholder="total date" id="totaldays" class="form-control form-control-lg" readonly>
                     </div>
 
                 </div>
@@ -257,11 +260,9 @@ if (isset($_SESSION['email']) != NULL) {
                 <i class="fa fa-cc-amex" style="color:blue; font-size:50px"></i>
                 <i class="fa fa-cc-mastercard" style="color:red; font-size:50px"></i>
                 <i class="fa fa-cc-discover" style="color:orange; font-size:50px"></i>
-                <label for="cardNumber"><b>Card Number</b></label>
-
 
                 <div class="form-group">
-                    <label for="seeAnotherField">Do You Want To See Another Field?</label>
+                    <label for="seeAnotherField"><b>Select your payment method?</b></label>
                     <select class="form-control form-control-lg" name="payment_method" id="seeAnotherField">
                         <option value="cash">Cash</option>
                         <option value="creditCard">Credit Card</option>
@@ -273,14 +274,15 @@ if (isset($_SESSION['email']) != NULL) {
                     <input type=text name="cardNumber" id="otherField" placeholder="Card Number" class="form-control form-control-lg" required>
                 </div>
 
-                <lable for="promotion"><b>Promotion</b></lable>
-                <input type="text" name="promotion" placeholder="Enter promo code" class="form-control form-control-lg">
             </div>
-            <div class="container" id="totalPrice">
-                <h4><b>Total</b></h4>
-                <span id="output"></span>
-                <!-- <lable for="total"><b>Total</b></lable>
-                    <span name="total"> echo $_GET['price'];?></span> -->
+            <div class="container">
+                <div class="form-group">
+                    <h4><b>Total Price</b></h4>
+                    <script>
+
+                    </script>
+                    <input type="number" class="form-control form-control-lg" name='calPrice' id="myInput" placeholder="Total Price" readonly>
+                </div>
             </div>
 
             <div class="container">
