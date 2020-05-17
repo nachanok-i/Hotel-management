@@ -138,7 +138,7 @@ else {
                 ?>
               </select>
               <br>
-            <button type="submit" class="btn btn-secondary btn-lg" style="margin-left: 47%;" name="submit" value="Explore">Select</button>
+            <button type="submit" class="btn btn-secondary btn-lg" style="margin-left: 47%;" name="submit" value="Explore">Book Know</button>
           </form>
         </div>
 
