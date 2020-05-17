@@ -8,8 +8,8 @@
     // echo "<br>";
     // echo $_POST['Room_Type'];
     // echo "<br>";
-    echo $_SESSION['price'];
-    echo "<br>";
+    // echo $_SESSION['price'];
+    // echo "<br>";
     // echo $_POST['firstName'];
     // echo "<br>";
     // echo $_POST['lastName'];
@@ -28,10 +28,10 @@
     // echo "<br>";
     // echo $_POST['additional'];
     // echo "<br>";
-    echo $_SESSION['email'];
-    echo $_SESSION['branch'];
-    echo "<br>";
-    echo "'".$_POST['promotion']."'";
+    $email = $_SESSION['email'];
+    // echo $_SESSION['branch'];
+    // echo "<br>";
+    // echo "'".$_POST['promotion']."'";
     if ($_POST['adult'] < 1)
     {
         echo '<script>
@@ -47,10 +47,11 @@
         </script>';
     }
     //get citizenID
-    $query = "SELECT citizenID FROM Customer WHERE email = '".$_SESSION['email']."'";
+    $query = "SELECT citizenID FROM Customer WHERE email LIKE '%$email%'";
     $objQuery = mysqli_query($conn,$query) or die(mysqli_error());
     $objResult = mysqli_fetch_array($objQuery ,MYSQLI_ASSOC);
     $citizenID = $objResult["citizenID"];
+    echo "'".$citizenID."'";
     //get roomID
     $query = "SELECT roomID FROM Room WHERE branchID = '".$_SESSION['branch']."' 
     AND roomType = '".$_POST['Room_Type']."' AND status = '0'";
