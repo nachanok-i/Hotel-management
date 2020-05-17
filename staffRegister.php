@@ -32,6 +32,12 @@ require_once "config.php";
   ?>
 
   <script>
+    $(".readonly").keydown(function(e) {
+      e.preventDefault();
+    });
+  </script>
+
+  <script>
     $(document).ready(function() {
       $("#choose").mousedown(function(e) {
         e.preventDefault();
@@ -176,14 +182,14 @@ require_once "config.php";
 
       <div class="form-group">
         <label for="starDate"><b>Start Date</b></label>
-        <input type="text" class="form-control form-control-lg" name="startDate" id="dt1" placeholder="Enter Start date" readonly="readonly" required>
+        <input type="text" class="form-control form-control-lg readonly" name="startDate" id="dt1" placeholder="Enter Start date"  required>
       </div>
 
       <div class="form-group">
         <label for="Branch">
           <b>Branch</b>
         </label>
-        <select name="Branch" class="form-control form-control-lg" require>
+        <select name="Branch" class="form-control form-control-lg" required>
           <option value="">Select Branch</option>
           <?php
           if ($result->num_rows > 0) {

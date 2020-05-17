@@ -91,6 +91,7 @@ if (isset($_GET["action"])) {
             });
             $('#food').change(function() {
                 $.ajax({
+                    async: false,
                     url: "data.php",
                     method: "POST",
                     data: {
@@ -100,7 +101,6 @@ if (isset($_GET["action"])) {
                     success: function(price) {
                         $('#price').html(price);
                         $('#price').val(data)
-
                     }
 
                 });
