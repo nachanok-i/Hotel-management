@@ -160,7 +160,7 @@ if (isset($_SESSION['email']) != NULL) {
         </div>
         <div class="form-group col-sm-3 my-1">
           <label for="state"><b>State</b></label>
-          <input type="text" class="form-control form-control-lg" name="state" id="state" placeholder="Enter State" required>
+          <input type="text" class="form-control form-control-lg" name="state" id="state" placeholder="Enter State (Optional)">
         </div>
       </div>
       <div class="form-row">

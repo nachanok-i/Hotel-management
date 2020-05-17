@@ -2,10 +2,19 @@
 // Start the session
 session_start();
 require_once "config.php";
-$query = "SELECT * FROM Branch ORDER BY branchID";
-$query_2 = "SELECT * FROM Furniture ";
-$result_2 = $conn->query($query_2);
-$result = $conn->query($query);
+
+if (isset($_SESSION['email']) != NULL) {
+    $userEmail = $_SESSION['email'];
+    $query = "SELECT * FROM Branch ORDER BY branchID";
+    $query_2 = "SELECT * FROM Furniture ";
+    $result_2 = $conn->query($query_2);
+    $result = $conn->query($query);
+} else {
+    echo '<script>
+    alert("Please Login first");
+    window.location.href="index.php";
+    </script>';
+}
 ?>
 
 <!Doctype html>

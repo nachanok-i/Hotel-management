@@ -2,19 +2,23 @@
     session_start();
     // Include config file
     require_once "config.php";
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $psw = $_POST['psw'];
+    $pswRep = $_POST['psw-repeat'];
+    $citizenID = $_POST['CitizenID'];
+    $city = $_POST['inputCity'];
+    $street = $_POST['street'];
+    $state = $_POST['state'];
+    $zipCode = $_POST['zipCode'];
+    $country = $_POST['country'];
+    $email = $_POST['email'];
 
-    if (isset($_POST['submit'])) {
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $psw = $_POST['psw'];
-        $pswRep = $_POST['psw-repeat'];
-        $citizenID = $_POST['CitizenID'];
-        $city = $_POST['inputCity'];
-        $street = $_POST['street'];
-        $state = $_POST['state'];
-        $zipCode = $_POST['zipCode'];
-        $country = $_POST['country'];
-        $email = $_POST['email'];
+    if (isset($_POST['submit']) && (!ctype_space($firstName)) && (!ctype_space($lastName)) && (!ctype_space($psw)) && (!ctype_space($pswRep)) && (!ctype_space($city)) && (!ctype_space($state)) && (!ctype_space($country)) && (!ctype_space($email)) ) {
+        if (empty($_POST['state'])) {
+            $state = '""';
+        }
+        
         $encryppsw = sha1($psw);
         $sql_citizenID = mysqli_query($conn, "SELECT citizenID FROM Customer WHERE citizenID='$citizenID'");
         $sql_email = mysqli_query($conn, "SELECT email FROM Customer WHERE email like '%$email%'");
