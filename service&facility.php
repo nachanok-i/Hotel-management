@@ -49,7 +49,7 @@ else {
             <div class="container">
                 <div class="masthead-subheading">Welcome To Calina</div>
                 <div class="masthead-heading text-uppercase">Your Elegance Stay</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Explore More</a>
+                <a class="btn btn-primary btn-xl text-uppercase " href="service.php">Order Servuce</a>
             </div>
         </header>
         <!-- Services-->
