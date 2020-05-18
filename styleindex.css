@@ -269,6 +269,7 @@ body a:hover{
 }
 .resp-tabs-list li{
        border:3px solid #fff;
+       width: 190px;
 }
 li.resp-tab-item.resp-tab-active{
     border: 3px solid #ff5722;
