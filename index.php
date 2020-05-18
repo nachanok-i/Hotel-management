@@ -94,27 +94,29 @@ if (isset($_SESSION['email']) != NULL) {
 		</div>
 
 		<div class="popular-section-wthree">
-			<div class="container">
-				<div class="w3ls-heading">
-					<h3>Our Service</h3>
-				</div>
-				<div class="popular-agileinfo">
-					<div class="col-md-3 popular-grid item1">
-						<i class="fa fa-cutlery" aria-hidden="true"></i>
-						<h4>Food</h4>
-						<p>We have varity food for customer to explore</p>
+			<div class="w3ls-heading">
+				<h3>Our Service</h3>
+			</div>
+			<div class="popular-agileinfo">
+				<div class="container">
+					<div class="row">
+						<div class="col-md popular-grid">
+							<i class="fa fa-cutlery" aria-hidden="true"></i>
+							<h4>Food</h4>
+							<p>We have varity food for customer to explore</p>
+						</div>
+						<div class="col-md popular-grid">
+							<i class="fa fa-moon-o" aria-hidden="true"></i>
+							<h4>Resting</h4>
+							<p>We have varity rooms for customer to choose for booking</p>
+						</div>
+						<div class="col-md popular-grid popular-grid-bottom">
+							<i class="fa fa-car" aria-hidden="true"></i>
+							<h4>Service</h4>
+							<p>We have varity services for customer to choose for using</p>
+						</div>
+						<div class="clearfix"> </div>
 					</div>
-					<div class="col-md-3 popular-grid item2">
-						<i class="fa fa-moon-o" aria-hidden="true"></i>
-						<h4>Resting</h4>
-						<p>We have varity rooms for customer to choose for booking</p>
-					</div>
-					<div class="col-md-3 popular-grid popular-grid-bottom item3">
-						<i class="fa fa-car" aria-hidden="true"></i>
-						<h4>Service</h4>
-						<p>We have varity services for customer to choose for using</p>
-					</div>
-					<div class="clearfix"> </div>
 				</div>
 			</div>
 		</div>
