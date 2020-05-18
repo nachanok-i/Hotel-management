@@ -154,7 +154,7 @@ if (isset($_SESSION['email']) != NULL) {
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
 											<li><a href="https://www.facebook.com/nachanok.issarapruk.tap.ipod" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
-											<li><a href="https://instagram.com/iss_taptap?igshid=mdx610fms5r8" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
+											<li><a href="https://instagram.com/iss_taptap?igshid=mdx610fms5r8" class="ig_profile"><img src="picHotelRoom/instagram.png"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -172,7 +172,7 @@ if (isset($_SESSION['email']) != NULL) {
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
 											<li><a href="https://www.facebook.com/sutinan.tadalimavad" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
-											<li><a href="https://instagram.com/fabgeniu_z?igshid=1w4eyt617h47w" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
+											<li><a href="https://instagram.com/fabgeniu_z?igshid=1w4eyt617h47w" class="ig_profile"><img src="picHotelRoom/instagram.png"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -189,7 +189,7 @@ if (isset($_SESSION['email']) != NULL) {
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
 											<li><a href="https://www.facebook.com/bookbight" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
-											<li><a href="https://instagram.com/howdy_book?igshid=cxvirokbjj9m" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
+											<li><a href="https://instagram.com/howdy_book?igshid=cxvirokbjj9m" class="ig_profile"><img src="picHotelRoom/instagram.png"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -206,7 +206,7 @@ if (isset($_SESSION['email']) != NULL) {
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
 											<li><a href="https://www.facebook.com/toonTheta" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
-											<li><a href="https://instagram.com/toon.sir?igshid=1wsqvmgb51vey" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
+											<li><a href="https://instagram.com/toon.sir?igshid=1wsqvmgb51vey" class="ig_profile"><img src="picHotelRoom/instagram.png"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -224,7 +224,7 @@ if (isset($_SESSION['email']) != NULL) {
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
 											<li><a href="https://www.facebook.com/sahachokp" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
-											<li><a href="https://instagram.com/lionn_lsp?igshid=lqmo1ftht4lt" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
+											<li><a href="https://instagram.com/lionn_lsp?igshid=lqmo1ftht4lt" class="ig_profile"><img src="picHotelRoom/instagram.png"></a></li>
 										</ul>
 									</div>
 								</div>
