@@ -183,7 +183,7 @@ if (isset($_SESSION['email']) != NULL) {
 								</div>
 								<div class="col-md-6 team-Info-agileits">
 									<h4>Chadapong Thanaprasit</h4>
-									<span>Web Debeloper</span>
+									<span>Web Developer</span>
 									<p>His student ID:61070503403</p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
