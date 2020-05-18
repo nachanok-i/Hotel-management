@@ -11,6 +11,7 @@ if (isset($_SESSION['email']) != NULL) {
 
 <head>
 	<title>Calina Hotel</title>
+	<link rel="shortcut icon" href="./Logo/Calina_Logo-03.png" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="styleindex.css">
@@ -252,18 +253,18 @@ if (isset($_SESSION['email']) != NULL) {
 						echo '<img src="' . $path . $imgName . '" class="img-fluid img-thumbnail mx-auto d-block" alt="customer picture" >';
 						echo '<div class="row">';
 						echo 	'<div class="col profile" style=" text-align: center;">';
-						echo 		'<h5 style="font-size:2em;"> Firstname </h5>';
+						echo 		'<h5 style="font-size:2em;"> First name </h5>';
 						echo 		'<p style="font-size:2em;"><b>' . $row['firstName'] . '</b></p>';
 						echo 	'</div>';
 						echo 	'<div class="col profile" style=" text-align: center;" >';
-						echo 		'<h5 style="font-size:2em;"> Lastname </h5>';
+						echo 		'<h5 style="font-size:2em;"> Last name </h5>';
 						echo 		'<p style="font-size:2em;"><b>' . $row['lastName'] . '</b></p>';
 						echo 	'</div>';
 
 						echo 	'<div class="w-100"></div>';
 
 						echo 	'<div class="col profile" style=" text-align: center;">';
-						echo 		'<h5 style="font-size:2em;"> CitizenID </h5>';
+						echo 		'<h5 style="font-size:2em;"> Citizen ID </h5>';
 						echo 		'<p style="font-size:2em;"><b>' . $row['citizenID'] . '</b></p>';
 						echo 	'</div>';
 						echo 	'<div class="col profile" style=" text-align: center;">';
@@ -291,7 +292,7 @@ if (isset($_SESSION['email']) != NULL) {
 						echo 	'</div>';
 
 						echo 	'<div class="col profile" style=" text-align: center;">';
-						echo 		'<h5 style="font-size:2em;"> Zipcode </h5>';
+						echo 		'<h5 style="font-size:2em;"> Zip code </h5>';
 						echo 		'<p style="font-size:2em;"><b>' . $row['zipCode'] . '</b></p>';
 						echo 	'</div>';
 

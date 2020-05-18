@@ -15,7 +15,8 @@ if (isset($_SESSION['email']) != NULL) {
 <html lang="en">
 
 <head>
-    <title>View Service Detail Page</title>
+    <title>Service & Facility</title>
+    <link rel="shortcut icon" href="./Logo/Calina_Logo-03.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -24,10 +25,13 @@ if (isset($_SESSION['email']) != NULL) {
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!--This is my kit font awesome pls remind me-------------------------------------------->
+	<script src="https://kit.fontawesome.com/92d742c429.js" crossorigin="anonymous"></script>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="styleindex.css" rel="stylesheet" />

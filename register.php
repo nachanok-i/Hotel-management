@@ -15,6 +15,7 @@ if (isset($_SESSION['email']) != NULL) {
 
 <head>
   <title>Register Form</title>
+  <link rel="shortcut icon" href="./Logo/Calina_Logo-03.png" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="register.css">

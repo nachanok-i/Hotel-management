@@ -67,7 +67,7 @@
     if ( ($conn->query($sql) === TRUE) && ($conn->query($sqlRoom) == TRUE) ) {
         $conn->close();
         echo '<script>
-        alert("Booking success");
+        alert("Booking successful");
         window.location.href="index.php";
         </script>';
     } else {

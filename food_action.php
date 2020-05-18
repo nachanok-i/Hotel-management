@@ -36,7 +36,7 @@ if ( (isset($_SESSION['shopping_cart']) != NULL)  && (isset($_POST['sumbit'])!=N
                     $sql3 = "INSERT INTO FoodReceipt(receiptID,foodID,qty) VALUES ('$receiptID', '$foodID', $quantity )";
                     if ($conn->query($sql3) === TRUE) {
                         unset($_SESSION["shopping_cart"]);
-                        echo '<script>alert("Order success!")</script>';
+                        echo '<script>alert("Order successful!")</script>';
                         echo '<script>window.location="food.php"</script>';
                     } else {
                         unset($_SESSION["shopping_cart"]);

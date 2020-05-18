@@ -17,6 +17,7 @@ else {
 
 <head>
   <title>Elite</title>
+  <link rel="shortcut icon" href="./Logo/Calina_Logo-03.png" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="type_2.css">
@@ -148,26 +149,6 @@ else {
       </div>
     </div>
   </div>
-  </div>
-  <div>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-sm-12">
-            <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
-            <P>This website is for Tab Hotel<br> Thank you for using our page</P>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <h6 class="text-uppercase font-weight-bold">Contact</h6>
-            <p>1640 Riverside Drive, Hill Valley, California
-              <br>book21424@gmail.com
-              <br>+ 01 234 567 88
-              <br>+ 01 234 567 89</p>
-          </div>
-        </div>
-        <div class="footer-copyright text-uppercase font-weight-bold  text-center">king mongkut's university of technology thonburi </div>
-      </div>
-    </footer>
   </div>
 </body>
 

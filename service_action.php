@@ -31,7 +31,7 @@ if ((isset($_SESSION['service_cart']) != NULL)  && (isset($_POST['sumbit']) != N
                     $sql3 = "INSERT INTO AdditionalServiceReceipt(receiptID,serviceID) VALUES ('$receiptID', '$serviceID')";
                     if ($conn->query($sql3) === TRUE) {
                         unset($_SESSION["service_cart"]);
-                        echo '<script>alert("Order success!")</script>';
+                        echo '<script>alert("Order successful!")</script>';
                         echo '<script>window.location="service.php"</script>';
                     } else {
                         unset($_SESSION["service_cart"]);
