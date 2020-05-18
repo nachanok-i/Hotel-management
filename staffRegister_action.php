@@ -55,7 +55,7 @@ if (isset($_POST['submit']) ) {
         if ($conn->query($sql) === TRUE) {
             $conn->close();
             echo '<script>
-        alert("Register Successfully");
+        alert("Register Successful");
         window.location.href="index.php";
         </script>';
         } else {
