@@ -3,10 +3,9 @@ require_once "config.php";
 ?>
 <?php session_start();
 if (isset($_SESSION['email']) != NULL) {
-	$userEmail = $_SESSION['email'];
-}
-else {
-	echo '<script>
+  $userEmail = $_SESSION['email'];
+} else {
+  echo '<script>
     alert("Please Login first");
     window.location.href="index.php";
     </script>';
@@ -17,6 +16,7 @@ else {
 <html>
 
 <head>
+  <title>View Room Detail Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="roomstyle.css">
@@ -39,38 +39,38 @@ else {
 <body>
 
   <div>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-			<a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
-			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="navbar-nav">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
           <a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
-					<a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
-					<a href="food.php" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
-					<a href="service&facility.php" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
-				</div>
-				<div class="navbar-nav ml-auto">
-					<?php if (isset($_SESSION['email']) != NULL) : ?>
-						<a class="nav-item nav-link"> <i class="fas fa-user-alt"> </i> <?php echo $_SESSION['email']; ?> </a>
-						<form class="form-inline" action="logout.php" method="POST">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logout">Logout</button>
-						</form>
-					<?php else : ?>
-						<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
-						<div class="dropdown-menu dropdown-menu-right p-3">
-							<form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
-								<input class="form-control login" type="text" name="email" placeholder="Email" id="email">
-								<input class="form-control login" type="password" name="password" placeholder="Password" id="pass">
-								<input class="btn btn-primary" type="submit" name="submit" value="Login">
-							</form>
-						</div>
-						<a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
-					<?php endif ?>
-				</div>
-			</div>
-		</nav>
+          <a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
+          <a href="food.php" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
+          <a href="service&facility.php" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <?php if (isset($_SESSION['email']) != NULL) : ?>
+            <a class="nav-item nav-link"> <i class="fas fa-user-alt"> </i> <?php echo $_SESSION['email']; ?> </a>
+            <form class="form-inline" action="logout.php" method="POST">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logout">Logout</button>
+            </form>
+          <?php else : ?>
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+            <div class="dropdown-menu dropdown-menu-right p-3">
+              <form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
+                <input class="form-control login" type="text" name="email" placeholder="Email" id="email">
+                <input class="form-control login" type="password" name="password" placeholder="Password" id="pass">
+                <input class="btn btn-primary" type="submit" name="submit" value="Login">
+              </form>
+            </div>
+            <a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
+          <?php endif ?>
+        </div>
+      </div>
+    </nav>
   </div>
 
   <div class="bd-example">
@@ -138,13 +138,13 @@ else {
                 ?>
               </select>
               <br>
-            <button type="submit" class="btn btn-secondary btn-lg" style="margin-left: 47%;" name="submit" value="Explore">Book Now!</button>
+              <button type="submit" class="btn btn-secondary btn-lg" style="margin-left: 47%;" name="submit" value="Explore">Book Now!</button>
           </form>
         </div>
 
       </div>
     </div>
-    
+
   </div>
   </div>
 

@@ -16,6 +16,7 @@ else {
 <html>
 
 <head>
+  <title>Elite</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="type_2.css">
@@ -38,7 +39,7 @@ else {
 </head>
 
 <body>
-
+  
   <div class="banner">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
