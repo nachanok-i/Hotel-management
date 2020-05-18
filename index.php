@@ -245,7 +245,7 @@ if (isset($_SESSION['email']) != NULL) {
 					<hr>
 				</div>
 				<?php
-				$path = './customerPicture/';
+				$path = './Asset/Customer/';
 				if ($result->num_rows > 0) {
 					while ($row = mysqli_fetch_array($result)) {
 						$imgName = $row['profileImage'];
