@@ -1,5 +1,4 @@
     <?php
-    session_start();
     // Include config file
     require_once "config.php";
     $firstName = $_POST['firstName'];
@@ -66,7 +65,7 @@
                                     $fileDestination = 'Asset/Customer/'.$fileNameNew;
                                     move_uploaded_file($fileTmpName, $fileDestination);
                                     $sql = "INSERT INTO Customer(firstName, lastName, email,password, citizenID, profileImage, street,city,state,zipCode,country)
-                                    VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileDestination','$street','$city','$state','$zipCode','$country' )";
+                                    VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileName','$street','$city','$state','$zipCode','$country' )";
 
                                     if ($conn->query($sql) === TRUE) {
                                         $conn->close();

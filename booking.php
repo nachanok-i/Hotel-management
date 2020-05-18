@@ -262,19 +262,6 @@ if (isset($_SESSION['email']) != NULL) {
 
                 </div>
 
-                <h4><b>Number of Guest</b></h4>
-                <div class="form-row">
-                    <div class="col-6 col-sm-3">
-                        <label for="adult"><b>Adult</b></lable>
-                            <p><input type="number" name="adult" placeholder="Enter number" value="1" class="form-control form-control-lg" required></p>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <label for="child"><b>Child</b></lable>
-                            <p><input type="number" name="child" placeholder="Enter number" value="0" class="form-control form-control-lg" required></p>
-                    </div>
-                </div>
-
-
             </div>
 
             <div class="container">

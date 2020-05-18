@@ -30,22 +30,43 @@ if (isset($_SESSION['email']) != NULL) {
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="styleindex.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#facility">Facilities</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<a href="index.php" class="navbar-brand"><img src="Logo/Calina_Logo-tiny.png" alt="logo"></a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<div class="navbar-nav">
+					<a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+					<a href="roomSelectPage.php" class="nav-item nav-link"><i class="fa fa-bed"></i> Find & Reserve</a>
+					<a href="food.php" class="nav-item nav-link"><i class="fa fa-cutlery"></i> Food & Dining</a>
+					<a href="service&facility.php" class="nav-item nav-link" tabindex="-1"><i class="fa fa-car"></i> Service & Facility</a>
+				</div>
+				<div class="navbar-nav ml-auto">
+					<?php if (isset($_SESSION['email']) != NULL) : ?>
+						<a class="nav-item nav-link"> <i class="fas fa-user-alt"> </i> <?php echo $_SESSION['email']; ?> </a>
+						<form class="form-inline" action="logout.php" method="POST">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logout">Logout</button>
+						</form>
+					<?php else : ?>
+						<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fas fa-user-alt"></i>Login</a>
+						<div class="dropdown-menu dropdown-menu-right p-3">
+							<form class="form-horizontal" method="POST" accept-charset="UTF-8" action="login_action.php">
+								<input class="form-control login" type="text" name="email" placeholder="Email" id="email">
+								<input class="form-control login" type="password" name="password" placeholder="Password" id="pass">
+								<input class="btn btn-primary" type="submit" name="submit" value="Login">
+							</form>
+						</div>
+						<a href="register.php" class="nav-item nav-link"> <i class="fas fa-user-plus"> </i> Sign up</a>
+					<?php endif ?>
+				</div>
+			</div>
+		</nav>
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
