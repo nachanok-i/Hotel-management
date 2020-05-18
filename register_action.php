@@ -70,7 +70,7 @@
                                     if ($conn->query($sql) === TRUE) {
                                         $conn->close();
                                         echo '<script>
-                                        alert("Register successful=");
+                                        alert("Register successful");
                                         window.location.href="index.php";
                                         </script>';
                                     } else {
