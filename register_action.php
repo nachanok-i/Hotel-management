@@ -18,7 +18,6 @@
         if (empty($_POST['state'])) {
             $state = '""';
         }
-        
         $encryppsw = sha1($psw);
         $sql_citizenID = mysqli_query($conn, "SELECT citizenID FROM Customer WHERE citizenID='$citizenID'");
         $sql_email = mysqli_query($conn, "SELECT email FROM Customer WHERE email like '%$email%'");
@@ -64,10 +63,10 @@
                             if (in_array($fileActualExt, $alllowed)) {
                                 if ($fileError === 0) {
                                     $fileNameNew = $fileName;
-                                    $fileDestination = './customerPicture/' . $fileNameNew;
+                                    $fileDestination = 'Asset/Customer/'.$fileNameNew;
                                     move_uploaded_file($fileTmpName, $fileDestination);
                                     $sql = "INSERT INTO Customer(firstName, lastName, email,password, citizenID, profileImage, street,city,state,zipCode,country)
-                                    VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileName','$street','$city','$state','$zipCode','$country' )";
+                                    VALUES('$firstName', '$lastName',' $email','$encryppsw','$citizenID','$fileDestination','$street','$city','$state','$zipCode','$country' )";
 
                                     if ($conn->query($sql) === TRUE) {
                                         $conn->close();

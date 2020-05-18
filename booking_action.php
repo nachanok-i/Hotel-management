@@ -52,7 +52,6 @@
     $objQuery = mysqli_query($conn,$query);
     $objResult = mysqli_fetch_array($objQuery ,MYSQLI_ASSOC);
     $citizenID = $objResult["citizenID"];
-    echo "'".$citizenID."'";
     //get roomID
     $query = "SELECT roomID FROM Room WHERE branchID = '".$_SESSION['branch']."' 
     AND roomType = '".$_POST['Room_Type']."' AND status = '0'";
@@ -60,11 +59,12 @@
     $objResult = mysqli_fetch_array($objQuery ,MYSQLI_ASSOC);
     $roomID = $objResult["roomID"];
     //get promotion
-
+    $sqlRoom = "UPDATE Room SET status=1  WHERE roomID = $roomID AND branchID =  '".$_SESSION['branch']."'";
     $sql = "INSERT INTO Booking_Detail(guestFirstName,guestLastName,checkIn,checkOut,adult,child,branchID,price,paymentMethod,cardnumber,additionalNote,roomID,citizenID)
     VALUES('".$_POST['firstName']."', '".$_POST['lastName']."', '".$_POST['From']."', '".$_POST['To']."', '".$_POST['adult']."', '".$_POST['child']."', 
     '".$_SESSION['branch']."', '".$totalPrice."', '".$_POST['payment_method']."', '".$_POST['cardNumber']."', '".$_POST['additional']."', '$roomID', '$citizenID')";
-    if ($conn->query($sql) === TRUE) {
+    
+    if ( ($conn->query($sql) === TRUE) && ($conn->query($sqlRoom) == TRUE) ) {
         $conn->close();
         echo '<script>
         alert("Booking success");
