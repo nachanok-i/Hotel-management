@@ -221,20 +221,23 @@ body a:hover{
 .team-heading h3,.team-heading p{
 	color:#FFFFFF;
 }
+.team-img-w3-agile{
+    float: left;
+}
 .tab1 .team-img-w3-agile{
-	  background: url(./picHotelRoom/tap2.png)no-repeat 0px 0px;
+	  background: url(./picHotelRoom/tap2.jpg)no-repeat 0px 0px;
 }
 .tab2 .team-img-w3-agile{
 	  background: url(./picHotelRoom/lion1.2.jpg)no-repeat 0px 0px;
 }
 .tab3 .team-img-w3-agile{
-	  background: url(./picHotelRoom/lion2.2.jpg)no-repeat 0px 0px;
+	  background: url(./picHotelRoom/book.jpg)no-repeat 0px 0px;
 }
 .tab4 .team-img-w3-agile{
 	  background: url(./picHotelRoom/toon.jpg)no-repeat 0px 0px;
 }
 .tab5 .team-img-w3-agile{
-    background: url(./picHotelRoom/book.jpg)no-repeat 0px 0px;
+    background: url(./picHotelRoom/lion2.2.jpg)no-repeat 0px 0px;
 }
 .tab1 .team-img-w3-agile,.tab2 .team-img-w3-agile,.tab3 .team-img-w3-agile,.tab4 .team-img-w3-agile,.tab5 .team-img-w3-agile{
     -webkit-background-size: cover;
@@ -248,6 +251,7 @@ body a:hover{
 .team-Info-agileits {
     text-align: left;
     padding: 2em 0 0 3em;
+    float: left ;
 }
 .team-Info-agileits h4 {
     letter-spacing: 1px;
@@ -267,6 +271,12 @@ body a:hover{
     line-height: 1.8em;
     margin: 1.5em 0 2em;
 }
+/* .team-Info-agileits li img {
+    height: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
+} */
 .resp-tabs-list li{
        border:3px solid #fff;
        width: 190px;

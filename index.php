@@ -127,19 +127,19 @@ if (isset($_SESSION['email']) != NULL) {
 					<div id="horizontalTab">
 						<ul class="resp-tabs-list">
 							<li>
-								<img src="./picHotelRoom/tap2.png" alt="Tap" class="img-responsive" />
+								<img src="./picHotelRoom/tap2.jpg" alt="Tap" class="img-responsive" />
 							</li>
 							<li>
 								<img src="./picHotelRoom/lion1.2.jpg" alt="Lion" class="img-responsive" />
 							</li>
 							<li>
-								<img src="./picHotelRoom/lion2.2.jpg" alt="Lion" class="img-responsive" />
+								<img src="./picHotelRoom/book.jpg" alt="Book" class="img-responsive" />
 							</li>
 							<li>
 								<img src="./picHotelRoom/toon.jpg" alt="Toon" class="img-responsive" />
 							</li>
 							<li>
-								<img src="./picHotelRoom/book.jpg" alt="Book" class="img-responsive" />
+								<img src="./picHotelRoom/lion2.2.jpg" alt="Lion" class="img-responsive" />
 							</li>
 						</ul>
 						<div class="resp-tabs-container">
@@ -148,12 +148,13 @@ if (isset($_SESSION['email']) != NULL) {
 								</div>
 								<div class="col-md-6 team-Info-agileits">
 									<h4>Nachanok Issarapruk</h4>
-									<span>First of Our Member</span>
+									<span>Project Manager</span>
 									<p> His student ID:61070503410 </p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
-											<li><a href="https://www.facebook.com/nachanok.issarapruk.tap.ipod" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.facebook.com/nachanok.issarapruk.tap.ipod" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
+											<li><a href="https://instagram.com/iss_taptap?igshid=mdx610fms5r8" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
 										</ul>
 									</div>
 								</div>
@@ -165,12 +166,13 @@ if (isset($_SESSION['email']) != NULL) {
 								</div>
 								<div class="col-md-6 team-Info-agileits">
 									<h4>Sutinan Tadalimavad</h4>
-									<span>Second of Our Member</span>
+									<span>Web designer</span>
 									<p>His student ID:61070503443</p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
-											<li><a href="https://www.facebook.com/sutinan.tadalimavad" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.facebook.com/sutinan.tadalimavad" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
+											<li><a href="https://instagram.com/fabgeniu_z?igshid=1w4eyt617h47w" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
 										</ul>
 									</div>
 								</div>
@@ -180,13 +182,14 @@ if (isset($_SESSION['email']) != NULL) {
 								<div class="col-md-6 team-img-w3-agile">
 								</div>
 								<div class="col-md-6 team-Info-agileits">
-									<h4>Sahachok Prachaporn</h4>
-									<span>Third of Our Member</span>
-									<p>His student ID:61070503436</p>
+									<h4>Chadapong Thanaprasit</h4>
+									<span>Web Debeloper</span>
+									<p>His student ID:61070503403</p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
-											<li><a href="https://www.facebook.com/sahachokp" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.facebook.com/bookbight" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
+											<li><a href="https://instagram.com/howdy_book?igshid=cxvirokbjj9m" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
 										</ul>
 									</div>
 								</div>
@@ -197,12 +200,13 @@ if (isset($_SESSION['email']) != NULL) {
 								</div>
 								<div class="col-md-6 team-Info-agileits">
 									<h4>Siradanai Sutin</h4>
-									<span>Fourth of Our Member</span>
+									<span>Application Developer</span>
 									<p>His student ID:61070503437</p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
-											<li><a href="https://www.facebook.com/toonTheta" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.facebook.com/toonTheta" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
+											<li><a href="https://instagram.com/toon.sir?igshid=1wsqvmgb51vey" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
 										</ul>
 									</div>
 								</div>
@@ -213,13 +217,14 @@ if (isset($_SESSION['email']) != NULL) {
 								<div class="col-md-6 team-img-w3-agile">
 								</div>
 								<div class="col-md-6 team-Info-agileits">
-									<h4>Chadapong Thanaprasit</h4>
-									<span>Fifth of Our Member</span>
-									<p>His student ID:61070503403</p>
+									<h4>Sahachok Prachaporn</h4>
+									<span>Data Manipulator</span>
+									<p>His student ID:61070503436</p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
 											<li class="agileinfo_share">Follow In</li>
-											<li><a href="https://www.facebook.com/bookbight" class="wthree_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.facebook.com/sahachokp" class="fb_profile"> <img src="picHotelRoom/facebook.png"></a></li>
+											<li><a href="https://instagram.com/lionn_lsp?igshid=lqmo1ftht4lt" class="ig_profile"><img src="picHotelRoom/instagram.png"></li>
 										</ul>
 									</div>
 								</div>
