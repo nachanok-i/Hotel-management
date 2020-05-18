@@ -33,13 +33,6 @@
     // echo $_SESSION['branch'];
     // echo "<br>";
     // echo "'".$_POST['promotion']."'";
-    if ($_POST['adult'] < 1)
-    {
-        echo '<script>
-        alert("Require at least 1 adult");
-        window.location.href="booking.php";
-        </script>';
-    }
     if ($_POST['From'] == NULL)
     {
         echo '<script>
@@ -60,14 +53,14 @@
     $roomID = $objResult["roomID"];
     //get promotion
     $sqlRoom = "UPDATE Room SET status=1  WHERE roomID = $roomID AND branchID =  '".$_SESSION['branch']."'";
-    $sql = "INSERT INTO Booking_Detail(guestFirstName,guestLastName,checkIn,checkOut,adult,child,branchID,price,paymentMethod,cardnumber,additionalNote,roomID,citizenID)
-    VALUES('".$_POST['firstName']."', '".$_POST['lastName']."', '".$_POST['From']."', '".$_POST['To']."', '".$_POST['adult']."', '".$_POST['child']."', 
+    $sql = "INSERT INTO Booking_Detail(guestFirstName,guestLastName,checkIn,checkOut,branchID,price,paymentMethod,cardnumber,additionalNote,roomID,citizenID)
+    VALUES('".$_POST['firstName']."', '".$_POST['lastName']."', '".$_POST['From']."', '".$_POST['To']."', 
     '".$_SESSION['branch']."', '".$totalPrice."', '".$_POST['payment_method']."', '".$_POST['cardNumber']."', '".$_POST['additional']."', '$roomID', '$citizenID')";
     
     if ( ($conn->query($sql) === TRUE) && ($conn->query($sqlRoom) == TRUE) ) {
         $conn->close();
         echo '<script>
-        alert("Booking successful");
+        alert("Booking successful\nPlease contact hotel lobby during\n9:00am to 12:00pm when you arrived.");
         window.location.href="index.php";
         </script>';
     } else {
