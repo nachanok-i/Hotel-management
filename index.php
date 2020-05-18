@@ -84,9 +84,9 @@ if (isset($_SESSION['email']) != NULL) {
 					<h2>Welcome</h2>
 				</div>
 				<div clas="w3-about-grids">
-					<div class="col-md-6 w3-about-left">
+					<div class="w3-about-left">
 						<h5>Hope you all happy with our service</h5>
-						<p>We will create for you an atmosphere of tranquility, subdued elegance and new expression for cosmopolitan life at its finest in the vibrant and green Filinvest City.</p>
+						<p>We will create for you an atmosphere of tranquility, subdued elegance and new <br>expression for cosmopolitan life at its finest in the vibrant and green Filinvest City.</p>
 					</div>
 
 				</div>
