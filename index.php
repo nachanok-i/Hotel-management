@@ -168,7 +168,7 @@ if (isset($_SESSION['email']) != NULL) {
 								</div>
 								<div class="col-md-6 team-Info-agileits">
 									<h4>Sutinan Tadalimavad</h4>
-									<span>Web designer</span>
+									<span>Web Designer</span>
 									<p>His student ID:61070503443</p>
 									<div class="w3_agileits_social_media team_agile_w3l">
 										<ul class="social-icons3">
