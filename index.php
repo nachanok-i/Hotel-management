@@ -241,8 +241,6 @@ if (isset($_SESSION['email']) != NULL) {
 				$path = './customerPicture/';
 				if ($result->num_rows > 0) {
 					while ($row = mysqli_fetch_array($result)) {
-						$imgName = $row['profileImage'];
-						echo '<img src="' . $path . $imgName . '" class="img-fluid img-thumbnail mx-auto d-block" alt="customer picture" >';
 						echo '<div class="row">';
 						echo 	'<div class="col profile" style=" text-align: center;">';
 						echo 		'<h5 style="font-size:2em;"> Firstname </h5>';
