@@ -125,12 +125,12 @@ if (isset($_SESSION['email']) != NULL) {
       <hr>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="firstName"><b>Firstname</b></label>
+          <label for="firstName"><b>First name</b></label>
           <input type="text" class="form-control  form-control-lg" name="firstName" id="firstName" placeholder="Your Firstname" required>
           <div class="invalid-feedback">please fill your name</div>
         </div>
         <div class="form-group col-md-6">
-          <label for="lastName"><b>Lastname</b></label>
+          <label for="lastName"><b>Last name</b></label>
           <input type="text" class="form-control  form-control-lg" name="lastName" id="lastName" placeholder="Your Lastname" required>
         </div>
       </div>
@@ -148,7 +148,7 @@ if (isset($_SESSION['email']) != NULL) {
         <input type="password" placeholder="Repeat Password" class="form-control  form-control-lg" name="psw-repeat" required>
       </div>
       <div class="form-group ">
-        <label for="CitizenID"><b>CitizenID</b></label>
+        <label for="CitizenID"><b>Citizen ID</b></label>
         <input type="number" placeholder="Enter CitizenID" class="form-control form-control-lg" name="CitizenID" required>
       </div>
       <div class="form-row">

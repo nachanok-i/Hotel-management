@@ -126,12 +126,12 @@ require_once "config.php";
       <hr>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="firstName"><b>Firstname</b></label>
+          <label for="firstName"><b>First name</b></label>
           <input type="text" class="form-control  form-control-lg" name="firstName" id="firstName" placeholder="Your Firstname" required>
           <div class="invalid-feedback">please fill your name</div>
         </div>
         <div class="form-group col-md-6">
-          <label for="lastName"><b>Lastname</b></label>
+          <label for="lastName"><b>Last name</b></label>
           <input type="tex" class="form-control  form-control-lg" name="lastName" id="lastName" placeholder="Your Lastname" required>
         </div>
       </div>
@@ -154,7 +154,7 @@ require_once "config.php";
         </div>
         <div class="form-group col-sm-3 my-1">
           <label for="state"><b>State</b></label>
-          <input type="text" class="form-control form-control-lg" name="state" id="state" placeholder="Enter State" required>
+          <input type="text" class="form-control form-control-lg" name="state" id="state" placeholder="Enter State (Optional)">
         </div>
       </div>
       <div class="form-row">
